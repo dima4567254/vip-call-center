@@ -13,6 +13,7 @@
 
 <!--!!!! добавить в снипеты секции и новые иконки -->
 <!--!!!! сделать файл jayson в другую папку-->
+<!-- 290 стоит ли делать сылкой весь блок -->
 
 
 <body>
@@ -117,80 +118,93 @@
 
         <section class="about section section--bem">
             <div class="container">
-                <h2 class="about__title title">
-                    Про компанію
-                </h2>
-                <div class="about__text">
-                    <p>
-                        Аутсорсинговий колл-центр для товарного бізнесу на ринку понад 6 років. Ми здійснюємо від 40 000
-                        дзвінків на день, у штаті 250 менеджерів. Наша мета:
-                    </p>
-                </div>
-                <ul class="about__items">
-                    <li class="about__item">
-                        ✔ швидко підтвердити замовлення вашого інтернет магазину
-                    </li>
-                    <li class="about__item">
-                        ✔ збільшити кількість допродажів до 96%,
-                    </li>
-                    <li class="about__item">
-                        ✔ збільшити середній чек мінімум на 50%,
-                    </li>
-                    <li class="about__item">
-                        ✔ скоротити час на обробку замовлень.
-                    </li>
-                </ul>
-                <div class="about__text">
-                    <p>
-                        Все це зменшує витрати власника товарного бізнесу, збільшує прибуток та лояльність
-                        клієнтів онлайн-магазину.
-                    </p>
-                </div>
-                <button class="about__btn btn" type="text">
-                    детальніше
-                </button>
-            </div>
-        </section>
-
-        <section class="autonomously">
-            <div class="container">
-                <div class="autonomously__wrapper">
-                    <div class="autonomously__inner">
-                        <div class="autonomously__box">
-                            <h2 class="autonomously__title title">
-                                ми працюємо автономно
-                            </h2>
-                            <div class="autonomously__text">
+                <div class="flex">
+                    <div class="about__img"></div>
+                    <div class="about__wrapper">
+                        <h2 class="about__title title">
+                            Про компанію
+                        </h2>
+                        <div class="about__inner">
+                            <div class="about__text">
                                 <p>
-                                    Завдяки установці генератора та старлінка, ми працюємо в автономному режимі. Ми 24/7
-                                    на
-                                    зв'язку
-                                    та
-                                    завжди можемо надавати послуги у повному обсязі.
+                                    Аутсорсинговий колл-центр для товарного бізнесу на ринку понад 6 років. Ми
+                                    здійснюємо
+                                    від 40
+                                    000
+                                    дзвінків на день, у штаті 250 менеджерів. Наша мета:
+                                </p>
+                            </div>
+                            <ul class="about__items">
+                                <li class="about__item">
+                                    ✔ швидко підтвердити замовлення вашого інтернет магазину
+                                </li>
+                                <li class="about__item">
+                                    ✔ збільшити кількість допродажів до 96%,
+                                </li>
+                                <li class="about__item">
+                                    ✔ збільшити середній чек мінімум на 50%,
+                                </li>
+                                <li class="about__item">
+                                    ✔ скоротити час на обробку замовлень.
+                                </li>
+                            </ul>
+                            <div class="about__text">
+                                <p>
+                                    Все це зменшує витрати власника товарного бізнесу, збільшує прибуток та лояльність
+                                    клієнтів онлайн-магазину.
                                 </p>
                             </div>
                         </div>
-                        <img src="images/icons/lamp.svg" alt="Лампа">
+                        <button class="about__btn btn" type="text">
+                            детальніше
+                        </button>
                     </div>
-                    <img src="images/generator.png" alt="Генератор">
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="autonomously section section--bem">
+            <div class="container">
+                <div class="autonomously__wrapper">
+                    <!-- <div class="autonomously__inner"> -->
+                    <div class="autonomously__box">
+                        <h2 class="autonomously__title title">
+                            ми працюємо автономно
+                        </h2>
+                        <div class="autonomously__text">
+                            <p>
+                                Завдяки установці генератора та старлінка, ми працюємо в автономному режимі. Ми 24/7
+                                на
+                                зв'язку
+                                та
+                                завжди можемо надавати послуги у повному обсязі.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- <img class="autonomously__img2" src="images/icons/lamp.svg" alt="Лампа"> -->
+                    <img class="autonomously__img" src="images/generator.png" alt="Генератор">
                 </div>
             </div>
         </section>
 
-        <section class="advantages">
+        <section class="advantages section section--bem">
             <div class="container">
-                <h2 class="advantages__title title">
-                    Переваги
-                </h2>
-                <div class="advantages__text">
-                    <p>
-                        Чому інтернет-магазинам і власникам товарного бізнесу вигідно з нами співпрацювати?
-                    </p>
+                <div class="advantages__box">
+                    <h2 class="advantages__title title">
+                        Переваги
+                    </h2>
+                    <div class="advantages__text">
+                        <p>
+                            Чому інтернет-магазинам і власникам товарного бізнесу вигідно з нами співпрацювати?
+                        </p>
+                    </div>
                 </div>
                 <ul class="advantages__list">
                     <li class="advantages__item">
-                        <svg class="social__svg" width="48px" height="48px">
-                            <use xlink:href="images/sprite.svg#crypto.svg">
+                        <svg class="advantages__svg" width="48px" height="48px">
+                            <use xlink:href="images/sprite.svg#crypto">
                             </use>
                         </svg>
                         <h3 class="advantages__subtitle">
@@ -207,8 +221,8 @@
                         </div>
                     </li>
                     <li class="advantages__item">
-                        <svg class="social__svg" width="48px" height="48px">
-                            <use xlink:href="images/sprite.svg#rocket.svg">
+                        <svg class="advantages__svg" width="48px" height="48px">
+                            <use xlink:href="images/sprite.svg#rocket">
                             </use>
                         </svg>
                         <h3 class="advantages__subtitle">
@@ -224,8 +238,8 @@
                         </div>
                     </li>
                     <li class="advantages__item">
-                        <svg class="social__svg" width="48px" height="48px">
-                            <use xlink:href="images/sprite.svg#schedule.svg">
+                        <svg class="advantages__svg" width="48px" height="48px">
+                            <use xlink:href="images/sprite.svg#schedule">
                             </use>
                         </svg>
                         <h3 class="advantages__subtitle">
@@ -241,8 +255,8 @@
                         </div>
                     </li>
                     <li class="advantages__item">
-                        <svg class="social__svg" width="48px" height="48px">
-                            <use xlink:href="images/sprite.svg#handshake.svg">
+                        <svg class="advantages__svg" width="48px" height="48px">
+                            <use xlink:href="images/sprite.svg#handshake">
                             </use>
                         </svg>
                         <h3 class="advantages__subtitle">
@@ -261,91 +275,98 @@
             </div>
         </section>
 
-        <section class="services">
+        <section class="services section section--bem">
             <div class="container">
-                <h2 class="services__title title">
-                    Послуги
-                </h2>
-                <div class="services__text">
-                    <p>
-                        Більше лідів - тим приємніша ціна
-                    </p>
+                <div class="services__box">
+                    <h2 class="services__title title">
+                        Послуги
+                    </h2>
+                    <div class="services__text">
+                        <p>
+                            Більше лідів - тим приємніша ціна
+                        </p>
+                    </div>
                 </div>
                 <ul class="services__list">
                     <li class="services__item">
+                        <!-- <a class="services__link" href="#"> -->
                         <h3 class="services__subtitle">
                             мінімум
                         </h3>
                         <ul class="services__items">
-                            <li class="services__item">
+                            <li class="services__info">
                                 Кількість лідів на день: 30-50
                             </li>
-                            <li class="services__item">
+                            <li class="services__info">
                                 Персональний менеджер 24/7
                             </li>
-                            <li class="services__item">
+                            <li class="services__info">
                                 Унікальні скрипти під ваш оффер
                             </li>
-                            <li class="services__item">
+                            <li class="services__info">
                                 Дожим замовлення до викупу: БЕЗКОШТОВНО
                             </li>
-                            <li class="services__item">
+                            <li class="services__info">
                                 Секретні фішки щодо збільшення прибутку у ПОДАРУНОК 🎁
                             </li>
-                            <li class="services__item">
-                                База топ постачальників у ПОДАРУНОК 🎁
+                            <li class="services__info">
+                                База топ постачальників у ПОДАРУНОК
+                                🎁
                             </li>
                         </ul>
                         <div class="services__inner">
                             <div class="services__subtext">
-                                <span>25 грн</span>
+                                <p>25<span>грн</span></p>
                                 Підтверджене замовлення
                             </div>
                             <div class="services__subtext">
-                                <span>25 %</span>
-                                Від маржі
+                                <p>25<span>%</span></p>
+                                <p>Від маржі</p>
                             </div>
                         </div>
-                        <button class="services__btn btn" type="button">
-                            details
+                        <button class="services__btn btn services__btn--start" type="button">
+                            <span>Детальніше</span>
                         </button>
+                        <!-- </a> -->
                     </li>
-                    <li class="services__item">
+                    <li class="services__item services__item--standard">
                         <h3 class="services__subtitle">
                             стандарт
                         </h3>
                         <ul class="services__items">
-                            <li class="services__item">
+                            <li class="services__info">
                                 Кількість лідів на день: 50-100
                             </li>
-                            <li class="services__item">
+                            <li class="services__info">
                                 Персональний менеджер 24/7
                             </li>
-                            <li class="services__item">
+                            <li class="services__info">
                                 Унікальні скрипти під ваш оффер
                             </li>
-                            <li class="services__item">
+                            <li class="services__info">
                                 Дожим замовлення до викупу: БЕЗКОШТОВНО
                             </li>
-                            <li class="services__item">
+                            <li class="services__info">
                                 Секретні фішки щодо збільшення прибутку у ПОДАРУНОК 🎁
                             </li>
-                            <li class="services__item">
+                            <li class="services__info">
                                 База топ постачальників у ПОДАРУНОК 🎁
                             </li>
                         </ul>
                         <div class="services__inner">
                             <div class="services__subtext">
-                                <span>24 грн</span>
-                                Підтверджене замовлення
+                                <p>24<span>грн</span></p>
+                                <p>
+                                    Підтверджене замовлення
+                                </p>
                             </div>
                             <div class="services__subtext">
-                                <span>23 %</span>
-                                Від маржі
+                                <p>23<span>%</span></p>
+                                <p>Від маржі</p>
                             </div>
                         </div>
-                        <button class="services__btn btn" type="button">
-                            details
+                        <button class="services__btn btn services__btn--standard" type="button">
+                            <span>Детальніше</span>
                         </button>
                     </li>
                     <li class="services__item">
@@ -353,159 +374,536 @@
                             преміум
                         </h3>
                         <ul class="services__items">
-                            <li class="services__item">
+                            <li class="services__info">
                                 Кількість лідів на день: >100
                             </li>
-                            <li class="services__item">
+                            <li class="services__info">
                                 Персональний менеджер 24/7
                             </li>
-                            <li class="services__item">
+                            <li class="services__info">
                                 Унікальні скрипти під ваш оффер
                             </li>
-                            <li class="services__item">
+                            <li class="services__info">
                                 Дожим замовлення до викупу: БЕЗКОШТОВНО
                             </li>
-                            <li class="services__item">
+                            <li class="services__info">
                                 Секретні фішки щодо збільшення прибутку у ПОДАРУНОК 🎁
                             </li>
-                            <li class="services__item">
+                            <li class="services__info">
                                 База топ постачальників у ПОДАРУНОК 🎁
                             </li>
                         </ul>
                         <div class="services__inner">
                             <div class="services__subtext">
-                                <span>24 грн</span>
-                                Підтверджене замовлення
+                                <p>24<span>грн</span></p>
+                                <p>Підтверджене замовлення</p>
                             </div>
                             <div class="services__subtext">
-                                <span>23 %</span>
-                                Від маржі
+                                <p>23<span>%</span></p>
+                                <p>Від маржі</p>
                             </div>
                         </div>
-                        <button class="services__btn btn" type="button">
-                            details
+                        <button class="services__btn btn services__btn--start" type="button">
+                            <span>Детальніше</span>
                         </button>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <section class="casey">
-            <div class="container">
-                <div class="swiper">
+        <section class="casey section section--bem">
+            <div class="container" style="overflow: hidden;">
+                <h2 class="casey__title title">
+                    Кейси
+                </h2>
+                <!-- </div> -->
+                <!-- <div class="containers"> -->
+                <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
+                <!-- <div class="containerss"> -->
+                <div class="swiper-casey swipercasey">
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-                    <div class="swiper-wrapper">
-                        <ul class="swiper-slide">
-                            <li class="swiper-slide__item">
-                                <h3 class="swiper-slide__title">
+                    <div class="swiper-wrapper swiper-casey__items">
+                        <!-- <div class="swiper-slide">1</div>
+                        <div class="swiper-slide">2</div>
+                        <div class="swiper-slide">3</div>
+                        <div class="swiper-slide">4</div>
+                        <div class="swiper-slide">5</div> -->
+
+                        <li class="swiper-casey__item swiper-slide">
+                            <img class="swiper-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
+                            <div class="swiper-casey__inner">
+                                <h3 class="swiper-casey__title">
                                     Пульсоксиметр
                                 </h3>
-                                <div class="swiper-slide__text">
+                                <div class="swiper-casey__text">
                                     <p>
                                         Кількість лідів:
+                                        <span>2766</span>
                                     </p>
                                 </div>
-                                <span>2766</span>
-                                <ul class="swiper-slide__list">
-                                    <li class="swiper-slide__item">
-                                        <p>Показник</p>
-                                        <p>Аппрув</p>
-                                        <p>Апсейл</p>
-                                        <p>Середній чек</p>
-                                        <p>Викуп</p>
-                                    </li>
-                                    <li class="swiper-slide__item">
-                                        <p>До</p>
-                                        <p>65%</p>
-                                        <p>48%</p>
-                                        <p>255 грн</p>
-                                        <p>67%</p>
-                                    </li>
-                                    <li class="swiper-slide__item">
-                                        <p>Після</p>
-                                        <p>95%</p>
-                                        <p>96%</p>
-                                        <p>460 грн</p>
-                                        <p>88%</p>
-                                    </li>
-                                </ul>
-                            </li>
-                            <div class="swiper-slide">
-                                <li class="swiper-slide__item">
-                                    <h3 class="swiper-slide__title">
-                                        Палички від засмічень Sani sticks
-                                    </h3>
-                                    <div class="swiper-slide__text">
-                                        <p>
-                                            Кількість лідів:
-                                        </p>
+                                <div class="swiper-casey__list">
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            Показник
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Аппрув
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Апсейл
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Середній чек
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Викуп
+                                        </div>
                                     </div>
-                                    <span>8000</span>
-                                    <ul class="swiper-slide__list">
-                                        <li class="swiper-slide__item">
-                                            <p>Показник</p>
-                                            <p>Аппрув</p>
-                                            <p>Апсейл</p>
-                                            <p>Середній чек</p>
-                                            <p>Викуп</p>
-                                        </li>
-                                        <li class="swiper-slide__item">
-                                            <p>До</p>
-                                            <p>25%</p>
-                                            <p>10%</p>
-                                            <p>220 грн</p>
-                                            <p>78%</p>
-                                        </li>
-                                        <li class="swiper-slide__item">
-                                            <p>Після</p>
-                                            <p>61%</p>
-                                            <p>72%</p>
-                                            <p>375 грн</p>
-                                            <p>91%</p>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </div>
-                            <div class=" swiper-slide">
-                                <li class="swiper-slide__item">
-                                    <h3 class="swiper-slide__title">
-                                        Палички від засмічень Sani sticks
-                                    </h3>
-                                    <div class="swiper-slide__text">
-                                        <p>
-                                            Кількість лідів:
-                                        </p>
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            До
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            65%
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            48%
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            255<span>грн</span>
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            67%
+                                        </div>
                                     </div>
-                                    <span>1200</span>
-                                    <ul class="swiper-slide__list">
-                                        <li class="swiper-slide__item">
-                                            <p>Показник</p>
-                                            <p>Аппрув</p>
-                                            <p>Апсейл</p>
-                                            <p>Середній чек</p>
-                                            <p>Викуп</p>
-                                        </li>
-                                        <li class="swiper-slide__item">
-                                            <p>До</p>
-                                            <p>67%</p>
-                                            <p>15%</p>
-                                            <p>680 грн</p>
-                                            <p>88%</p>
-                                        </li>
-                                        <li class="swiper-slide__item">
-                                            <p>Після</p>
-                                            <p>89%</p>
-                                            <p>96%</p>
-                                            <p>1250 грн</p>
-                                            <p>91%</p>
-                                        </li>
-                                    </ul>
-                                </li>
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            Після
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            95%
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            96%
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            460<span>грн</span>
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            88%
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </ul>
+                        </li>
+                        <li class="swiper-casey__item swiper-slide">
+                            <img class="swiper-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
+                            <div class="swiper-casey__inner">
+                                <h3 class="swiper-casey__title ">
+                                    Пульсоксиметр
+                                </h3>
+                                <div class="swiper-casey__text">
+                                    <p>
+                                        Кількість лідів:
+                                        <span>2766</span>
+                                    </p>
+                                </div>
+                                <div class="swiper-casey__list">
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            Показник
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Аппрув
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Апсейл
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Середній чек
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Викуп
+                                        </div>
+                                    </div>
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            До
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            65%
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            48%
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            255<span>грн</span>
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            67%
+                                        </div>
+                                    </div>
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            Після
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            95%
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            96%
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            460<span>грн</span>
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            88%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-casey__item swiper-slide">
+                            <img class="swiper-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
+                            <div class="swiper-casey__inner">
+                                <h3 class="swiper-casey__title ">
+                                    Пульсоксиметр
+                                </h3>
+                                <div class="swiper-casey__text">
+                                    <p>
+                                        Кількість лідів:
+                                        <span>2766</span>
+                                    </p>
+                                </div>
+                                <div class="swiper-casey__list">
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            Показник
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Аппрув
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Апсейл
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Середній чек
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Викуп
+                                        </div>
+                                    </div>
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            До
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            65%
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            48%
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            255<span>грн</span>
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            67%
+                                        </div>
+                                    </div>
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            Після
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            95%
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            96%
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            460<span>грн</span>
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            88%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-casey__item swiper-slide">
+                            <img class="swiper-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
+                            <div class="swiper-casey__inner">
+                                <h3 class="swiper-casey__title ">
+                                    Пульсоксиметр
+                                </h3>
+                                <div class="swiper-casey__text">
+                                    <p>
+                                        Кількість лідів:
+                                        <span>2766</span>
+                                    </p>
+                                </div>
+                                <div class="swiper-casey__list">
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            Показник
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Аппрув
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Апсейл
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Середній чек
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Викуп
+                                        </div>
+                                    </div>
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            До
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            65%
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            48%
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            255<span>грн</span>
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            67%
+                                        </div>
+                                    </div>
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            Після
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            95%
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            96%
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            460<span>грн</span>
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            88%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-casey__item swiper-slide">
+                            <img class="swiper-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
+                            <div class="swiper-casey__inner">
+                                <h3 class="swiper-casey__title">
+                                    Пульсоксиметр
+                                </h3>
+                                <div class="swiper-casey__text">
+                                    <p>
+                                        Кількість лідів:
+                                        <span>2766</span>
+                                    </p>
+                                </div>
+                                <div class="swiper-casey__list">
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            Показник
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Аппрув
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Апсейл
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Середній чек
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Викуп
+                                        </div>
+                                    </div>
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            До
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            65%
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            48%
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            255<span>грн</span>
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            67%
+                                        </div>
+                                    </div>
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            Після
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            95%
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            96%
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            460<span>грн</span>
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            88%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-casey__item swiper-slide">
+                            <img class="swiper-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
+                            <div class="swiper-casey__inner">
+                                <h3 class="swiper-casey__title">
+                                    Пульсоксиметр
+                                </h3>
+                                <div class="swiper-casey__text">
+                                    <p>
+                                        Кількість лідів:
+                                        <span>2766</span>
+                                    </p>
+                                </div>
+                                <div class="swiper-casey__list">
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            Показник
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Аппрув
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Апсейл
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Середній чек
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Викуп
+                                        </div>
+                                    </div>
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            До
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            65%
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            48%
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            255<span>грн</span>
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            67%
+                                        </div>
+                                    </div>
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            Після
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            95%
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            96%
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            460<span>грн</span>
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            88%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-casey__item swiper-slide">
+                            <img class="swiper-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
+                            <div class="swiper-casey__inner">
+                                <h3 class="swiper-casey__title">
+                                    Пульсоксиметр
+                                </h3>
+                                <div class="swiper-casey__text">
+                                    <p>
+                                        Кількість лідів:
+                                        <span>2766</span>
+                                    </p>
+                                </div>
+                                <div class="swiper-casey__list">
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            Показник
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Аппрув
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Апсейл
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Середній чек
+                                        </div>
+                                        <div class="swiper-casey__indicator">
+                                            Викуп
+                                        </div>
+                                    </div>
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            До
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            65%
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            48%
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            255<span>грн</span>
+                                        </div>
+                                        <div class="swiper-casey__to">
+                                            67%
+                                        </div>
+                                    </div>
+                                    <div class="swiper-casey__item">
+                                        <div class="swiper-casey__first">
+                                            Після
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            95%
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            96%
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            460<span>грн</span>
+                                        </div>
+                                        <div class="swiper-casey__after">
+                                            88%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li> -->
                     </div>
                 </div>
+                <!-- </div> -->
+                <!-- </div> -->
             </div>
         </section>
 
@@ -558,14 +956,14 @@
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img class="swiper-slide__img" src="images/schedule1.jpg" alt="Графік">
+                            <div class="swiper-casey">
+                                <img class="swiper-casey__img" src="images/schedule1.jpg" alt="Графік">
                             </div>
-                            <div class="swiper-slide">
-                                <img class="swiper-slide__img" src="images/schedule2.jpg" alt="Графік">
+                            <div class="swiper-casey">
+                                <img class="swiper-casey__img" src="images/schedule2.jpg" alt="Графік">
                             </div>
-                            <div class="swiper-slide">
-                                <img class="swiper-slide__img" src="images/schedule1.jpg" alt="Графік">
+                            <div class="swiper-casey">
+                                <img class="swiper-casey__img" src="images/schedule1.jpg" alt="Графік">
                             </div>
                         </div>
                     </div>
@@ -676,7 +1074,7 @@
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <div class="swiper-casey">
                             <div class="slider-reviews__inner">
                                 <img class="slider-reviews__img" src="images/alexey.png" alt="Валентин Сафаргалин">
                                 <div class="slider-reviews__name">
@@ -692,7 +1090,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-casey">
                             <div class="slider-reviews__inner">
                                 <img class="slider-reviews__img" src="images/alexey.png" alt="Дмитрий Спичак">
                                 <div class="slider-reviews__name">
@@ -710,7 +1108,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-casey">
                             <div class="slider-reviews__inner">
                                 <img class="slider-reviews__img" src="images/alexey.png" alt="Алексей Варганич">
                                 <div class="slider-reviews__name">
@@ -727,7 +1125,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-casey">
                             <div class="slider-reviews__inner">
                                 <img class="slider-reviews__img" src="images/alexey.png" alt="Алексей Варганич">
                                 <div class="slider-reviews__name">

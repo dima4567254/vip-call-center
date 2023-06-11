@@ -79,6 +79,8 @@
     right: 0;
     z-index: 999;
     background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.5);
+
     // display: flex;
     // justify-content: center;
 
@@ -177,22 +179,449 @@
     }
 }
 
-.about {
-    padding: 0;
-    
+.flex {
+    display: flex;
+    position: relative;
+}
 
-    &__title {}
+.about {
+
+    &__img {
+        position: relative;
+        height: 680px;
+        width: 50%;
+        background-image: url('../images/man.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        // height: 680px;
+        // width: 50%;
+        // ------
+        // border-radius: 16px;
+        // position: absolute;
+        // top: 0;
+        // // right: 0;
+        // left: 0;
+        // background-image: url('../images/man.jpg');
+        // background-repeat: no-repeat;
+        // background-position: center;
+        // background-size: cover;
+        // // background-size: auto 850px;
+        // height: 100%;
+        // width: 50%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            // left: 0;
+            // height: 680px;
+            // width: 510px;
+            background-image: url('../images/man.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    // &::before {
+    //     content: "";
+    //     // position: absolute;
+    //     // top: 0;
+    //     // // right: 0;
+    //     // left: 0;
+    //     // height: 680px;
+    //     // width: 510px;
+    //     // background-image: url('../images/man.jpg');
+    //     // background-repeat: no-repeat;
+    //     // background-position: center;
+    //     // background-size: cover;
+    //     // top: 0;
+    //     // // right: 0;
+    //     // // right: 0;
+    //     // left: 0;
+    //     // background-repeat: no-repeat;
+    //     // background-position: top right;
+    //     // background-size: auto 850px;
+    //     // height: 100%;
+    //     // width: 50%;
+    // }
+
+    &__wrapper {
+        background-color: #2c2f3b;
+        // padding: 68px 60px 87px;
+        width: 50%;
+        border-bottom-right-radius: 16px;
+        border-top-right-radius: 16px;
+        margin-left: auto;
+        // position: relative;
+
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     // left: 0;
+        //     height: 680px;
+        //     width: 510px;
+        //     background-image: url('../images/man.jpg');
+        //     background-repeat: no-repeat;
+        //     background-position: left;
+        //     background-size: cover;
+        // }
+
+    }
+
+    &__inner {
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+    }
 
     &__text {}
 
     &__items {}
 
-    &__item {}
+    &__item {
+        // font-size: 18px;
+    }
 
-    &__btn {}
+    &__btn {
+        padding: 18px 12px 9px 12px;
+    }
 }
 
 
+
+
+
+
+.autonomously {
+
+    // скорей всего придется переделывать блок  и задавать мак ширену в % смысла скорей всего нет
+    &__wrapper {
+        background-color: #2c2f3b;
+        padding: 48px 0 64px 40px;
+        // width: 100%;
+        border-radius: 16px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    // &__inner {
+    //     display: flex;
+    //     justify-content: space-between;
+    // }
+
+    &__box {
+        max-width: 62%;
+        // max-width: 615px;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+
+    }
+
+    &__text {
+        @include line-height(18, 28, px, ); //1.5
+        max-width: 78%;
+        // max-width: 480px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 3%;
+            right: -37%;
+            height: 145px;
+            width: 30%;
+            // width: 145px;
+            background-image: url('../images/icons/lamp.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    // &__img2 {
+    //     // display: none;
+    // }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        // left: 0;
+        right: 0;
+        // display: none;
+        width: 37%;
+        width: 400px;
+        height: 310px;
+        margin-top: -40px;
+        object-fit: cover
+    }
+
+}
+
+
+
+.advantages {
+
+    &__box {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        @include line-height(18, 22, px, );
+        margin: 0 auto;
+        max-width: 480px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &__item {
+        max-width: 525px;
+        border-radius: 16px;
+        background-color: #2c2f3b;
+        padding: 40px 30px;
+    }
+
+    &__svg {
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+}
+
+
+.services {
+
+    &__box {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        @include line-height(18, 22, px, );
+        margin: 0 auto;
+        max-width: 300px;
+    }
+
+
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        gap: 30px;
+    }
+
+    &__item {
+        padding: 40px 30px;
+        border-radius: 16px;
+        background-color: #2c2f3b;
+
+        &--standard {
+            background-image: linear-gradient(135deg, #2fbeff, #1b70b6);
+        }
+    }
+
+    &__info {
+        margin-bottom: 20px;
+        @include line-height(18, 22, px, );
+    }
+
+    &__subtitle {
+        font-size: 32px;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+
+    &__items {}
+
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 45px;
+    }
+
+    &__subtext {
+        // &:first-child {
+        //     font-size: 32px;
+        // }
+    }
+
+    &__subtext p {
+        &:first-child {
+            font-size: 32px;
+        }
+
+    }
+
+    &__subtext span {
+        margin-left: 10px;
+    }
+
+
+
+    &__btn {
+        padding: 8px 40px;
+
+        &--start {
+            &:before {
+                background-image: linear-gradient(204deg, #2fbeff, #1b70b6);
+            }
+        }
+
+        &--standard {
+            background-color: $white;
+            color: #2fbeff;
+
+            &:before {
+                background-color: rgba(0, 0, 0, .1);
+            }
+        }
+    }
+}
+
+
+.casey {
+    &__title {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+}
+
+// .swipercasey {
+//     max-width: 1366px;
+//     margin: 0 auto;
+// }
+
+// .containers {
+//     max-width: 1366px;
+//     margin: 0 auto;
+//     overflow: hidden;
+// }
+
+// .containerss {
+//     max-width: 1140px;
+//     margin: 0 auto;
+// }
+
+.swiper-button-next {
+    // left: 0;
+    z-index: 999;
+}
+
+.swiper-button-prev {
+    // right: 0;
+    z-index: 999;
+}
+
+.swiper {}
+
+// !!! баг с хедером 
+//!!!! добавить в снипеты все что нужно для слайдера
+.swiper-casey {
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        // 1140
+        // max-width: 1140px
+    }
+
+
+
+    &__item {
+        max-width: 350px;
+        display: grid;
+    }
+
+    &__inner {
+        padding: 15px;
+        background-color: #2c2f3b;
+    }
+
+    &__img {
+        width: 350px;
+        height: 230px;
+        object-fit: cover;
+        // line-height: 0;
+    }
+
+    &__title {
+        font-size: 24px;
+    }
+
+    &__text {
+        margin-bottom: 15px;
+    }
+
+    &__text span {
+        font-size: 14px;
+        // bolt!!!
+        margin-left: 10px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid hsla(0, 0%, 100%, .35);
+        border-bottom: 1px solid hsla(0, 0%, 100%, .35);
+        padding: 15px 0;
+        // max-width: 290px;
+    }
+
+    &__item {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    &__first {
+        color: #808289;
+    }
+
+    &__indicator {
+        color: $white;
+    }
+
+    &__to {
+        color: #ff932f;
+    }
+
+    &__after {
+        color: #2fff93;
+    }
+
+    &__to span,
+    &__after span {
+        margin-left: 5px;
+    }
+}
 
 
 

@@ -1,23 +1,35 @@
+const swipercasey = new Swiper('.swipercasey', {
+    slidesPerView: 3,
+    loop: true,
+    loopedslides: 1,
+    // slidesPerView: 2,
+    // navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    // },
+});
 
 
-// $padding-main
-let names = 1000;
+
+// // $padding-main
+// let names = 1000;
 
 
-name2()
-function name2() {
-    // neme / 4
-    var tottal = names -30  ;
-    var cum = tottal /4; //5
-    var cum1 = names - cum ;//45
-    var cum2 = cum1 - cum ;//40
-    var cum3 = cum2 - cum ;//35
-    var $cum4 = cum3 - cum ;//30
-    console.log(cum);
-    console.log(cum1);
-    console.log(cum2);
-    console.log(cum3);
-    console.log($cum4);
+// name2()
+// function name2() {
+//     // neme / 4
+//     var tottal = names -30  ;
+//     var cum = tottal /4; //5
+//     var cum1 = names - cum ;//45
+//     var cum2 = cum1 - cum ;//40
+//     var cum3 = cum2 - cum ;//35
+//     var $cum4 = cum3 - cum ;//30
+//     console.log(cum);
+//     console.log(cum1);
+//     console.log(cum2);
+//     console.log(cum3);
+//     console.log($cum4);
+    // можно сделать на мекцинах но тогда будет плохая читабельность кода лутьше бы сделать в формател плагина или js или кода который потом можно удалить
 
     // for (let index = 4; index < array.length; index++) {
     //     // const element = array[index];
@@ -32,7 +44,7 @@ function name2() {
     // document.querySelector('p').insertAdjacentHTML('beforebegin', 1111);
 
 
-}
+// }
 
 /*	$(".menu a").on("click", function (event) {
         event.preventDefault();
