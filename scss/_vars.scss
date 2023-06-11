@@ -3,7 +3,7 @@ sans-serif;*/
 
 $active: #fb0909;
 $focus:#14B4BE;
-$hover:#000010;
+$hover:#2fbeff;
 
 
 $ac: #fcd7b6;
@@ -29,10 +29,10 @@ $btn-menu:silver;
 
 
 //section
-$padding-main:100px;
-$padding-1200:60px;
-$padding-992:50px; //70
-$padding-768:40px; //50
+$padding-main:50px;
+$padding-1200:45px;
+$padding-992:40px; //70
+$padding-768:35px; //50
 $padding-576:30px;
 
 // @mixin line-clamp-box($line-clamp, ) {
@@ -65,11 +65,29 @@ $padding-576:30px;
 
 // }
 
-// @mixin line-height($font-size, $line-height, ) {
-//     line-height: ($line-height / $font-size)
-// }
+@mixin line-height($font-size, $line-height, $px, ) {
+    line-height: ($line-height / $font-size);
+    font-size: ($font-size + $px);
+}
 
 
+$padding-main2:50;
+@mixin cum($padding-main, $cum,) {
+    // line-height: ($line-height / $font-size);
+    // font-size: ($font-size + $px);
+    $cum: ($padding-main - 30);
+    // $padding-main: (-30 / 4);
+
+    // $cum = cum1 -30;
+
+}
+// var cum=tottal /4; //5
+// var $cum4=cum3 - cum; //30
+$px:px;
+// $padding-576:30px;
+
+
+// @include line-height(16, 28, $px, );
 
 // @mixin clamp($font-size,
 //     $line-height,

@@ -5,10 +5,198 @@
 @import 'libs';
 
 .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__logo {
+        width: 235px;
+        height: 78px;
+    }
+
+    &__items {
+        display: flex;
+    }
+
+    &__item {
+        margin-right: 40px;
+        position: relative;
+        overflow: hidden;
+        outline-color: #000000;
+        outline-offset: 5px;
+        padding: 0px 10px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            background-color: inherit;
+            transform: translateX(-100%);
+            border-radius: 4px;
+            // padding: 10px;
+        }
+
+        &:focus {
+            color: $focus;
+        }
+
+        &:hover {
+
+            // color: $white;
+            &::before {
+                transition: transform 0.5s;
+                background-color: $hover;
+                transform: translateX(0%);
+                z-index: -1;
+            }
+        }
+
+        &:active {
+            color: $active;
+        }
+
+    }
+
+    &__link {
+        &--active {}
+    }
+
     &__btn {
         display: none;
     }
 }
+
+
+.header {
+    padding: 11px 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: transparent;
+    // display: flex;
+    // justify-content: center;
+
+    &__nav {
+        display: flex;
+        align-items: center;
+    }
+
+    &__btn {
+        padding: 8px 35px 9px;
+    }
+}
+
+.language {
+    display: flex;
+    gap: 10px;
+    transition: background-color 0.5s;
+    margin-right: 35px;
+
+    &__link {
+        position: relative;
+        padding-right: 20px;
+        color: $white;
+        font-size: 12px;
+
+        &:hover {
+            color: $hover;
+        }
+
+        &::before {
+            content: "/";
+            position: absolute;
+            top: 0;
+            left: 25px;
+        }
+
+        &:focus {
+            color: $focus;
+        }
+
+        &:active {
+            color: $active;
+        }
+
+        &--active {
+            opacity: .4;
+
+            // color: $white;
+            // сделать без этого ховера
+            &:hover {
+                color: inherit;
+            }
+
+        }
+    }
+}
+
+
+
+.intro {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // align-items: center;
+        margin-right: 10px;
+        transition: all 6s ease-in-out;
+    }
+
+    &__title {
+        @include line-height(56, 56, px, );
+        margin-bottom: 35px;
+    }
+
+    &__text {
+        font-size: 18px;
+        margin-bottom: 35px;
+    }
+
+    &__text span {
+        color: $hover;
+    }
+
+    &__img {
+        width: 325px;
+        height: 655px;
+        object-fit: cover;
+    }
+}
+
+.about {
+    padding: 0;
+    
+
+    &__title {}
+
+    &__text {}
+
+    &__items {}
+
+    &__item {}
+
+    &__btn {}
+}
+
+
+
+
+
+
 
 
 
