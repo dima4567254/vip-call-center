@@ -507,54 +507,84 @@
     }
 }
 
+// стили сладера
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    font-size: 20px;
+    z-index: 999;
+}
 
-.casey {
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    border-radius: 4px;
+    background-color: $hover;
+    padding: 24px;
+    color: $white;
+    border-radius: 4px;
+    top: 54%;
+    z-index: 100;
+
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: all 0.6s ease-in-out;
+        background-image: linear-gradient(204deg, #2fbeff, #1b70b6);
+    }
+
+    &:hover {
+        opacity: 1;
+
+        &:before {
+            opacity: 1;
+        }
+    }
+}
+
+.swiper-button-next span,
+.swiper-button-prev span {
+    position: relative;
+    z-index: 1;
+}
+
+// !!! баг с хедером 
+//!!!! добавить в глобал снипеты все что нужно для слайдера
+// .buttons {}
+
+
+
+.swiper-casey {
+
+    &__wrapper {
+        max-width: 1110px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
     &__title {
         margin-bottom: 50px;
         text-align: center;
     }
-}
 
-// .swipercasey {
-//     max-width: 1366px;
-//     margin: 0 auto;
-// }
-
-// .containers {
-//     max-width: 1366px;
-//     margin: 0 auto;
-//     overflow: hidden;
-// }
-
-// .containerss {
-//     max-width: 1140px;
-//     margin: 0 auto;
-// }
-
-.swiper-button-next {
-    // left: 0;
-    z-index: 999;
-}
-
-.swiper-button-prev {
-    // right: 0;
-    z-index: 999;
-}
-
-.swiper {}
-
-// !!! баг с хедером 
-//!!!! добавить в снипеты все что нужно для слайдера
-.swiper-casey {
     &__items {
         display: flex;
         justify-content: space-between;
-        gap: 30px;
-        // 1140
-        // max-width: 1140px
     }
-
-
 
     &__item {
         max-width: 350px;
@@ -570,11 +600,10 @@
         width: 350px;
         height: 230px;
         object-fit: cover;
-        // line-height: 0;
     }
 
-    &__title {
-        font-size: 24px;
+    &__subtitle {
+        font-size: 23px;
     }
 
     &__text {
@@ -623,7 +652,169 @@
     }
 }
 
+// потом заполнить блок !!! и проверить еще раз все
 
+.clients {
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__box {
+        width: 50%;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__inner {
+        width: 50%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__link {
+        cursor: pointer;
+    }
+
+    &__img {
+        width: 555px;
+        height: 600px;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    // &__after {
+    //     top: 7%;
+    //     left: 0;
+    //     border-radius: 0 8px 8px 0;
+    // }
+
+    // &__before {
+    //     bottom: 7%;
+    //     right: 0;
+    //     border-radius: 8px 0 0 8px;
+    // }
+
+    // &__before,
+    // &__after {
+    //     position: absolute;
+    //     font-size: 24px;
+    //     padding: 8px 41px 8px;
+    //     background-color: #1b1e27;
+    // }
+}
+
+
+
+.accordion {
+    max-width: 470px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__item {
+        border-bottom: 1px solid hsla(0, 0%, 100%, .35);
+        padding: 21px 0;
+        cursor: pointer;
+        position: relative;
+
+        &::before,
+        &::after {
+            height: 12px;
+            width: 2px;
+            display: block;
+            content: '';
+            background-color: $white;
+            position: absolute;
+            top: 0;
+            left: 87%;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            // !!!! дабавить в техники
+
+            @media (max-width: 576px) {
+                height: 18px;
+            }
+        }
+
+        &::before {
+            transform: rotate(270deg);
+        }
+
+        &::after {
+            transform: rotate(180deg);
+        }
+
+        &--active {
+            &:before {
+                transform: rotate(90deg);
+            }
+
+            &::after {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    &__subtitle {
+        font-size: 24px;
+    }
+
+    &__text {
+        display: none;
+    }
+}
+
+.clients__images,
+.fancybox-content {
+    position: relative;
+
+    &::after,
+    &::before {
+        position: absolute;
+        font-size: 24px;
+        padding: 8px 41px 8px;
+        background-color: #1b1e27;
+    }
+
+    &::before {
+        content: "До";
+        bottom: 7%;
+        right: 0;
+        border-radius: 8px 0 0 8px;
+        z-index: 999;
+    }
+
+    &:after {
+        content: "Після";
+        z-index: 999;
+        top: 7%;
+        left: 0;
+        border-radius: 0 8px 8px 0;
+    }
+}
+
+
+
+
+
+.swiper-button-next {}
+
+.swiper-button-prev {}
+
+.swiper-wrapper {}
+
+.swiper-casey {}
+
+.swiper-casey__img {}
 
 
 

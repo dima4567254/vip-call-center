@@ -2,11 +2,35 @@ const swipercasey = new Swiper('.swipercasey', {
     slidesPerView: 3,
     loop: true,
     loopedslides: 1,
-    // slidesPerView: 2,
-    // navigation: {
-    //     nextEl: '.swiper-button-next',
-    //     prevEl: '.swiper-button-prev',
-    // },
+    spaceBetween: 30,/*растояние*/
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+const swiperclients = new Swiper('.swiperclients', {
+    slidesPerView: 1,
+    loop: true,
+    // loopedslides: 1,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+$('.accordion__item').on('click', function () {
+    $(this).next().toggleClass('accordion__text--active');
+});
+
+// // $(document).ready(function () {
+//     $(".accordion__item").click(function () {
+//         $(this).toggleClass("accordion__item--active");
+//     });
+// // });
+
+$(".accordion__item").click(function () {
+    $(this).toggleClass("accordion__item--active");
 });
 
 

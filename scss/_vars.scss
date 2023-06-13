@@ -64,7 +64,7 @@ $padding-576:30px;
 //     overflow: hidden;
 
 // }
-
+$px:px;
 @mixin line-height($font-size, $line-height, $px, ) {
     line-height: ($line-height / $font-size);
     font-size: ($font-size + $px);
@@ -72,7 +72,8 @@ $padding-576:30px;
 
 
 $padding-main2:50;
-@mixin cum($padding-main, $cum,) {
+
+@mixin cum($padding-main, $cum, ) {
     // line-height: ($line-height / $font-size);
     // font-size: ($font-size + $px);
     $cum: ($padding-main - 30);
@@ -81,11 +82,19 @@ $padding-main2:50;
     // $cum = cum1 -30;
 
 }
+
 // var cum=tottal /4; //5
 // var $cum4=cum3 - cum; //30
-$px:px;
+
 // $padding-576:30px;
 
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}
 
 // @include line-height(16, 28, $px, );
 
