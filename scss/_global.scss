@@ -202,7 +202,7 @@ body {
 }
 
 .form {
-    gap: 30px;
+    // gap: 30px;
 
     &__input {
         // padding: 15px;
@@ -213,11 +213,11 @@ body {
         // width: 100%;
         color: #050512;
         font-size: 14px;
-        margin-bottom: 10px;
+       
 
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
+        // &:not(:last-child) {
+        //     margin-right: 20px;
+        // }
 
         &::placeholder {
             color: rgb(118, 118, 118);
@@ -228,11 +228,7 @@ body {
         padding: 8px 33px;
     }
 
-    &__text {}
-
-    // &__text span {
-    //     color: $hover;
-    // }
+    
 }
 
 .section {
