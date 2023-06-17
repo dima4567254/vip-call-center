@@ -19,24 +19,19 @@ const swiperclients = new Swiper('.swiperclients', {
         prevEl: '.swiper-button-prev',
     },
 });
-// --------------------------------------------
-// $(document).ready(function () {
-//     $(".accordion__item").on("click", function () {
-//         if ($(this).hasClass('accordion__text--active')) {
-//             $(this).removeClass("accordion__text--active");
-//             // $(this).siblings('.content').slideUp(200);
-//             // $(".set > a span").removeClass("minus").addClass("plus");
-//         } else {
-//             // $(".set > a span").removeClass("minus").addClass("plus");
-//             // $(this).find("span").removeClass("plus").addClass("minus");
-//             $(".accordion__text").removeClass("accordion__text--active");
-//             $(this).addClass("accordion__text--active");
-//             // $('.content').slideUp(200);
-//             // $(this).siblings('.content').slideDown(200);
-//         }
-//     });
-// });
-// --------------------------------------------
+
+const sliderreviews = new Swiper('.sliderreviews', {
+    slidesPerView: 3,
+    loopedslides: 1,
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+
 $(document).ready(function () {
     $('.accordion > li  >.accordion__text').hide();
 
@@ -51,6 +46,151 @@ $(document).ready(function () {
         return false;
     });
 });
+
+// document.querySelector('body').onmouseleave = function () {
+//     // мышь колесико
+//     console.log('wheel');
+//     return false
+// }
+
+// let pageYOffset = 10;
+
+// data
+// console.log(img);
+// console.log('.abv');
+window.addEventListener('scroll', function () {
+    // $(img).css('transform', 'rotate3d(2, 1, 0,');
+    // var img = $(this);
+    // var degree = getDegreeElementById($(this).attr('id')) + 50;
+    // img.css('transform', 'rotate3d(2, 1, 0,)');
+    // left();
+    console.log('work');
+
+
+
+    // document.getElementById('body').innerHTML = pageYOffset + 'px';
+
+    // img.style.margin('10');
+    // // data
+    // console.log(img);
+});
+
+// function left(params) {
+let img = document.querySelector('.images');
+let abv = document.querySelector('.abv');
+let aba = document.querySelector('.abv');
+
+let left = 0
+let right = 0
+abv.addEventListener('click', () => {
+    // let left = -500;
+    // left = left - 500;
+    left1()
+    
+});
+aba.addEventListener('click', () => {
+    // let left = -500;
+    // left = left - 500;
+    right1()
+    
+});
+
+function left1() {
+    left = left - 10;
+    abv.style.marginLeft = left + 'px';
+}
+function right1() {
+    right = right - 10;
+    aba.style.marginright = right + 'px';
+}
+
+
+
+// document.onkeypress = function (event) {
+//     console.log('e.keyCode');
+//     let sq = document.querySelector('.sq');
+//     if (event.keyCode == 100) {
+//         left = left + 10;
+//         sq.style.marginLeft = left + 'px';
+//     }
+//     if (event.keyCode == 97) {
+//         left = left - 10;
+//         sq.style.marginLeft = left + 'px';
+//     }
+// }
+
+// }
+// ------------
+// var style = window.getComputedStyle(elem1, null);
+// var trans = style.transform;
+// ------------
+// console.log(trans);
+// let imgd = document.getElementById(".abv").style.transform = "rotate(50deg)";
+// console.log(imgd);
+// ----------
+// let img = document.querySelector('.img');
+// img.style.transform = `rotate(80deg)`;
+// console.log(img);
+// ----------
+// let transform = document.querySelector('.img').img.style.transform;
+// console.log(transform);
+// -----------------
+
+// var el = document.getElementById("thing");
+// var st = window.getComputedStyle(el, null);
+// var tr = st.getPropertyValue("-webkit-transform") ||
+//     st.getPropertyValue("-moz-transform") ||
+//     st.getPropertyValue("-ms-transform") ||
+//     st.getPropertyValue("-o-transform") ||
+//     st.getPropertyValue("transform") ||
+//     "FAIL";
+
+// With rotate(30deg)...
+// matrix(0.866025, 0.5, -0.5, 0.866025, 0px, 0px)
+// console.log('Matrix: ' + tr);
+
+// rotation matrix - http://en.wikipedia.org/wiki/Rotation_matrix
+// -----------------
+// var values = tr.split('(')[1].split(')')[0].split(',');
+// var a = values[0];
+// var b = values[1];
+// var c = values[2];
+// var d = values[3];
+
+// var scale = Math.sqrt(a * a + b * b);
+
+// console.log('Scale: ' + scale);
+
+// // arc sin, convert from radians to degrees, round
+// var sin = b / scale;
+// // next line works for 30deg but not 130deg (returns 50);
+// // var angle = Math.round(Math.asin(sin) * (180/Math.PI));
+// var angle = Math.round(Math.atan2(b, a) * (180 / Math.PI));
+
+// console.log('Rotate: ' + angle + 'deg');
+
+
+// var eText = document.getElementById('.abv');
+
+// eText.style.MozTransform = 'rotate(45deg)';
+
+// eText.style.WebkitTransform = 'rotate(45deg)';
+
+// eText.style.OTransform = 'rotate(45deg)';
+
+// eText.style.MsTransform = 'rotate(45deg)';
+
+// eText.style.transform = 'rotate(45deg)';
+// console.log(eText);
+
+
+
+// myclass.addEventListener("click", function () {
+//     $('.content_active').attr('style', 'transform'); // Именно УДАЛИТ свойство style
+// });
+// transform: translate3d(0px, 0px, 0px);
+// transform: translate3d(0px, -20px, 0px);
+// AOS.init();
     // accordion__subtitle
     // $(document).ready(function () {
     //     $('.accordion > li > .accordion__text').hide();

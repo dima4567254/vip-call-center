@@ -65,9 +65,7 @@
         &--active {}
     }
 
-    &__btn {
-        display: none;
-    }
+
 }
 
 
@@ -91,6 +89,10 @@
 
     &__btn {
         padding: 8px 35px 9px;
+    }
+
+    &__button {
+        display: none;
     }
 }
 
@@ -125,15 +127,14 @@
             color: $active;
         }
 
-        &--active {
+        &--disabled {
             opacity: .4;
-
-            // color: $white;
-            // сделать без этого ховера
-            &:hover {
-                color: inherit;
-            }
-
+            pointer-events: none;
+            /* делаем элемент неактивным для взаимодействия */
+            cursor: default;
+            /*  курсор в виде стрелки */
+            // color: #888;
+            /* цвет текста серый */
         }
     }
 }
@@ -183,21 +184,23 @@
     }
 }
 
-.flex {
-    display: flex;
-    position: relative;
-}
-
 .about {
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
 
     &__img {
-        position: relative;
+        // position: relative;
         height: 680px;
-        width: 50%;
+        width: 46%;
+        // width: 510px;
         background-image: url('../images/man.jpg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        border-radius: 16px;
         // height: 680px;
         // width: 50%;
         // ------
@@ -214,19 +217,19 @@
         // height: 100%;
         // width: 50%;
 
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            // left: 0;
-            // height: 680px;
-            // width: 510px;
-            background-image: url('../images/man.jpg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     // left: 0;
+        //     // height: 680px;
+        //     // width: 510px;
+        //     background-image: url('../images/man.jpg');
+        //     background-repeat: no-repeat;
+        //     background-position: center;
+        //     background-size: cover;
+        // }
     }
 
     // &::before {
@@ -252,13 +255,14 @@
     //     // width: 50%;
     // }
 
-    &__wrapper {
+    &__box {
         background-color: #2c2f3b;
-        // padding: 68px 60px 87px;
-        width: 50%;
+        padding: 68px 60px 87px;
+        width: 54%;
         border-bottom-right-radius: 16px;
         border-top-right-radius: 16px;
         margin-left: auto;
+        height: 570px;
         // position: relative;
 
         // &::before {
@@ -274,7 +278,6 @@
         //     background-position: left;
         //     background-size: cover;
         // }
-
     }
 
     &__inner {
@@ -295,10 +298,23 @@
     }
 
     &__btn {
-        padding: 18px 12px 9px 12px;
+        // padding: 18px 12px 9px 12px;
+        padding: 8px 28px;
     }
 }
 
+.abv {
+    // transform: rotate(0deg);
+    // transform: translate3d(0px, 0px, 0px)
+    background-color: red;
+    z-index: 999;
+}
+
+.sq {
+    width: 50px;
+    height: 50px;
+    // margin-right: ;
+}
 
 
 
@@ -372,8 +388,6 @@
 
 }
 
-
-
 .advantages {
 
     &__box {
@@ -415,7 +429,6 @@
     }
 }
 
-
 .services {
 
     &__box {
@@ -433,8 +446,6 @@
         max-width: 300px;
     }
 
-
-
     &__list {
         display: flex;
         justify-content: space-between;
@@ -447,9 +458,9 @@
         border-radius: 16px;
         background-color: #2c2f3b;
 
-        &--standard {
-            background-image: linear-gradient(135deg, #2fbeff, #1b70b6);
-        }
+        // &--standard {
+        //     background-image: linear-gradient(135deg, #2fbeff, #1b70b6);
+        // }
     }
 
     &__info {
@@ -494,11 +505,11 @@
     &__btn {
         padding: 8px 40px;
 
-        &--start {
-            &:before {
-                background-image: linear-gradient(204deg, #2fbeff, #1b70b6);
-            }
-        }
+        // &--start {
+        //     &:before {
+        //         background-image: linear-gradient(204deg, #2fbeff, #1b70b6);
+        //     }
+        // }
 
         &--standard {
             background-color: $white;
@@ -569,8 +580,6 @@
 // !!! баг с хедером 
 //!!!! добавить в глобал снипеты все что нужно для слайдера
 // .buttons {}
-
-
 
 .swiper-casey {
 
@@ -712,8 +721,6 @@
     // }
 }
 
-
-
 .accordion {
     max-width: 470px;
     // mr10
@@ -730,7 +737,6 @@
         border-bottom: 1px solid hsla(0, 0%, 100%, .35);
         padding: 21px 0;
         cursor: pointer;
-
     }
 
     &__subtitle {
@@ -739,13 +745,55 @@
         position: relative;
         transition: all 5s;
 
+        &--clients {
+
+            &::before,
+            &::after {
+                background-color: $white;
+                height: 12px;
+                width: 2px;
+            }
+
+            &::before {
+                transform: rotate(360deg);
+                // transform: rotate(270deg);
+            }
+
+            &::after {
+                transform: rotate(450deg);
+                // transform: rotate(180deg);
+            }
+        }
+
+        &--faq {
+            text-transform: uppercase;
+            font-size: 20px;
+
+            &::before,
+            &::after {
+                background-color: #2fbeff;
+
+                height: 14px;
+                width: 3px;
+            }
+
+            &::before {
+                transform: rotate(360deg);
+                // transform: rotate(270deg);
+            }
+
+            &::after {
+                transform: rotate(450deg);
+                // transform: rotate(180deg);
+            }
+        }
+
         &::before,
         &::after {
-            height: 12px;
-            width: 2px;
+            // height: 12px;
+            // width: 2px;
             display: block;
             content: '';
-            background-color: $white;
             position: absolute;
             top: 0;
             left: 87%;
@@ -778,6 +826,9 @@
         // opacity: 0;
 
 
+        &--faq {
+            font-size: 18px;
+        }
 
         &--active {
             // display: block;
@@ -787,15 +838,30 @@
     }
 }
 
+.active h3:before {
+    transition: all 2s;
+    // transform: rotate(320deg);
+}
 
 .active h3:after {
-    // &:before {
-    //     transform: rotate(90deg);
-    // }
+    transition: all 2s;
+    // transform: rotate(220deg);
+    // transform: rotate(90deg);
+}
 
-    // &::after {
+.active .accordion__subtitle.accordion__subtitle--clients:after {
     transform: rotate(90deg);
-    // }
+}
+
+// .active .accordion__subtitle .accordion__subtitle--clients:before {
+//     transform: rotate(250deg);
+// }
+.active .accordion__subtitle.accordion__subtitle--faq:after {
+    transform: rotate(220deg);
+}
+
+.active .accordion__subtitle.accordion__subtitle--faq:before {
+    transform: rotate(320deg);
 }
 
 .clients__images,
@@ -884,7 +950,6 @@
         padding: 0 10px;
         display: flex;
         align-items: center;
-        // margin-bottom: 15px;
     }
 
     &__item span {
@@ -915,9 +980,265 @@
 }
 
 
+.sliderreviews {
+    overflow: hidden;
+    // position: relative;
+}
+
+.slider-reviews {
+    // position: relative;
+
+    &__title {
+        margin-bottom: 55px;
+        text-align: center;
+    }
+
+    &__wrapper {
+        display: flex;
+        // flex-direction: column;
+        justify-content: space-between;
+        // flex-wrap: wrap;
+        // align-items: center;
+        // gap: 15px;
+
+    }
+
+    &__item {
+        border-radius: 8px;
+        background-color: #2c2f3b;
+        padding: 30px 20px;
+        max-width: 355px;
+        height: 445px;
+        // !!!
+        // height: 100%;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        // min-height: 100%;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &__img {
+        margin-right: 15px;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &__name {
+        font-size: 20px;
+    }
+
+    &__text {
+        @include line-height(18, 28, px, );
+        // flex: 1 1 auto;
+    }
+
+    &__subtext {}
+}
+
+.sliderreviews {
+    max-width: 1110px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+// подумать стоит ли оставлеять версию на модификаторах
+// подумать стоит ли делать обратную анимацию
+// переназвать секцию faq
+
+.faq {
+    padding: 50px 0 100px;
+
+    &__title {
+        margin-bottom: 40px;
+        text-align: center;
+        //!!! потом добавить в бем блок 
+    }
+
+    &__accordion {
+        margin: 0 auto;
+        max-width: 730px;
+    }
+}
+
+.footer {
+    background-color: #2c2f3b;
+    padding: 20px 0 15px;
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        max-width: 255px;
+        font-style: normal;
+        // display: flex;
+    }
+
+    // поменять название в html
+    &__logo {
+        margin-bottom: 25px;
+        display: block;
+    }
+
+    &__text {
+        max-width: 235px;
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    &__title {
+        padding-top: 25px;
+        margin-bottom: 35px;
+        font-size: 20px;
+    }
+
+    &__links {
+        display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-wrap: wrap;
+        // max-width: 160px;
+    }
+
+    &__link {
+        margin-right: 20px;
+        font-size: 18px;
+        transition: color 0.5s;
+        display: block;
+        margin-bottom: 15px;
+
+        &:focus {
+            color: $focus;
+        }
+
+        &:hover {
+            color: $hover;
+        }
+
+        &:active {
+            color: $active;
+        }
+    }
+
+    &__svg {
+        margin-right: 15px;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        transition: color 0.5s;
+
+        &:focus {
+            color: $focus;
+        }
+
+        &:hover {
+            color: $hover;
+        }
+
+        &:active {
+            color: $active;
+        }
+    }
+
+    &__info {
+        font-size: 18px;
+    }
+
+    //!!! не знаю правильно ли сделал форму
+    &__input {
+        // padding: 15px;
+        border-radius: 4px;
+        // padding: 0 12px
+        // padding: 0px 0px 0px 0px;
+        padding: 6px 10px;
+        width: 100%;
+        color: #050512;
+        font-size: 14px;
+        border: none;
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        &::placeholder {
+            // color:  rgb(133, 133, 133);
+            // rgb(118, 118, 118), rgb(133, 133, 133));
+            // background: rgb(118, 118, 118);
+            // background-clip: text;
+            // background: linear-gradient(90deg, rgba(118, 118, 118, 1) 0%, rgba(133, 133, 133, 1) 100%);
+            color: silver;
+
+        }
+    }
+
+    &__btn {
+        padding: 8px 33px;
+        width: 100%;
+    }
+
+}
+
+
+.social {
+    // gap: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    // поменять иконки
+
+    &__item {}
+
+    &__link {
+        &:not(:last-child) {
+            margin-right: 40px;
+        }
+    }
+
+    &__svg {
+        // margin-right: 40px;
+        // display: block;
+
+
+    }
+
+    &__svg path {
+        transition: fill 0.5s;
+
+
+
+        &:hover {
+            fill: $ac;
+        }
+    }
+}
+
+
+
+.logo {}
+
+.menu__logo {}
+
+.logo__menu {}
+
+
+
 
 
 .form {}
+
+.form__title {}
 
 .sr-only {}
 
@@ -936,6 +1257,55 @@
 
 
 
+
+// @media screen and (min-width: 993px) #main-section .section-figure {
+//     width: 1110px;
+//     height: 1110px;
+//     left: unset;
+//     right: -950px;
+//     top: -100px;
+// }
+
+
+
+// .section-figure {
+//     left: -480px;
+//     top: 5%;
+//     width: 555px;
+//     height: 555px;
+// }
+.section-figure {
+    width: 1110px;
+    height: 1110px;
+    left: unset;
+    right: -950px;
+    top: -100px;
+}
+
+.section-figure,
+.section-figure2 {
+    position: absolute;
+    z-index: -1;
+}
+
+[data-aos][data-aos][data-aos-duration="800"],
+body[data-aos-duration="800"] [data-aos] {
+    transition-duration: .8s;
+}
+
+[data-aos=fromOpacity].aos-animate {
+    opacity: 1;
+}
+
+.section-figure,
+.section-figure2 {
+    object-fit: unset;
+}
+
+[data-aos=fromOpacity] {
+    opacity: 0;
+    transition-property: opacity;
+}
 
 /*медия всегда должны быть в низу */
 
