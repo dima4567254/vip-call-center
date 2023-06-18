@@ -18,7 +18,37 @@ body {
 
 .logo {
     &__menu {}
+}
 
+// .visible {
+//     visibility: visible !important;
+// }
+
+@keyframes my-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.animate__animated.animate__fadeInLeft {
+    --animate-duration: 2s;
+    --animate-delay: 25s;
+}
+
+:root {
+    --animate-delay: 0.5s;
 }
 
 .container {

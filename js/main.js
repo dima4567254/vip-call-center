@@ -31,6 +31,16 @@ const sliderreviews = new Swiper('.sliderreviews', {
     },
 });
 
+// var scroll = window.pageYOffset, array = [];
+// wow.boxes.forEach(function (box) {
+//     let pos = $(box).position(), height = $(box).height();
+//     if (pos.top + height < scroll) {
+//         $(box).addClass("visible");
+//     } else {
+//         array.push(box);
+//     }
+// });
+// wow.boxes = array;
 
 $(document).ready(function () {
     $('.accordion > li  >.accordion__text').hide();
@@ -47,6 +57,65 @@ $(document).ready(function () {
     });
 });
 
+// initWow_scroll: function() {
+//     var main = this;
+
+//     var wow = new WOW(
+//         {
+//             offset: 0,          // distance to the element when triggering the animation (default is 0)
+//             callback: function (box) {
+//                 // the callback is fired every time an animation is started
+//                 // the argument that is passed in is the DOM node being animated
+//             },
+//             scrollContainer: null // optional scroll container selector, otherwise use window
+//         }
+//     );
+//     wow.init();
+
+//     return main;
+// }
+
+// $(function () {
+
+//     var $window = $(window),
+//         win_height_padded = $window.height() * 1.1,
+//         isTouch = Modernizr.touch;
+
+//     if (isTouch) { $('.revealOnScroll').addClass('animated'); }
+
+//     $window.on('scroll', revealOnScroll);
+
+//     function revealOnScroll() {
+//         var scrolled = $window.scrollTop(),
+//             win_height_padded = $window.height() * 1.1;
+
+//         // Showed...
+//         $(".revealOnScroll:not(.animated)").each(function () {
+//             var $this = $(this),
+//                 offsetTop = $this.offset().top;
+
+//             if (scrolled + win_height_padded > offsetTop) {
+//                 if ($this.data('timeout')) {
+//                     window.setTimeout(function () {
+//                         $this.addClass('animated ' + $this.data('animation'));
+//                     }, parseInt($this.data('timeout'), 10));
+//                 } else {
+//                     $this.addClass('animated ' + $this.data('animation'));
+//                 }
+//             }
+//         });
+//         // Hidden...
+//         $(".revealOnScroll.animated").each(function (index) {
+//             var $this = $(this),
+//                 offsetTop = $this.offset().top;
+//             if (scrolled + win_height_padded < offsetTop) {
+//                 $(this).removeClass('animated fadeInUp flipInX lightSpeedIn')
+//             }
+//         });
+//     }
+
+//     revealOnScroll();
+// });
 // document.querySelector('body').onmouseleave = function () {
 //     // мышь колесико
 //     console.log('wheel');
@@ -94,48 +163,48 @@ $(window).scroll(function () {
 // });
 
 // function left(params) {
-let img = document.querySelector('.images');
-let abv = document.querySelector('.abv');
-let aba = document.querySelector('.aba');
+// let img = document.querySelector('.images');
+// let abv = document.querySelector('.abv');
+// let aba = document.querySelector('.aba');
 
-let left = 0;
-let right = 0;
-let bottom1 = 0;
-let top1 = 0;
+// let left = 0;
+// let right = 0;
+// let bottom1 = 0;
+// let top1 = 0;
 
-// abv.addEventListener('click', () => {
-//     // let left = -500;
-//     // left = left - 500;
-//     // left1()
-//     bottom2()
-// });
-// aba.addEventListener('click', () => {
-//     // let left = -500;
-//     // left = left - 500;
-//     // right1()
-//     // top2()
-// });
+// // abv.addEventListener('click', () => {
+// //     // let left = -500;
+// //     // left = left - 500;
+// //     // left1()
+// //     bottom2()
+// // });
+// // aba.addEventListener('click', () => {
+// //     // let left = -500;
+// //     // left = left - 500;
+// //     // right1()
+// //     // top2()
+// // });
 
-// function left1() {
-//     left = left - 10;
-//     abv.style.marginLeft = left + 'px';
+// // function left1() {
+// //     left = left - 10;
+// //     abv.style.marginLeft = left + 'px';
+// // }
+// // function right1() {
+// //     right = right - 10;
+// //     aba.style.marginRight = right + 'px';
+// // }
+
+
+
+// function top2() {
+//     top1 = top1 - 10;
+//     aba.style.marginTop = top1 + 'px';
 // }
-// function right1() {
-//     right = right - 10;
-//     aba.style.marginRight = right + 'px';
+
+// function bottom2() {
+//     bottom1 = bottom1 + 10;
+//     aba.style.marginBottom = bottom1 + 'px';
 // }
-
-
-
-function top2() {
-    top1 = top1 - 10;
-    aba.style.marginTop = top1 + 'px';
-}
-
-function bottom2() {
-    bottom1 = bottom1 + 10;
-    aba.style.marginBottom = bottom1 + 'px';
-}
 
 // bottom
 
