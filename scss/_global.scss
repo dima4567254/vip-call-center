@@ -13,6 +13,7 @@ body {
     color: $white;
     // letter-spacing: 0.6px;
     background-color: #1b1e27;
+    // overflow: hidden;
 }
 
 .logo {
@@ -25,6 +26,7 @@ body {
     // max-width: 1110px;
     margin: 0 auto;
     padding: 0 15px;
+    // overflow: hidden;
 
     &--big {
         max-width: 1680px;

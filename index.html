@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="https://yoursite.ru/favicon.png" type="image/x-icon">
     <title>vip-call-center</title>
     <link rel="stylesheet" href="css/style.min.css?_v=20230604180731">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css?_v=20230617194258" rel="stylesheet">
 </head>
 
 <!--!!!! добавить в снипеты секции и новые иконки -->
@@ -17,6 +18,7 @@
 <!-- заполнить блоки -->
 <!-- ховере поченить в первом блоке -->
 <!-- иконки в футере -->
+<!-- проверить сайт на перевод есть не те слова ////Как работать с нами? -->
 
 
 <body>
@@ -79,10 +81,12 @@
         <section class="intro">
             <div class="container">
                 <!-- <div class="abv">style="transform: translate3d(0px, 0px, 0px)"</div> -->
-                <div class="images">
-                    <img src="../images/shape 2.svg" alt="img" class="img section-figure aos-init aos-animate"
-                        data-aos="fromOpacity">
-                </div>
+                <!-- <img src="../images/icons/decor1.svg" alt="img" class="img section-figure aos-init aos-animate"
+                    data-aos="fromOpacity"> -->
+                <!-- <img src="../images/icons/decor2.svg" alt="img" class="section-figure2 aos-init aos-animate"
+                    data-aos="fromOpacity" style="transform: translate3d(0px, 0px, 0px)"> -->
+                <img class="intro__images" src="../images/icons/decor1.svg" alt="Декор">
+                <img class="intro__images intro__images--decor" src="../images/icons/decor2.svg" alt="Декор">
                 <div class="intro__wrapper">
                     <div class="intro__inner">
                         <h1 class="intro__title">
@@ -123,6 +127,11 @@
 
         <section class="about section section--bem">
             <div class="container">
+                <!-- <img src="../images/icons/decor3.svg" alt="img" class="section-figure aos-init aos-animate"
+                    data-aos="fromOpacity"> -->
+                <!-- <img src="../images/icons/decor3.svg" alt="img" class="section-figure3 aos-init aos-animate"
+                    data-aos="fromOpacity" style="transform: translate3d(0px, 0px, 0px)"> -->
+                <img class="about__images about__images--decor" src="../images/icons/decor3.svg" alt="Декор">
                 <div class="about__wrapper">
                     <div class="about__img"></div>
                     <div class="about__box">
@@ -277,6 +286,12 @@
         </section>
 
         <section class="services section section--bem">
+            <!-- <img src="../images/icons/decor4.svg" alt="img" class="section-figure4 aos-init aos-animate"
+                data-aos="fromOpaciy" style="transform: translate3d(0px, 0px, 0px)"> -->
+            <img src="../images/icons/decor5.svg" alt="img" class="section-figure5 aos-init aos-animate"
+                data-aos="fromOpaciy" style="transform: translate3d(0px, 0px, 0px)">
+            <img class="services__images" src="../images/icons/decor4.svg" alt="Декор">
+            <!-- <img class="services__images services__images--decor" src="../images/icons/decor5.svg" alt="Декор"> -->
             <div class="container">
                 <div class="services__box">
                     <h2 class="services__title title">
@@ -411,6 +426,8 @@
         </section>
 
         <section class="swiper-casey section section--bem">
+            <img src="../images/icons/decor6.svg" alt="img" class="section-figure6 aos-init aos-animate"
+                data-aos="fromOpaciy" style="transform: translate3d(0px, 0px, 0px)">
             <div class="container container--slider">
                 <h2 class="swiper-casey__title title">
                     Кейси
@@ -971,6 +988,8 @@
         </section>
 
         <section class="partners section section--bem">
+            <img src="../images/icons/decor7.svg" alt="img" class="section-figure7 aos-init aos-animate"
+                data-aos="fromOpaciy" style="transform: translate3d(0px, 0px, 0px)">
             <div class="container">
                 <h2 class="partners__title title">
                     Наші партнери
@@ -1073,14 +1092,18 @@
         </section>
 
         <section class="slider-reviews section section--bem">
+            <img src="../images/icons/decor8.svg" alt="img" class="section-figure8 aos-init aos-animate"
+                data-aos="fromOpaciy" style="transform: translate3d(0px, 0px, 0px)">
+            <img src="../images/icons/decor9.svg" alt="img" class="section-figure9 aos-init aos-animate"
+                data-aos="fromOpaciy" style="transform: translate3d(0px, 0px, 0px)">
             <div class="container container--slider">
                 <h2 class="slider-reviews__title title">
-                    Как работать с нами?
+                    Відгуки
                 </h2>
-                <div class="sliderreviews">
+                <div class="slider-reviews__wrapper sliderreviews">
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-                    <div class="swiper-wrapper slider-reviews__wrapper">
+                    <div class="slider-reviews__items swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="slider-reviews__item">
                                 <div class="slider-reviews__inner">
@@ -1100,6 +1123,7 @@
                                     </p>
                                 </div>
                                 <div class=""></div>
+                                <!-- !!! -->
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -1122,6 +1146,60 @@
                                         всё
                                         отлично.
                                         Рекомендую смело всем этот КЦ
+                                    </p>
+                                </div>
+                                <div class=""></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-reviews__item">
+                                <div class="slider-reviews__inner">
+                                    <img class="slider-reviews__img" src="images/alexey.png" alt="Алексей Варганич">
+                                    <div class="slider-reviews__name">
+                                        Алексей Варганич
+                                    </div>
+                                </div>
+                                <div class="slider-reviews__text">
+                                    <p>
+                                        Вообщем мне нравится с вами сотрудничество, подход к работе не через одного
+                                        место,
+                                        все слажено и оперативно.
+                                    </p>
+                                </div>
+                                <div class=""></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-reviews__item">
+                                <div class="slider-reviews__inner">
+                                    <img class="slider-reviews__img" src="images/alexey.png" alt="Алексей Варганич">
+                                    <div class="slider-reviews__name">
+                                        Алексей Варганич
+                                    </div>
+                                </div>
+                                <div class="slider-reviews__text">
+                                    <p>
+                                        Вообщем мне нравится с вами сотрудничество, подход к работе не через одного
+                                        место,
+                                        все слажено и оперативно.
+                                    </p>
+                                </div>
+                                <div class=""></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-reviews__item">
+                                <div class="slider-reviews__inner">
+                                    <img class="slider-reviews__img" src="images/alexey.png" alt="Алексей Варганич">
+                                    <div class="slider-reviews__name">
+                                        Алексей Варганич
+                                    </div>
+                                </div>
+                                <div class="slider-reviews__text">
+                                    <p>
+                                        Вообщем мне нравится с вами сотрудничество, подход к работе не через одного
+                                        место,
+                                        все слажено и оперативно.
                                     </p>
                                 </div>
                                 <div class=""></div>
@@ -1363,14 +1441,16 @@
             </div>
         </div>
     </footer>
-
-    <div class="abv">style="transform: translate3d(0px, 0px, 0px)"</div>
+    <!-- ------------ -->
+    <!-- <div class="abv">style="transform: translate3d(0px, 0px, 0px)"</div>
     <div class="aba">style="transform: translate3d(0px, 0px, 0px)"</div>
+    <div class="sq">я блок</div> -->
+    <!-- ------------ -->
     <!-- <div class="images">
         <img src="../images/shape 2.svg" alt="img" class="img section-figure aos-init aos-animate"
             data-aos="fromOpacity">
     </div> -->
-    <div class="sq">я блок</div>
+
     <!-- <script>
         AOS.init();
     </script> -->
@@ -1385,7 +1465,13 @@
     <script src="js/runtime.2fd2dd53.js?_v=20230616232959" defer></script>
     <script src="js/941.5a858917.js?_v=20230616232959" defer></script>
     <script src="js/public.ba201670.js?_v=20230616232959" defer></script> -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20230617194258"></script>
     <script src="js/main.min.js?_v=20230616232959"></script>
+    <script>
+        AOS.init(
+
+        );
+    </script>
 
     <!-- !!! -->
 </body>

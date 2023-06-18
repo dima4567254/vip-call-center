@@ -58,51 +58,86 @@ $(document).ready(function () {
 // data
 // console.log(img);
 // console.log('.abv');
-window.addEventListener('scroll', function () {
-    // $(img).css('transform', 'rotate3d(2, 1, 0,');
-    // var img = $(this);
-    // var degree = getDegreeElementById($(this).attr('id')) + 50;
-    // img.css('transform', 'rotate3d(2, 1, 0,)');
-    // left();
-    console.log('work');
+// window.addEventListener('wheel', function (evt) {
+//     if (evt.deltaY < 0 && window.scrollY === 0) {
+//         // поймали
+//         bottom2()
+//     }
+// });
 
-
-
-    // document.getElementById('body').innerHTML = pageYOffset + 'px';
-
-    // img.style.margin('10');
-    // // data
-    // console.log(img);
+var scrollPos = 0;
+$(window).scroll(function () {
+    var st = $(this).scrollTop();
+    if (st > scrollPos) {
+        $('#result').html('Вниз');
+        top2()
+    } else {
+        $('#result').html('Вверх');
+        bottom2()
+    }
+    scrollPos = st;
 });
+
+// window.addEventListener('scroll', function () {
+//     // $(img).css('transform', 'rotate3d(2, 1, 0,');
+//     // var img = $(this);
+//     // var degree = getDegreeElementById($(this).attr('id')) + 50;
+//     // img.css('transform', 'rotate3d(2, 1, 0,)');
+//     // left();
+//     console.log('work');
+
+//     // document.getElementById('body').innerHTML = pageYOffset + 'px';
+
+//     // img.style.margin('10');
+//     // // data
+//     // console.log(img);
+// });
 
 // function left(params) {
 let img = document.querySelector('.images');
 let abv = document.querySelector('.abv');
-let aba = document.querySelector('.abv');
+let aba = document.querySelector('.aba');
 
-let left = 0
-let right = 0
-abv.addEventListener('click', () => {
-    // let left = -500;
-    // left = left - 500;
-    left1()
-    
-});
-aba.addEventListener('click', () => {
-    // let left = -500;
-    // left = left - 500;
-    right1()
-    
-});
+let left = 0;
+let right = 0;
+let bottom1 = 0;
+let top1 = 0;
 
-function left1() {
-    left = left - 10;
-    abv.style.marginLeft = left + 'px';
+// abv.addEventListener('click', () => {
+//     // let left = -500;
+//     // left = left - 500;
+//     // left1()
+//     bottom2()
+// });
+// aba.addEventListener('click', () => {
+//     // let left = -500;
+//     // left = left - 500;
+//     // right1()
+//     // top2()
+// });
+
+// function left1() {
+//     left = left - 10;
+//     abv.style.marginLeft = left + 'px';
+// }
+// function right1() {
+//     right = right - 10;
+//     aba.style.marginRight = right + 'px';
+// }
+
+
+
+function top2() {
+    top1 = top1 - 10;
+    aba.style.marginTop = top1 + 'px';
 }
-function right1() {
-    right = right - 10;
-    aba.style.marginright = right + 'px';
+
+function bottom2() {
+    bottom1 = bottom1 + 10;
+    aba.style.marginBottom = bottom1 + 'px';
 }
+
+// bottom
 
 
 

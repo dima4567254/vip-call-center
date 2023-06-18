@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="375px" height="331px" viewBox="0 0 375 331" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>little D Copy</title>
+    <defs>
+        <linearGradient x1="68.1244281%" y1="14.7609135%" x2="27.8874387%" y2="88.4856889%" id="linearGradient-1">
+            <stop stop-color="#2FBEFF" offset="0%"></stop>
+            <stop stop-color="#1B70B6" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="little-D-Copy" transform="translate(0.000000, 0.718015)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <polygon id="Path_1" points="333.603896 0.281984665 43.8311688 0.281984665 0 70.9560587 187.5 329.281985 375 70.9560587"></polygon>
+        </g>
+    </g>
+</svg>
