@@ -23,8 +23,9 @@
 <!-- иконки в футере -->
 <!-- проверить сайт на перевод есть не те слова ////Как работать с нами? -->
 
+<!-- потом убрать!!! -->
 
-<body>
+<body data-aos-easing="cubic-bezier(.4, .8, .74, 1)">
     <header class="header">
         <div class="container container--big">
             <nav class="menu">
@@ -65,8 +66,10 @@
                 </ul>
                 <div class="header__nav">
                     <ul class="language">
-                        <a class="language__link language__link--disabled" href="/ua">ua</a>
-                        <a class="language__link" href="/ru">ru</a>
+                        <a class="language__link language__link--disabled language__link--active" href="#">ua</a>
+                        <!-- /ua -->
+                        <a class="language__link" href="#">ru</a>
+                        <!-- /ru -->
                     </ul>
                     <button class="header__btn btn btn--start" type="button">
                         <span>Зв'язатись з нами</span>
@@ -80,15 +83,20 @@
         </div>
     </header>
 
-    <main class="main">
+    <!-- <main class="main">
+
         <section class="intro">
+
             <div class="container">
+                <div class="intro__images">
+                    <img class="" src="../images/icons/decor1.svg" alt="Декор">
+                </div>
                 <!-- <div class="abv">style="transform: translate3d(0px, 0px, 0px)"</div> -->
                 <!-- <img src="../images/icons/decor1.svg" alt="img" class="img section-figure aos-init aos-animate"
                     data-aos="fromOpacity"> -->
                 <!-- <img src="../images/icons/decor2.svg" alt="img" class="section-figure2 aos-init aos-animate"
-                    data-aos="fromOpacity" style="transform: translate3d(0px, 0px, 0px)"> -->
-                <img class="intro__images" src="../images/icons/decor1.svg" alt="Декор">
+                    data-aos="fromOpacity" style="transform: translate3d(0px, 0px, 0px)"> --
+
                 <img class="intro__images intro__images--decor" src="../images/icons/decor2.svg" alt="Декор">
                 <div class="intro__wrapper">
                     <div class="intro__inner">
@@ -133,7 +141,7 @@
                 <!-- <img src="../images/icons/decor3.svg" alt="img" class="section-figure aos-init aos-animate"
                     data-aos="fromOpacity"> -->
                 <!-- <img src="../images/icons/decor3.svg" alt="img" class="section-figure3 aos-init aos-animate"
-                    data-aos="fromOpacity" style="transform: translate3d(0px, 0px, 0px)"> -->
+                    data-aos="fromOpacity" style="transform: translate3d(0px, 0px, 0px)"> --
                 <img class="about__images about__images--decor" src="../images/icons/decor3.svg" alt="Декор">
                 <div class="about__wrapper">
                     <div class="about__img" data-aos="fade-right"></div>
@@ -291,10 +299,10 @@
         <section class="services section section--bem">
             <!-- <img src="../images/icons/decor4.svg" alt="img" class="section-figure4 aos-init aos-animate"
                 data-aos="fromOpaciy" style="transform: translate3d(0px, 0px, 0px)"> -->
-            <img src="../images/icons/decor5.svg" alt="img" class="section-figure5 aos-init aos-animate"
-                data-aos="fromOpaciy" style="transform: translate3d(0px, 0px, 0px)">
+            <!-- <img src="../images/icons/decor5.svg" alt="img" class="section-figure5 aos-init aos-animate"
+                data-aos="fromOpaciy" style="transform: translate3d(0px, 0px, 0px)"> --
             <img class="services__images" src="../images/icons/decor4.svg" alt="Декор">
-            <!-- <img class="services__images services__images--decor" src="../images/icons/decor5.svg" alt="Декор"> -->
+            <img class="services__images services__images--decor" src="../images/icons/decor5.svg" alt="Декор">
             <div class="container">
                 <div class="services__box">
                     <h2 class="services__title title" data-aos="fade-up" data-aos-delay="100">
@@ -429,18 +437,20 @@
         </section>
 
         <section class="swiper-casey section section--bem">
-            <img src="../images/icons/decor6.svg" alt="img" class="section-figure6 aos-init aos-animate"
-                data-aos="fromOpaciy" style="transform: translate3d(0px, 0px, 0px)">
+            <!-- <img src="../images/icons/decor6.svg" alt="img" class="section-figure6 aos-init aos-animate"
+                data-aos="fromOpaciy" style="transform: translate3d(0px, 0px, 0px)"> --
+
             <div class="container container--slider">
+                <img class="swiper-casey__images" src="../images/icons/decor6.svg" alt="Декор">
                 <h2 class="swiper-casey__title title" data-aos="fade-up">
                     Кейси
                 </h2>
                 <div class="swiper-casey__wrapper swipercasey" data-aos="fromOpacity" data-aos-delay="100">
-                    <!-- data-aos="fromOpacity" -->
+                    <!-- data-aos="fromOpacity" --
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-wrapper swiper-casey__items">
-                        <!-- !!! список -->
+                        <!-- !!! список --
                         <li class="swiper-casey__item swiper-slide">
                             <img class="swiper-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
                             <div class="swiper-casey__inner">
@@ -991,8 +1001,9 @@
         </section>
 
         <section class="partners section section--bem">
-            <img src="../images/icons/decor7.svg" alt="img" class="section-figure7 aos-init aos-animate"
-                data-aos="fromOpaciy" style="transform: translate3d(0px, 0px, 0px)">
+            <!-- <img src="../images/icons/decor7.svg" alt="img" class="section-figure7 aos-init aos-animate"
+                data-aos="fromOpaciy" style="transform: translate3d(0px, 0px, 0px)"> --
+            <img class="partners__images" src="../images/icons/decor7.svg" alt="Декор">
             <div class="container">
                 <h2 class="partners__title title" data-aos="fade-up">
                     Наші партнери
@@ -1034,7 +1045,6 @@
                 </ul>
             </div>
         </section>
-
 
         <section class="work section section--bem">
             <div class="container">
@@ -1091,17 +1101,20 @@
         </section>
 
         <section class="slider-reviews section section--bem">
-            <img src="../images/icons/decor8.svg" alt="img" class="section-figure8 aos-init aos-animate"
+            <!-- <img src="../images/icons/decor8.svg" alt="img" class="section-figure8 aos-init aos-animate"
                 data-aos="fromOpaciy" style="transform: translate3d(0px, 0px, 0px)">
             <img src="../images/icons/decor9.svg" alt="img" class="section-figure9 aos-init aos-animate"
-                data-aos="fromOpaciy" style="transform: translate3d(0px, 0px, 0px)">
+                data-aos="fromOpaciy" style="transform: translate3d(0px, 0px, 0px)"> --
             <div class="container container--slider">
+                <img class="slider-reviews__images" src="../images/icons/decor8.svg" alt="Декор">
+                <img class="slider-reviews__images slider-reviews__images--reviews" src="../images/icons/decor9.svg"
+                    alt="Декор">
                 <h2 class="slider-reviews__title title" data-aos="fade-up" data-aos-delay="100">
                     Відгуки
                 </h2>
                 <div class="slider-reviews__wrapper sliderreviews" data-aos="fromOpacity" data-aos-delay="500">
                     <!-- fromOpacity data-aos="userFadeUp" -->
-                    <!-- !!!не знаю такой аимации -->
+                    <!-- !!!не знаю такой аимации --
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="slider-reviews__items swiper-wrapper">
@@ -1124,7 +1137,7 @@
                                     </p>
                                 </div>
                                 <div class=""></div>
-                                <!-- !!! -->
+                                <!-- !!! --
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -1222,7 +1235,7 @@
                                     </p>
                                 </div>
                                 <div class=""></div>
-                                <!-- !!! -->
+                                <!-- !!! --
                             </div>
                         </div>
                     </div>
@@ -1442,7 +1455,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
     <!-- ------------ -->
     <!-- <div class="abv">style="transform: translate3d(0px, 0px, 0px)"</div>
     <div class="aba">style="transform: translate3d(0px, 0px, 0px)"</div>

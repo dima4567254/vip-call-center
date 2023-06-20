@@ -1,8 +1,10 @@
 /*$Butler: 'Butler',
 sans-serif;*/
 
+$active: inherit;
+$focus:inherit;
 $active: #fb0909;
-$focus:#14B4BE;
+// $focus:#14B4BE;
 $hover:#2fbeff;
 
 
@@ -65,6 +67,7 @@ $padding-576:30px;
 
 // }
 $px:px;
+
 @mixin line-height($font-size, $line-height, $px, ) {
     line-height: ($line-height / $font-size);
     font-size: ($font-size + $px);

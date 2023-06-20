@@ -1,3 +1,103 @@
+$('.header__button').on('click', function () {
+    $('.menu__items').toggleClass('menu__items--active');
+
+    /*$('.header__logo').toggleClass('menu__list--active');
+    $('.intro__btn').toggleClass('menu__list--active');*/
+});
+
+// $('.language__link').on('click', function () {
+//     $('.language__link').toggleClass('language__link--active');
+
+//     /*$('.header__logo').toggleClass('menu__list--active');
+//     $('.intro__btn').toggleClass('menu__list--active');*/
+// });
+
+if (link.classList.contains('language__link--active'))
+    for (let i = 0; i < elements.length; i++) {/*прокручиваем в цикле все элементы*/
+        // elements[i].addEventListener('click', function () {  /*при клике на элемент
+        //  */
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].classList.add('language__link--active'); /*удаляем у всех class active*/
+        }
+        // this.classList.removeClass('language__link--active');/*добавляем class active по которому кликнули */
+        // })
+    }
+else {
+    let elements = document.getElementsByClassName("language__link");
+    for (let i = 0; i < elements.length; i++) {/*прокручиваем в цикле все элементы*/
+        elements[i].addEventListener('click', function () {  /*при клике на элемент
+ */
+            for (let i = 0; i < elements.length; i++) {
+                elements[i].classList.remove('language__link--active'); /*удаляем у всех class active*/
+            }
+            // this.classList.removeClass('language__link--active');/*добавляем class active по которому кликнули */
+        })
+    }
+}
+
+// else {
+
+// }
+
+let link = document.querySelector('.language__link');
+
+
+
+
+// document.querySelectorAll('.language__link').forEach((item) =>
+
+// item.addEventListener('click', () => {
+//     const parent = item;
+//     // const parent = item.parentNode;
+
+//     if (parent.classList.contains('language__link--active')) {
+//         // parent.classList.add('language__link--active');
+//         let elements = document.getElementsByClassName("language__link");
+//         for (let i = 0; i < elements.length; i++) {/*прокручиваем в цикле все элементы*/
+//             // elements[i].addEventListener('click', function () {  /*при клике на элемент
+//             for (let i = 0; i < elements.length; i++) {
+//                 elements[i].classList.add('language__link--active'); /*удаляем у всех class active*/
+//                 link.addEventListener('click', () => {
+//                     elements[i].classList.toggle('language__link--active');
+//                     // if (link.classList.contains('language__link')) {
+//                     //     for (let i = 0; i < elements.length; i++) {/*прокручиваем в цикле все элементы*/
+//                     //         // elements[i].addEventListener('click', function () {  /*при клике на элемент
+//                     //         for (let i = 0; i < elements.length; i++) {
+//                     //             elements[i].classList.remove('language__link--active'); /*удаляем у всех class active*/
+//                     //             link.addEventListener('click', () => {
+//                     //                 if (link.classList.contains('language__link')) {
+//                     //                     link.classList.add('language__link--active');
+//                     //                 }
+//                     //             });
+//                     //         }
+//                     //     }
+//                     // }
+//                 }
+//                 )
+//             }
+//             // this.classList.add('active');/*добавляем class active по которому кликнули */
+//             // })
+//         }
+//     }
+//     else {
+//         // document
+//         //     .querySelectorAll('.accordion__link')
+//         //     .forEach((child) => child.classList.remove('language__link--active'))
+
+//         parent.classList.toggle('language__link--active');
+//         // parent.classList.toggleClass('accordion__wrapper--active');
+//     }
+// })
+// )
+
+// let link = document.querySelector('.language__link');
+// link.addEventListener('click', () => {
+//     // link.classList.toggle('language__link--active');
+//     // link.classList.toggleClass('language__link--active');
+//     link.classList.hide('language__link--active');
+// });
+
+
 const swipercasey = new Swiper('.swipercasey', {
     slidesPerView: 3,
     loop: true,
@@ -133,20 +233,20 @@ $(document).ready(function () {
 //         bottom2()
 //     }
 // });
-
-var scrollPos = 0;
-$(window).scroll(function () {
-    var st = $(this).scrollTop();
-    if (st > scrollPos) {
-        $('#result').html('Вниз');
-        top2()
-    } else {
-        $('#result').html('Вверх');
-        bottom2()
-    }
-    scrollPos = st;
-});
-
+// ---------------------------
+// var scrollPos = 0;
+// $(window).scroll(function () {
+//     var st = $(this).scrollTop();
+//     if (st > scrollPos) {
+//         $('#result').html('Вниз');
+//         top2()
+//     } else {
+//         $('#result').html('Вверх');
+//         bottom2()
+//     }
+//     scrollPos = st;
+// });
+// ---------------------------
 // window.addEventListener('scroll', function () {
 //     // $(img).css('transform', 'rotate3d(2, 1, 0,');
 //     // var img = $(this);
