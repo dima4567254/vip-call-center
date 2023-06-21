@@ -23,9 +23,10 @@
 <!-- иконки в футере -->
 <!-- проверить сайт на перевод есть не те слова ////Как работать с нами? -->
 
-<!-- потом убрать!!! -->
+<!-- потом убрать!!! data-aos-easing="cubic-bezier(.4, .8, .74, 1)" -->
+<!-- увеличеть клик зону меню -->
 
-<body data-aos-easing="cubic-bezier(.4, .8, .74, 1)">
+<body>
     <header class="header">
         <div class="container container--big">
             <nav class="menu">
@@ -66,9 +67,23 @@
                 </ul>
                 <div class="header__nav">
                     <ul class="language">
-                        <a class="language__link language__link--disabled language__link--active" href="#">ua</a>
-                        <!-- /ua -->
-                        <a class="language__link" href="#">ru</a>
+                        <div class="language__box">
+                            <a class="language__link language__link--disabled language__link--active" href="#">
+                                ua
+                                <!-- <svg class="language__svg" width="11px" height="7px">
+                                <use xlink:href="images/sprite.svg#arrow">
+                                </use>
+                            </svg> -->
+                            </a>
+                            <!-- /ua -->
+                            <a class="language__link" href="#">
+                                ru
+                            </a>
+                        </div>
+                        <svg class="language__svg" width="11px" height="7px">
+                            <use xlink:href="images/sprite.svg#arrow">
+                            </use>
+                        </svg>
                         <!-- /ru -->
                     </ul>
                     <button class="header__btn btn btn--start" type="button">
@@ -83,20 +98,15 @@
         </div>
     </header>
 
-    <!-- <main class="main">
-
+    <main class="main">
         <section class="intro">
-
             <div class="container">
-                <div class="intro__images">
-                    <img class="" src="../images/icons/decor1.svg" alt="Декор">
-                </div>
+                <img class="intro__images" src="../images/icons/decor1.svg" alt="Декор">
                 <!-- <div class="abv">style="transform: translate3d(0px, 0px, 0px)"</div> -->
                 <!-- <img src="../images/icons/decor1.svg" alt="img" class="img section-figure aos-init aos-animate"
                     data-aos="fromOpacity"> -->
                 <!-- <img src="../images/icons/decor2.svg" alt="img" class="section-figure2 aos-init aos-animate"
-                    data-aos="fromOpacity" style="transform: translate3d(0px, 0px, 0px)"> --
-
+                    data-aos="fromOpacity" style="transform: translate3d(0px, 0px, 0px)"> -->
                 <img class="intro__images intro__images--decor" src="../images/icons/decor2.svg" alt="Декор">
                 <div class="intro__wrapper">
                     <div class="intro__inner">
@@ -135,13 +145,13 @@
                 </div>
             </div>
         </section>
-
+        
         <section class="about section section--bem">
             <div class="container">
                 <!-- <img src="../images/icons/decor3.svg" alt="img" class="section-figure aos-init aos-animate"
                     data-aos="fromOpacity"> -->
-                <!-- <img src="../images/icons/decor3.svg" alt="img" class="section-figure3 aos-init aos-animate"
-                    data-aos="fromOpacity" style="transform: translate3d(0px, 0px, 0px)"> --
+        <!-- <img src="../images/icons/decor3.svg" alt="img" class="section-figure3 aos-init aos-animate"
+                    data-aos="fromOpacity" style="transform: translate3d(0px, 0px, 0px)"> -->
                 <img class="about__images about__images--decor" src="../images/icons/decor3.svg" alt="Декор">
                 <div class="about__wrapper">
                     <div class="about__img" data-aos="fade-right"></div>
@@ -187,7 +197,7 @@
                 </div>
             </div>
         </section>
-
+<!--
         <section class="autonomously section section--bem">
             <div class="container">
                 <div class="autonomously__wrapper">
@@ -299,7 +309,7 @@
         <section class="services section section--bem">
             <!-- <img src="../images/icons/decor4.svg" alt="img" class="section-figure4 aos-init aos-animate"
                 data-aos="fromOpaciy" style="transform: translate3d(0px, 0px, 0px)"> -->
-            <!-- <img src="../images/icons/decor5.svg" alt="img" class="section-figure5 aos-init aos-animate"
+        <!-- <img src="../images/icons/decor5.svg" alt="img" class="section-figure5 aos-init aos-animate"
                 data-aos="fromOpaciy" style="transform: translate3d(0px, 0px, 0px)"> --
             <img class="services__images" src="../images/icons/decor4.svg" alt="Декор">
             <img class="services__images services__images--decor" src="../images/icons/decor5.svg" alt="Декор">
@@ -1114,7 +1124,7 @@
                 </h2>
                 <div class="slider-reviews__wrapper sliderreviews" data-aos="fromOpacity" data-aos-delay="500">
                     <!-- fromOpacity data-aos="userFadeUp" -->
-                    <!-- !!!не знаю такой аимации --
+        <!-- !!!не знаю такой аимации --
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="slider-reviews__items swiper-wrapper">
@@ -1456,34 +1466,34 @@
             </div>
         </div>
     </footer> -->
-    <!-- ------------ -->
-    <!-- <div class="abv">style="transform: translate3d(0px, 0px, 0px)"</div>
+        <!-- ------------ -->
+        <!-- <div class="abv">style="transform: translate3d(0px, 0px, 0px)"</div>
     <div class="aba">style="transform: translate3d(0px, 0px, 0px)"</div>
     <div class="sq">я блок</div> -->
-    <!-- ------------ -->
-    <!-- <div class="images">
+        <!-- ------------ -->
+        <!-- <div class="images">
         <img src="../images/shape 2.svg" alt="img" class="img section-figure aos-init aos-animate"
             data-aos="fromOpacity">
     </div> -->
 
-    <!-- <script>
+        <!-- <script>
         AOS.init();
     </script> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20230616215911"
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20230616215911"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
     </script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js?_v=20230616215911" -->
-    <!-- type="text/javascript"></script> -->
-    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js?_v=20230616215911">
+        <!-- <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js?_v=20230616215911" -->
+        <!-- type="text/javascript"></script> -->
+        <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js?_v=20230616215911">
     </script> -->
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20230616232959"></script>
+        <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20230616232959"></script>
     <script src="js/runtime.2fd2dd53.js?_v=20230616232959" defer></script>
     <script src="js/941.5a858917.js?_v=20230616232959" defer></script>
     <script src="js/public.ba201670.js?_v=20230616232959" defer></script> -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20230617194258"></script>
-    <script src="js/main.min.js?_v=20230616232959"></script>
-    <!-- <script src="js/.min.js?_v=20230618184932"></script> -->
-    <!-- <script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20230617194258"></script>
+        <script src="js/main.min.js?_v=20230616232959"></script>
+        <!-- <script src="js/.min.js?_v=20230618184932"></script> -->
+        <!-- <script>
         // new ().init();
         var  = new ({
             boxClass: '', // animated element css class (default is )
@@ -1499,18 +1509,18 @@
         });
         .init();
     </script> -->
-    <script>
-        AOS.init();
-        AOS.init({
-            // delay: 100, // values from 0 to 3000, with step 50ms
-            duration: 900, //длительность
-            // once: false, // whether animation should happen only once - while scrolling down
-            mirror: true,
-            once: true,
-        })
-    </script>
+        <script>
+            AOS.init();
+            AOS.init({
+                // delay: 100, // values from 0 to 3000, with step 50ms
+                duration: 900, //длительность
+                // once: false, // whether animation should happen only once - while scrolling down
+                mirror: true,
+                once: true,
+            })
+        </script>
 
-    <!-- !!! -->
+        <!-- !!! -->
 </body>
 
 </html>

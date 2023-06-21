@@ -5,60 +5,95 @@ $('.header__button').on('click', function () {
     $('.intro__btn').toggleClass('menu__list--active');*/
 });
 
-// $('.language__link').on('click', function () {
-//     $('.language__link').toggleClass('language__link--active');
+// -------------------------------------------------------
+0
+$('.language').on('click', function () {
+    $('.language').toggleClass('language--active');
 
-//     /*$('.header__logo').toggleClass('menu__list--active');
-//     $('.intro__btn').toggleClass('menu__list--active');*/
-// });
+    /*$('.header__logo').toggleClass('menu__list--active');
+    $('.intro__btn').toggleClass('menu__list--active');*/
+});
+// -------------------------------------------------------
+// 1
+$('.language__link').on('click', function () {
+    $('.language__link').toggleClass('language__link--active');
 
-if (link.classList.contains('language__link--active'))
-    for (let i = 0; i < elements.length; i++) {/*прокручиваем в цикле все элементы*/
-        // elements[i].addEventListener('click', function () {  /*при клике на элемент
-        //  */
-        for (let i = 0; i < elements.length; i++) {
-            elements[i].classList.add('language__link--active'); /*удаляем у всех class active*/
-        }
-        // this.classList.removeClass('language__link--active');/*добавляем class active по которому кликнули */
-        // })
-    }
-else {
-    let elements = document.getElementsByClassName("language__link");
-    for (let i = 0; i < elements.length; i++) {/*прокручиваем в цикле все элементы*/
-        elements[i].addEventListener('click', function () {  /*при клике на элемент
- */
-            for (let i = 0; i < elements.length; i++) {
-                elements[i].classList.remove('language__link--active'); /*удаляем у всех class active*/
-            }
-            // this.classList.removeClass('language__link--active');/*добавляем class active по которому кликнули */
-        })
-    }
-}
+    /*$('.header__logo').toggleClass('menu__list--active');
+    $('.intro__btn').toggleClass('menu__list--active');*/
+});
+// -------------------------------------------------------
+// 2
+// if (link.classList.contains('language__link--active'))
+//     for (let i = 0; i < elements.length; i++) {/*прокручиваем в цикле все элементы*/
+//         // elements[i].addEventListener('click', function () {  /*при клике на элемент
+//         //  */
+//         for (let i = 0; i < elements.length; i++) {
+//             elements[i].classList.add('language__link--active'); /*удаляем у всех class active*/
+//         }
+//         // this.classList.removeClass('language__link--active');/*добавляем class active по которому кликнули */
+//         // })
+//     }
+// else {
+//     let elements = document.getElementsByClassName("language__link");
+//     for (let i = 0; i < elements.length; i++) {/*прокручиваем в цикле все элементы*/
+//         elements[i].addEventListener('click', function () {  /*при клике на элемент
+//  */
+//             for (let i = 0; i < elements.length; i++) {
+//                 elements[i].classList.remove('language__link--active'); /*удаляем у всех class active*/
+//             }
+//             // this.classList.removeClass('language__link--active');/*добавляем class active по которому кликнули */
+//         })
+//     }
+// }
 
 // else {
 
 // }
 
-let link = document.querySelector('.language__link');
+let item = document.querySelector('.language__link');
+// -------------------------------------------------------
+// 3
+// let item = document.querySelector('.language__link');
+document.querySelectorAll('.language__link').forEach((item) =>
 
+        item.addEventListener('click', () => {
+            const parent = item;
+            // const parent = item.parentNode;
+            
+            if (parent.classList.contains('language__link--active')) {
+                // parent.classList.add('language__link--active');
+                parent.classList.toggle('language__link--active');
+            }
+            else {
+                // document
+                //     .querySelectorAll('.language__link')
+                //     .forEach((child) => child.classList.remove('language__link--active'))
 
-
+                parent.classList.toggle('language__link--active');
+                parent.classList.remove('accordion__wrapper--active');
+            }
+        })
+)
+// // ----------------------------------------------------------
+// // 4 не раблтает
 
 // document.querySelectorAll('.language__link').forEach((item) =>
 
-// item.addEventListener('click', () => {
-//     const parent = item;
-//     // const parent = item.parentNode;
+//     item.addEventListener('click', () => {
+//         const parent = item;
+//         // const parent = item.parentNode;
 
-//     if (parent.classList.contains('language__link--active')) {
-//         // parent.classList.add('language__link--active');
-//         let elements = document.getElementsByClassName("language__link");
-//         for (let i = 0; i < elements.length; i++) {/*прокручиваем в цикле все элементы*/
-//             // elements[i].addEventListener('click', function () {  /*при клике на элемент
-//             for (let i = 0; i < elements.length; i++) {
-//                 elements[i].classList.add('language__link--active'); /*удаляем у всех class active*/
-//                 link.addEventListener('click', () => {
-//                     elements[i].classList.toggle('language__link--active');
+//         if (parent.classList.contains('language__link--active')) {
+//             // parent.classList.add('language__link--active');
+//             let elements = document.getElementsByClassName("language__link");
+//             for (let i = 0; i < elements.length; i++) {/*прокручиваем в цикле все элементы*/
+//                 // elements[i].addEventListener('click', function () {  /*при клике на элемент
+//                 for (let i = 0; i < elements.length; i++) {
+//                     elements[i].classList.add('language__link--active'); /*удаляем у всех class active*/
+//                     // link.addEventListener('click', () => {
+//                     if (parent.classList.contains('language__link--active')) {
+//                         elements[i].classList.add('language__link--active');
+//                     }
 //                     // if (link.classList.contains('language__link')) {
 //                     //     for (let i = 0; i < elements.length; i++) {/*прокручиваем в цикле все элементы*/
 //                     //         // elements[i].addEventListener('click', function () {  /*при клике на элемент
@@ -72,24 +107,24 @@ let link = document.querySelector('.language__link');
 //                     //         }
 //                     //     }
 //                     // }
+//                     // }
+//                     // )
 //                 }
-//                 )
+//                 // this.classList.add('active');/*добавляем class active по которому кликнули */
+//                 // })
 //             }
-//             // this.classList.add('active');/*добавляем class active по которому кликнули */
-//             // })
 //         }
-//     }
-//     else {
-//         // document
-//         //     .querySelectorAll('.accordion__link')
-//         //     .forEach((child) => child.classList.remove('language__link--active'))
+//         else {
+//             // document
+//             //     .querySelectorAll('.accordion__link')
+//             //     .forEach((child) => child.classList.remove('language__link--active'))
 
-//         parent.classList.toggle('language__link--active');
-//         // parent.classList.toggleClass('accordion__wrapper--active');
-//     }
-// })
+//             parent.classList.toggle('language__link--active');
+//             // parent.classList.toggleClass('accordion__wrapper--active');
+//         }
+//     })
 // )
-
+// ----------------------------------------
 // let link = document.querySelector('.language__link');
 // link.addEventListener('click', () => {
 //     // link.classList.toggle('language__link--active');
