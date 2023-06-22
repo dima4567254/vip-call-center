@@ -1,17 +1,21 @@
-$('.header__button').on('click', function () {
+$('.header__btn').on('click', function () {
     $('.menu__items').toggleClass('menu__items--active');
 
     /*$('.header__logo').toggleClass('menu__list--active');
     $('.intro__btn').toggleClass('menu__list--active');*/
 });
-
+// 
 // -------------------------------------------------------
-0
+// 0
 $('.language').on('click', function () {
     $('.language').toggleClass('language--active');
 
     /*$('.header__logo').toggleClass('menu__list--active');
     $('.intro__btn').toggleClass('menu__list--active');*/
+});
+// ------------------------------------------
+$('.header__btn').on('click', function () {
+    $('.header__btn').toggleClass('active');
 });
 // -------------------------------------------------------
 // 1
@@ -56,23 +60,23 @@ let item = document.querySelector('.language__link');
 // let item = document.querySelector('.language__link');
 document.querySelectorAll('.language__link').forEach((item) =>
 
-        item.addEventListener('click', () => {
-            const parent = item;
-            // const parent = item.parentNode;
-            
-            if (parent.classList.contains('language__link--active')) {
-                // parent.classList.add('language__link--active');
-                parent.classList.toggle('language__link--active');
-            }
-            else {
-                // document
-                //     .querySelectorAll('.language__link')
-                //     .forEach((child) => child.classList.remove('language__link--active'))
+    item.addEventListener('click', () => {
+        const parent = item;
+        // const parent = item.parentNode;
 
-                parent.classList.toggle('language__link--active');
-                parent.classList.remove('accordion__wrapper--active');
-            }
-        })
+        if (parent.classList.contains('language__link--active')) {
+            // parent.classList.add('language__link--active');
+            parent.classList.toggle('language__link--active');
+        }
+        else {
+            // document
+            //     .querySelectorAll('.language__link')
+            //     .forEach((child) => child.classList.remove('language__link--active'))
+
+            parent.classList.toggle('language__link--active');
+            parent.classList.remove('accordion__wrapper--active');
+        }
+    })
 )
 // // ----------------------------------------------------------
 // // 4 не раблтает
@@ -143,6 +147,24 @@ const swipercasey = new Swiper('.swipercasey', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+
+        // 1200: {
+        //     slidesPerView: 4,
+        // },
+
+        992: {
+            slidesPerView: 3,
+        },
+
+        578: {
+            slidesPerView: 2,
+        },
+
+        319: {
+            slidesPerView: 1,
+        },
+    },
 });
 
 const swiperclients = new Swiper('.swiperclients', {
@@ -150,9 +172,10 @@ const swiperclients = new Swiper('.swiperclients', {
     loop: true,
     // loopedslides: 1,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.button-next',
+        prevEl: '.button-prev',
     },
+    
 });
 
 const sliderreviews = new Swiper('.sliderreviews', {
