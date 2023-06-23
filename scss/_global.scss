@@ -33,32 +33,7 @@ main {
 //     // overflow: hidden;
 // }
 
-@keyframes my-animation {
-    0% {
-        transform: rotate(0deg);
-    }
 
-    50% {
-        transform: rotate(5deg);
-    }
-
-    75% {
-        transform: rotate(-5deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
-.animate__animated.animate__fadeInLeft {
-    --animate-duration: 2s;
-    --animate-delay: 25s;
-}
-
-:root {
-    --animate-delay: 0.5s;
-}
 
 .container {
     max-width: 1140px;
@@ -279,15 +254,16 @@ main {
         margin-right: 10px;
 
         @media (max-width: 1200px) {
-            margin-bottom: 25px;
+            // margin-bottom: 25px;
+            // убрал ели где то нужно то модификатор
         }
 
         @media (max-width: 992px) {
-            margin-bottom: 20px;
+            // margin-bottom: 20px;
         }
 
         @media (max-width: 768px) {
-            margin-bottom: 15px;
+            // margin-bottom: 15px;
             width: 100%;
             margin-right: 0;
         }
@@ -342,7 +318,32 @@ main {
     }
 }
 
+@keyframes my-animation {
+    0% {
+        transform: rotate(0deg);
+    }
 
+    50% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.animate__animated.animate__fadeInLeft {
+    --animate-duration: 2s;
+    --animate-delay: 25s;
+}
+
+:root {
+    --animate-delay: 0.5s;
+}
 
 // @keyframes my-animation {
 //     from {

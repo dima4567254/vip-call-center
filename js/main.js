@@ -153,9 +153,15 @@ const swipercasey = new Swiper('.swipercasey', {
         //     slidesPerView: 4,
         // },
 
-        992: {
+        // 992: {
+        //     slidesPerView: 3,
+        // },
+        785: {
             slidesPerView: 3,
         },
+        // 830: {
+        //     slidesPerView: 3,
+        // },
 
         578: {
             slidesPerView: 2,
@@ -175,7 +181,7 @@ const swiperclients = new Swiper('.swiperclients', {
         nextEl: '.button-next',
         prevEl: '.button-prev',
     },
-    
+
 });
 
 const sliderreviews = new Swiper('.sliderreviews', {
@@ -186,6 +192,44 @@ const sliderreviews = new Swiper('.sliderreviews', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+    },
+    // 945: {
+    //     // slidesPerView: 3,
+    // },
+    // 785: {
+    //     slidesPerView: 3,
+    // },
+
+    // 578: {
+    //     slidesPerView: 1,
+    // },
+
+    // 319: {
+    //     slidesPerView: 1,
+    // },
+    breakpoints: {
+
+        // 1200: {
+        //     slidesPerView: 4,
+        // },
+
+        // 992: {
+        //     slidesPerView: 3,
+        // },
+        785: {
+            slidesPerView: 3,
+        },
+        // 830: {
+        //     slidesPerView: 3,
+        // },
+
+        615: {
+            slidesPerView: 2,
+        },
+
+        319: {
+            slidesPerView: 1,
+        },
     },
 });
 
