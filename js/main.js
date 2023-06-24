@@ -1,3 +1,17 @@
+AOS.init();
+AOS.init({
+    // delay: 100, // values from 0 to 3000, with step 50ms
+    duration: 900, //длительность
+    // once: false, // whether animation should happen only once - while scrolling down
+    mirror: true,
+    once: true,
+    disable: 'phone',
+    disable: 'tablet',
+    disable: 'mobile',
+    // 'tablet', 'mobile',
+})
+
+
 $('.header__btn').on('click', function () {
     $('.menu__items').toggleClass('menu__items--active');
 
@@ -14,9 +28,31 @@ $('.language').on('click', function () {
     $('.intro__btn').toggleClass('menu__list--active');*/
 });
 // ------------------------------------------
-$('.header__btn').on('click', function () {
-    $('.header__btn').toggleClass('active');
-});
+// $('.header__btn').on('click', function () {
+//     $('.header__btn').toggleClass('active');
+// });
+
+document.querySelectorAll('.header__btn').forEach((item) =>
+
+    item.addEventListener('click', () => {
+        const parent = item;
+        // const parent = item.parentNode;
+
+        if (parent.classList.contains('active')) {
+            parent.classList.remove('active');
+            parent.classList.add('close');
+        }
+        else {
+            // document
+            //     .querySelectorAll('.accordion__wrapper')
+            //     .forEach((child) => child.classList.remove('active'))
+            parent.classList.add('active');
+            parent.classList.remove('close');
+            // parent.classList.toggle('active');
+            // parent.classList.toggleClass('accordion__wrapper--active');
+        }
+    })
+)
 // -------------------------------------------------------
 // 1
 $('.language__link').on('click', function () {
@@ -167,6 +203,10 @@ const swipercasey = new Swiper('.swipercasey', {
             slidesPerView: 2,
         },
 
+        615: {
+            slidesPerView: 2,
+        },
+
         319: {
             slidesPerView: 1,
         },
@@ -257,6 +297,68 @@ $(document).ready(function () {
         }
         return false;
     });
+});
+
+
+// open modal
+// $(' .price__link--scout').click(function () {
+//     $('.modal--scout').show();
+//     $('.modal__inner').css('display', 'inline-block');
+// });
+// $('.price__link--leader').click(function () {
+//     $('.modal--leader').show();
+//     $('.modal__inner').css('display', 'inline-block');
+// });
+// $('.price__link--operator').click(function () {
+//     $('.modal--operator').show();
+//     $('.modal__inner').css('display', 'inline-block');
+// });
+
+$('.header__button, .services__btn, .about__btn, .modal__btn').on('click', function () {
+    $('.modal').toggleClass('modal-active');
+
+    /*$('.header__logo').toggleClass('menu__list--active');
+    $('.intro__btn').toggleClass('menu__list--active');*/
+});
+
+// $('').on('click', function () {
+//     $('.modal').toggleClass('modal-active');
+
+//     /*$('.header__logo').toggleClass('menu__list--active');
+//     $('.intro__btn').toggleClass('menu__list--active');*/
+// });
+
+// close modal
+$('.modal').click(function () {
+    // $(document).on('click', function (event) {
+    var select = $('.modal__inner');
+    if ($(event.target).closest(select).length)
+        return;
+    $('.modal').toggleClass('modal-active');
+    $(document).unbind('click');
+    event.stopPropagation();
+    // });
+});
+// ---------------------------------------------
+// скрипт который убирает полосу при скроле
+$(function () {
+    let header = $('.header');
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 690) {
+            header.addClass('header-fixed');
+        } else {
+            header.removeClass('header-fixed');
+        }
+    });
+});
+// ---------------------------------------------
+// для плавного скрола
+$(".menu a").on("click", function (event) {
+    event.preventDefault();
+    var id = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({ scrollTop: top }, 1500);
 });
 
 // initWow_scroll: function() {
