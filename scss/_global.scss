@@ -178,7 +178,12 @@ main {
     }
 }
 
-
+.close {
+    animation-name: btn-close;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
 
 // &:before {
 //     content: "";
@@ -355,23 +360,23 @@ main {
     }
 }
 
-// @keyframes my-animation {
-//     0% {
-//         transform: rotate(0deg);
-//     }
+@keyframes my-animation {
+    0% {
+        transform: rotate(0deg);
+    }
 
-//     50% {
-//         transform: rotate(5deg);
-//     }
+    50% {
+        transform: rotate(5deg);
+    }
 
-//     75% {
-//         transform: rotate(-5deg);
-//     }
+    75% {
+        transform: rotate(-5deg);
+    }
 
-//     100% {
-//         transform: rotate(0deg);
-//     }
-// }
+    100% {
+        transform: rotate(0deg);
+    }
+}
 
 
 // @keyframes btn-close {
@@ -431,7 +436,9 @@ main {
 
 // }
 
-
+.swiper-slide {
+    height: auto !important;
+}
 
 .animate__animated.animate__fadeInLeft {
     --animate-duration: 2s;

@@ -46,7 +46,6 @@
 
         @media (max-width: 1200px) {
             order: 1;
-            // margin-left: 15px;
             width: 30px;
             height: 22px;
             position: relative;
@@ -58,8 +57,6 @@
             padding: 0;
             z-index: 10;
 
-            // transition: all 2s;
-
             &.close {
                 span {
                     transition: all .5s;
@@ -70,14 +67,10 @@
                 &:before {
                     transition: all .5s;
                     transform: rotate(0deg);
-                    // top: 9px;
-                    // top: 10px;
                 }
             }
 
             &.active {
-                // transition: all 2s;
-
                 span {
                     transition: all .5s;
                     transform: rotate(-40deg);
@@ -87,19 +80,12 @@
                 &:before {
                     transition: all .5s;
                     transform: rotate(45deg);
-                    // top: 9px;
                     top: 10px;
                 }
-
-                // &::after {
-                //     transform: rotate(-45deg);
-                //     bottom: 8px;
-                // }
             }
 
             @media (max-width: 576px) {
                 order: 0;
-                // margin-bottom: 20px;
             }
 
             span {
@@ -116,24 +102,8 @@
                 background-color: $hover;
                 top: 0;
             }
-
-            // &::before {
-            //     content: '';
-
-            // }
-
-            // &::after {
-            //     bottom: 0;
-            // }
         }
     }
-}
-
-.close {
-    animation-name: btn-close;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
 }
 
 .menu {
@@ -172,7 +142,6 @@
             align-items: center;
             z-index: 5;
             background-color: #1b1e27;
-            // background-color: $hover;
             transition: transform 1s;
             padding: 115px 0 20px;
 
@@ -187,7 +156,6 @@
 
         @media (max-width: 576px) {
             padding: 180px 0 20px;
-            // height: 100%;
         }
     }
 
@@ -208,21 +176,6 @@
         &--active {
             border-bottom: 3px solid $hover;
         }
-
-        // &:focus {
-        //     color: $focus;
-        // }
-
-        // &:hover {
-        //     border-bottom: 3px solid $orange1;
-        //     color: $ac;
-        //     // background-color: red;
-        // }
-
-        // &:active {
-        //     color: $active;
-        // }
-
     }
 
     &__link {
@@ -232,7 +185,6 @@
         @media (max-width: 1200px) {
             text-align: center;
             display: block;
-            // margin: 0 auto;
             color: $white;
         }
 
@@ -272,7 +224,6 @@
 }
 
 .language {
-    // display: flex;
 
     transition: background-color 0.5s;
     margin-right: 35px;
@@ -301,31 +252,12 @@
         position: relative;
         padding-right: 20px;
         color: $white;
-        // font-size: 12px;
         min-width: 12px;
 
         @media (max-width: 992px) {
             display: none;
             padding-right: 0;
         }
-
-        &--active {
-            display: block;
-        }
-
-        &--active1 {
-            display: grid;
-        }
-
-        // &--disabled {
-        //     opacity: .4;
-        //     pointer-events: none;
-        //     /* делаем элемент неактивным для взаимодействия */
-        //     cursor: default;
-        //     /*  курсор в виде стрелки */
-        //     // color: #888;
-        //     /* цвет текста серый */
-        // }
 
         &:hover {
             color: $hover;
@@ -348,6 +280,15 @@
 
         &:active {
             color: $active;
+        }
+
+        &--active {
+            opacity: .4;
+            pointer-events: none;
+
+            &:hover {
+                color: inherit;
+            }
         }
     }
 
@@ -529,11 +470,10 @@
 
     &__img {
         width: 325px;
-        // width: 40%;
         height: 655px;
         object-fit: cover;
         transform: rotate(0deg);
-        animation-name: my-animation;
+        // animation-name: my-animation;
         animation-duration: 2s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
@@ -1389,12 +1329,16 @@
 
     &__items {
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
     }
 
     &__item {
+        // padding: 30px 20px;
         max-width: 350px;
-        display: grid;
+        // display: flex;
+        // flex-direction: column;
+        margin: 0 auto;
+        // min-height: 100%;
 
         @media (max-width: 768px) {
             // max-width: 260px;
@@ -1564,6 +1508,7 @@
     // }
 }
 
+// переделать без модификаторов
 .accordion {
     max-width: 470px;
     margin-right: 10px;
@@ -1577,47 +1522,59 @@
         margin-bottom: 20px;
     }
 
-    // mr10
+    &__item {
+
+        padding: 21px 0;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid hsla(0, 0%, 100%, .35);
+        }
+    }
 
     &__inner {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         transition: all 5s;
     }
 
-    &__box {}
+    &__subtitle {
+        font-size: 24px;
+        padding-right: 15px;
 
-    &__item {
-        border-bottom: 1px solid hsla(0, 0%, 100%, .35);
-        padding: 21px 0;
-        cursor: pointer;
+        &--faq {
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+    }
+
+    &__box {
+        user-select: none;
         position: relative;
+        // height: 18px;
+        padding-right: 10px;
         transition: all 5s;
 
         &--clients {
 
             &::before,
             &::after {
-                // background-color: $white;
+                background-color: $white;
                 height: 12px;
                 width: 2px;
-                background-color: #2fbeff;
             }
 
             &::before {
                 transform: rotate(360deg);
-                // transform: rotate(270deg);
             }
 
             &::after {
                 transform: rotate(450deg);
-                // transform: rotate(180deg);
             }
         }
 
         &--faq {
-            text-transform: uppercase;
-            font-size: 20px;
 
             &::before,
             &::after {
@@ -1628,12 +1585,10 @@
 
             &::before {
                 transform: rotate(360deg);
-                // transform: rotate(270deg);
             }
 
             &::after {
                 transform: rotate(450deg);
-                // transform: rotate(180deg);
             }
         }
 
@@ -1642,21 +1597,14 @@
             height: 12px;
             width: 2px;
             // потом сделать по модификатору
-            display: block;
             content: '';
             position: absolute;
-            top: 0;
-            left: 95%;
-            // left: 5%;
-            right: 0;
-            bottom: 0;
             margin: auto;
-            background-color: #2fbeff;
 
             // !!!! дабавить в техники
-            @media (max-width: 1200px) {
-                left: 95%;
-            }
+            // @media (max-width: 1200px) {
+            //     // left: 95%;
+            // }
 
             @media (max-width: 576px) {
                 height: 18px;
@@ -1669,67 +1617,33 @@
 
         &::after {
             transform: rotate(180deg);
-            // transform: rotate(180deg);
         }
-
-        &--active {}
-
-
-    }
-
-    &__subtitle {
-        font-size: 24px;
-
-    }
-
-    &__box {
-        user-select: none;
-
     }
 
     &__text {
-        // transition: all 5s;
-        // display: none;
-        // overflow: hidden;
-        // opacity: 0;
-
+        padding-top: 10px;
 
         &--faq {
             font-size: 18px;
         }
-
-        &--active {
-            // display: block;
-            // overflow: visible;
-            // opacity: 1;
-        }
     }
 }
 
-.active h3:before {
+.active .accordion__box:after,
+.active .accordion__box:before {
     transition: all 2s;
-    // transform: rotate(320deg);
 }
 
-.active h3:after {
-    transition: all 2s;
-    // transform: rotate(220deg);
-    // transform: rotate(90deg);
+.active .accordion__box.accordion__box--faq:before {
+    transform: rotate(320deg);
 }
 
-.active .accordion__subtitle.accordion__subtitle--clients:after {
-    transform: rotate(90deg);
-}
-
-// .active .accordion__subtitle .accordion__subtitle--clients:before {
-//     transform: rotate(250deg);
-// }
-.active .accordion__subtitle.accordion__subtitle--faq:after {
+.active .accordion__box.accordion__box--faq:after {
     transform: rotate(220deg);
 }
 
-.active .accordion__subtitle.accordion__subtitle--faq:before {
-    transform: rotate(320deg);
+.active .accordion__box.accordion__box--clients:after {
+    transform: rotate(90deg);
 }
 
 .clients__images,
@@ -2043,19 +1957,29 @@
 
     &__items {
         display: flex;
+        // justify-content: space-between;
+
         // flex-direction: column;
-        justify-content: space-between;
         // flex-wrap: wrap;
         // align-items: center;
         // gap: 15px;
     }
+
+
 
     &__item {
         border-radius: 8px;
         background-color: #2c2f3b;
         padding: 30px 20px;
         max-width: 355px;
-        height: 445px;
+        // height: 445px;
+
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        // height: 100%;
+
+        // max-width: 370px;
 
         // !!!
         // height: 100%;
@@ -2070,7 +1994,7 @@
 
         @media (max-width: 992px) {
             padding: 20px;
-            height: 465px;
+            // height: 465px;
         }
 
         @media (max-width: 768px) {
@@ -2083,7 +2007,7 @@
             // width: 100%;
             // height: 300px;
             // min-height: 100%;
-            height: auto;
+            // height: auto;
             // min-height: auto;
         }
     }
@@ -2118,6 +2042,7 @@
         // -webkit-line-clamp: 6;
         // -webkit-box-orient: vertical;
         // overflow: hidden;
+        flex: 1 1 auto;
 
     }
 

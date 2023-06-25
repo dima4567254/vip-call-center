@@ -185,22 +185,8 @@ const swipercasey = new Swiper('.swipercasey', {
     },
     breakpoints: {
 
-        // 1200: {
-        //     slidesPerView: 4,
-        // },
-
-        // 992: {
-        //     slidesPerView: 3,
-        // },
         785: {
             slidesPerView: 3,
-        },
-        // 830: {
-        //     slidesPerView: 3,
-        // },
-
-        578: {
-            slidesPerView: 2,
         },
 
         615: {
@@ -220,6 +206,7 @@ const swiperclients = new Swiper('.swiperclients', {
     navigation: {
         nextEl: '.button-next',
         prevEl: '.button-prev',
+
     },
 
 });
@@ -229,6 +216,8 @@ const sliderreviews = new Swiper('.sliderreviews', {
     loopedslides: 1,
     spaceBetween: 30,
     loop: true,
+    // autoHeight: false,
+
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
