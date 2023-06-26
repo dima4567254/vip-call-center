@@ -1,4 +1,4 @@
-AOS.init();
+// AOS.init();
 AOS.init({
     // delay: 100, // values from 0 to 3000, with step 50ms
     duration: 900, //длительность
@@ -8,8 +8,19 @@ AOS.init({
     disable: 'phone',
     disable: 'tablet',
     disable: 'mobile',
+    // easing: "cubic-bezier(.4, .8, .74, 1)", once: !0
     // 'tablet', 'mobile',
 })
+
+$(window).on("scroll", function (e) {
+    var s = $("header"),
+        a = 0;
+    (a = window.innerWidth < 992 ? 30 : 100), window.scrollY > a ? (s.addClass("active"), AOS.refresh({ duration: 800, easing: "cubic-bezier(.4, .8, .74, 1)", once: !0 })) : s.removeClass("active");
+    var t = (-10 * window.scrollY) / 100;
+    $("about__images, .intro__images, services__images ,swiper-casey__images ,partners__images ,slider-reviews__images").attr("style", "transform: translate3d(0px, " + t + "px, 0px)");
+});
+
+// AOS.init({ duration: 800,  }),
 
 
 $('.header__btn').on('click', function () {
@@ -334,7 +345,7 @@ $(function () {
     let header = $('.header');
 
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 690) {
+        if ($(this).scrollTop() > 100) {
             header.addClass('header-fixed');
         } else {
             header.removeClass('header-fixed');
