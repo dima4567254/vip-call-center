@@ -49,44 +49,39 @@
                 </a>
                 <ul class="menu__items">
                     <li class="menu__item">
-                        <a class="menu__link menu__link--active" href="#">
+                        <a class="menu__link menu__link--active" href="#about">
                             Про компанію
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#service">
+                        <a class="menu__link" href="#services">
                             Послуги
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#collections">
+                        <a class="menu__link" href="#swiper-casey">
                             Кейси
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#products">
+                        <a class="menu__link" href="#swiper-casey">
                             Звіти
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#about">
+                        <a class="menu__link" href="#clients">
                             До/Після
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#blog">
+                        <a class="menu__link" href="#slider-reviews">
                             Відгуки
                         </a>
                     </li>
-                    <li class="menu__item">
-                        <button class="menu__button btn button--start" type="button">
-                            <span>Зв'язатись з нами</span>
-                        </button>
-                    </li>
-                    <!-- <button class="header__button btn button--start" type="button">
-                        <span>Зв'язатись з нами</span>
-                    </button> -->
                 </ul>
+                <button class="menu__button btn button--start" type="button">
+                    <span>Зв'язатись з нами</span>
+                </button>
                 <div class="header__nav">
                     <ul class="language">
                         <div class="language__box">
@@ -315,7 +310,7 @@
             </div>
         </section>
 
-        <section class="services section section--bem">
+        <section class="services section section--bem" id="services">
             <img class="services__images" src="../images/icons/decor4.svg" alt="Декор">
             <img class="services__images services__images--decor" src="../images/icons/decor5.svg" alt="Декор">
             <div class="container">
@@ -450,8 +445,8 @@
                 </ul>
             </div>
         </section>
-
-        <section class="swiper-casey section section--bem">
+        <!-- переделать ходябы на слайдер !!!-->
+        <section class="swiper-casey section section--bem" id="swiper-casey">
             <div class="container container--slider">
                 <img class="swiper-casey__images" src="../images/icons/decor6.svg" alt="Декор">
                 <h2 class="swiper-casey__title title" data-aos="fade-up">
@@ -950,7 +945,7 @@
             </div>
         </section>
 
-        <section class="clients section section--bem">
+        <section class="clients section section--bem" id="clients">
             <div class="container">
                 <div class="clients__wrapper">
                     <div class="clients__box" data-aos="fade-up" data-aos-delay="150">
@@ -1143,7 +1138,7 @@
             </div>
         </section>
 
-        <section class="slider-reviews section section--bem">
+        <section class="slider-reviews section section--bem" id="slider-reviews">
             <div class="container container--slider">
                 <img class="slider-reviews__images" src="../images/icons/decor8.svg" alt="Декор">
                 <img class="slider-reviews__images slider-reviews__images--reviews" src="../images/icons/decor9.svg"
@@ -1290,7 +1285,7 @@
                 <ul class="faq__accordion accordion" data-aos="fade-up">
                     <li class="accordion__item" data-aos="fade-up" data-aos-delay="300">
                         <div class="accordion__inner">
-                            <h3 class="accordion__subtitle">
+                            <h3 class="accordion__subtitle accordion__subtitle--faq">
                                 протягом якого часу продзвонюються надіслані замовлення?
                             </h3>
                             <div class="accordion__box accordion__box--faq">
@@ -1306,7 +1301,7 @@
                     </li>
                     <li class="accordion__item" data-aos="fade-up" data-aos-delay="300">
                         <div class="accordion__inner">
-                            <h3 class="accordion__subtitle">
+                            <h3 class="accordion__subtitle accordion__subtitle--faq">
                                 хто пише скрипти?
                             </h3>
                             <div class="accordion__box accordion__box--faq">
@@ -1322,7 +1317,7 @@
                     </li>
                     <li class="accordion__item" data-aos="fade-up" data-aos-delay="300">
                         <div class="accordion__inner">
-                            <h3 class="accordion__subtitle">
+                            <h3 class="accordion__subtitle accordion__subtitle--faq">
                                 чи надаєте записи дзвінків?
                             </h3>
                             <div class="accordion__box accordion__box--faq">
@@ -1337,7 +1332,7 @@
                     </li>
                     <li class="accordion__item" data-aos="fade-up" data-aos-delay="300">
                         <div class="accordion__inner">
-                            <h3 class="accordion__subtitle">
+                            <h3 class="accordion__subtitle accordion__subtitle--faq">
                                 як почати співпрацювати?
                             </h3>
                             <div class="accordion__box accordion__box--faq">
@@ -1354,7 +1349,7 @@
                     </li>
                     <li class="accordion__item" data-aos="fade-up" data-aos-delay="300">
                         <div class="accordion__inner">
-                            <h3 class="accordion__subtitle">
+                            <h3 class="accordion__subtitle accordion__subtitle--faq">
                                 дожимаєте клієнтів до викупу?
                             </h3>
                             <div class="accordion__box accordion__box--faq">
@@ -1371,7 +1366,7 @@
                     </li>
                     <li class="accordion__item" data-aos="fade-up" data-aos-delay="300">
                         <div class="accordion__inner">
-                            <h3 class="accordion__subtitle">
+                            <h3 class="accordion__subtitle accordion__subtitle--faq">
                                 обробляєте скарги і питання від клієнтів?
                             </h3>
                             <div class="accordion__box accordion__box--faq">
@@ -1387,7 +1382,7 @@
                     </li>
                     <li class="accordion__item" data-aos="fade-up" data-aos-delay="300">
                         <div class="accordion__inner">
-                            <h3 class="accordion__subtitle">
+                            <h3 class="accordion__subtitle accordion__subtitle--faq">
                                 оффери конфіденційні?
                             </h3>
                             <div class="accordion__box accordion__box--faq">
