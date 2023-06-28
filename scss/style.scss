@@ -4,9 +4,7 @@
 @import 'global';
 @import 'libs';
 
-// 805 абаут
-
-
+// !!!
 .header {
     padding: 11px 0px;
     position: fixed;
@@ -20,16 +18,7 @@
     // display: flex;
     // justify-content: center;
 
-    &__nav {
-        display: flex;
-        align-items: center;
 
-        @media (max-width: 576px) {
-            justify-content: space-between;
-            // width: 100%;
-            height: 41px;
-        }
-    }
 
     &__button {
         padding: 8px 35px 9px;
@@ -123,46 +112,62 @@
         width: 235px;
         height: 78px;
         object-fit: cover;
+        z-index: 1;
 
         @media (max-width: 992px) {
-            width: 168px;
+            width: 170px;
             height: 56px;
+        }
+    }
+
+    &__inner {
+        margin-right: 10px;
+        display: flex;
+
+        @media (max-width: 1200px) {
+            transform: translateY(-200%);
+            position: absolute;
+            top: 0;
+            width: 100%;
+            left: 0;
+            flex-direction: column;
+            // align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            background-color: #1b1e27;
+            transition: transform 1s;
+
+            &.active {
+                transform: translateY(0%);
+            }
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 576px) {
+            justify-content: space-between;
+            // width: 100%;
+            height: 41px;
         }
     }
 
     &__items {
         display: flex;
+        width: 100%;
         gap: 40px;
-        margin-right: 10px;
 
         @media (max-width: 1400px) {
             gap: 20px;
         }
 
         @media (max-width: 1200px) {
-            transform: translateY(-200%);
-            position: absolute;
-            top: 0px;
-            width: 100%;
-            left: 0;
-            flex-direction: column;
-            align-items: center;
             z-index: 5;
-            background-color: #1b1e27;
-            transition: transform 1s;
-            padding: 115px 0 20px;
-
-            &.active {
-                transform: translateY(0%);
-            }
-        }
-
-        @media (max-width: 768px) {
-            padding: 140px 0 20px;
-        }
-
-        @media (max-width: 576px) {
-            padding: 180px 0 20px;
+            display: block;
+            margin-bottom: 20px;
         }
     }
 
@@ -173,21 +178,24 @@
 
         @media (max-width: 1200px) {
             padding: 10px 0;
-            width: 100%;
-            z-index: 10;
+        }
 
-            // display: block;
-            // !!!
+        @media (max-width: 992px) {
+            outline-color: transparent;
         }
 
         &--active {
             border-bottom: 3px solid $hover;
+            @media (max-width: 1200px) {
+                color:$hover;
+             }
         }
     }
 
     &__link {
         padding: 5px 10px;
         position: relative;
+        font-size: 18px;
 
         @media (max-width: 1200px) {
             text-align: center;
@@ -217,6 +225,10 @@
                 background-color: $hover;
                 transform: translateX(0%);
                 z-index: -1;
+
+                // @media (max-width: 1200px) {
+                //     background-color: transparent;
+                // }
             }
         }
 
@@ -227,17 +239,25 @@
 
     &__button {
         display: none;
+        padding: 12px 35px 11px;
+
+        @media (max-width: 1200px) {
+            display: block;
+            max-width: 210px;
+            margin: 0 auto;
+        }
     }
 }
 
 .language {
-
     transition: background-color 0.5s;
     margin-right: 35px;
 
     @media (max-width: 1200px) {
         // margin-right: 30px;
         // padding: 10px;
+        z-index: 1;
+
     }
 
     @media (max-width: 992px) {
@@ -301,6 +321,7 @@
             @media (max-width: 992px) {
                 opacity: 1;
                 pointer-events: inherit;
+                // display: grid;
             }
 
             &:hover {
@@ -627,6 +648,7 @@
             // width:100%;
             // background-position: inherit;
             height: 300px;
+            height: 275px;
             width: 100%;
             background-position: 0px -47px;
         }
@@ -646,11 +668,8 @@
         margin-left: auto;
         height: 570px;
 
-        // 502.5 435 367.5 300
         @media (max-width: 1200px) {
             // height: 500px;
-            // 56 44 32 20
-            // 68.75 52.5 36.25 20
             padding: 55px 50px 70px;
         }
 
@@ -1359,9 +1378,9 @@
     z-index: 1;
 }
 
-// !!! баг с хедером 
+
 //!!!! добавить в глобал снипеты все что нужно для слайдера
-// .buttons {}
+
 
 .swiper-casey {
     position: relative;
@@ -1537,7 +1556,7 @@
     }
 
     &__box {
-        width: 50%;
+        width: 49%;
 
         @media (max-width: 768px) {
             width: 100%;
@@ -1553,7 +1572,7 @@
     }
 
     &__inner {
-        width: 50%;
+        width: 49%;
         overflow: hidden;
         position: relative;
 
@@ -1695,7 +1714,6 @@
         &::after {
             height: 12px;
             width: 2px;
-            // потом сделать по модификатору
             content: '';
             position: absolute;
             margin: auto;
@@ -1817,7 +1835,7 @@
         // top: unset;
         // 267.25 205.5 143.75 82
         // 304.5 234 163.5 93
- 
+
         @media (max-width: 1200px) {
             width: 304px;
             height: 267px;
@@ -2045,6 +2063,7 @@
         width: 641px;
         height: 577px;
 
+
         // 520.75 400.5 280.25 160
         // 468.75 360.5 252.25 144
         @media (max-width: 1200px) {
@@ -2139,44 +2158,23 @@
 
     &__items {
         display: flex;
-        // justify-content: space-between;
-
-        // flex-direction: column;
-        // flex-wrap: wrap;
-        // align-items: center;
-        // gap: 15px;
     }
-
-
 
     &__item {
         border-radius: 8px;
         background-color: #2c2f3b;
         padding: 30px 20px;
         max-width: 355px;
-        // height: 445px;
-
         display: flex;
         flex-direction: column;
         min-height: 100%;
-        // height: 100%;
 
-        // max-width: 370px;
-
-        // !!!
-        // height: 100%;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
-        // min-height: 100%;
         @media (max-width: 1200px) {
             padding: 35px 20px;
         }
 
         @media (max-width: 992px) {
             padding: 20px;
-            // height: 465px;
         }
 
         @media (max-width: 768px) {
@@ -2636,7 +2634,7 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: #fff;
+            background-color: $white;
             opacity: .7;
         }
     }

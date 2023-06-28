@@ -25,64 +25,69 @@
 
 
 <!-- модалку только код-->
-<!-- починить 3 блока при адаптиве акардион слайдер и блок с одзывами -->
 
-<!-- кнопку в меню -->
-<!-- адаптировать декор -->
-<!-- сделать сто бы скролилось -->
-
-<!-- переделать адаптив первого блока поменять местами блоки -->
-
-<!-- -------- -->
 <!-- проверить валидатор  -->
 <!-- проверить фокусы -->
+
+<!-- work 768 -->
+<!-- переделать адаптив первого блока поменять местами блоки -->
+<!-- ширена кнопки -->
+
+
+
 <!-- подписать все svg -->
 <!-- возможно надо сделать бем блок имагес -->
+<!--  оптимизировать скрипт -->
+<!-- вынести все цвета -->
+<!-- оптимизировать и убрать лишнее для анимации -->
+<!-- посинить скрипты -->
+
 
 <body>
-    <!-- data-aos-easing=" cubic-bezier(.4, .8, .74, 1)" -->
     <header class="header">
         <div class="container container--big">
             <nav class="menu">
                 <a class="logo menu__logo" href="#">
                     <img class="logo__menu" src="images/logo.svg" alt="логотип">
                 </a>
-                <ul class="menu__items">
-                    <li class="menu__item">
-                        <a class="menu__link menu__link--active" href="#about">
-                            Про компанію
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#services">
-                            Послуги
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#swiper-casey">
-                            Кейси
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#swiper-casey">
-                            Звіти
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#clients">
-                            До/Після
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#slider-reviews">
-                            Відгуки
-                        </a>
-                    </li>
-                </ul>
-                <button class="menu__button btn button--start" type="button">
-                    <span>Зв'язатись з нами</span>
-                </button>
-                <div class="header__nav">
+                <div class="menu__inner">
+                    <ul class="menu__items">
+                        <li class="menu__item">
+                            <a class="menu__link menu__link--active" href="#about">
+                                Про компанію
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#services">
+                                Послуги
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#swiper-casey">
+                                Кейси
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#swiper-casey">
+                                Звіти
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#clients">
+                                До/Після
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#slider-reviews">
+                                Відгуки
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="menu__button btn button--start" type="button">
+                        <span>Зв'язатись з нами</span>
+                    </button>
+                </div>
+                <div class="menu__nav">
                     <ul class="language">
                         <div class="language__box">
                             <a class="language__link language__link--active" href="#">
@@ -131,12 +136,13 @@
                             <label class="sr-only" for="name">
                                 Введіть ваше ім'я*
                             </label>
-                            <input class="form__input" id="name-input" type="text" name="name" placeholder="ім'я*"
-                                required oninvalid="this.setCustomValidity('введіть ваше ім`я')">
+                            <input class="form__input form__input--form" id="name-input" type="text" name="name"
+                                placeholder="ім'я*" required oninvalid="this.setCustomValidity('введіть ваше ім`я')">
                             <label class="sr-only" for="tel">
                                 Введіть ваш телефон*
                             </label>
-                            <input class="form__input" id="tel-input" type="tel" name="tel" placeholder="телефон*"
+                            <input class="form__input form__input--form" id=" tel-input" type="tel" name="tel"
+                                placeholder="телефон*"
                                 required oninvalid="this.setCustomValidity('Введіть ваш телефон')">
                             <button class="form__btn btn btn--start  " type="submit">
                                 <span>Надіслати</span>
@@ -1126,7 +1132,9 @@
                     <input class="form__input" id="tel-input" type="tel" name="tel" placeholder=" Введіть ваш телефон*"
                         required oninvalid="this.setCustomValidity('Введіть ваш телефон')">
                     <button class="form__btn btn btn--start" type="submit">
-                        Надіслати
+                        <span>
+                            Надіслати
+                        </span>
                     </button>
                 </form>
                 <div class="work__text">
@@ -1276,7 +1284,7 @@
                 </div>
             </div>
         </section>
-        <!-- проблемы с анимацией и в футере -->
+
         <section class="faq">
             <div class="container">
                 <h2 class="faq__title title" data-aos="fade-up" data-aos-delay="100">
@@ -1519,7 +1527,7 @@
                         <input class="footer__input" id="tel-input" type="tel" name="tel" placeholder="телефон*"
                             required oninvalid="this.setCustomValidity('Введіть ваш телефон')">
                         <button class="footer__btn btn btn--start" type="submit">
-                            Надіслати
+                            <span>Надіслати</span>
                         </button>
                     </form>
                 </div>
@@ -1568,11 +1576,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20230617194258"></script>
     <script src="js/main.min.js?_v=20230616232959"></script>
 
-    <!-- <script>
-        
-    </script> -->
 
-    <!-- !!! -->
 </body>
 
 </html>

@@ -378,68 +378,6 @@ main {
     }
 }
 
-.header.header-nav.active {
-    -webkit-clip-path: inset(0 0 0 0);
-    pointer-events: all;
-}
-
-
-// @keyframes btn-close {
-
-//     0% {
-
-//         // transform: rotate(-40deg);
-//         // transform: rotate(0deg);
-//         // transform: rotate(0deg);
-//         // width: 70%;
-//         .header__btn .active {
-//             span {
-//                 transition: all .5s;
-//                 transform: rotate(-40deg);
-//                 width: 100%;
-//             }
-
-//             &:before {
-//                 transition: all .5s;
-//                 transform: rotate(45deg);
-//                 // top: 9px;
-//                 top: 10px;
-//             }
-//         }
-//     }
-
-//     50% {
-//         // transform: rotate(25deg);
-//         // width: 100%;
-//     }
-
-//     75% {
-//         // transform: rotate(30deg);
-//         // width: 90%;
-//     }
-
-//     100% {
-
-//         // transform: rotate(0deg);
-//         // width: 100%;
-//         // .header__btn .active {
-//         //     span {
-//         //         transition: all .5s;
-//         //         transform: rotate(0deg);
-//         //         width: 100%;
-//         //     }
-
-//         //     &:before {
-//         //         transition: all .5s;
-//         //         transform: rotate(0deg);
-//         //         // top: 9px;
-//         //         top: 10px;
-//         //     }
-//         // }
-
-//     }
-
-// }
 
 .swiper-slide {
     height: auto !important;

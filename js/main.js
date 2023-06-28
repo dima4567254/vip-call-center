@@ -19,12 +19,6 @@ $(window).on("scroll", function (e) {
     $(".about__images, .intro__images, .services__images, .swiper-casey__images, .partners__images, .slider-reviews__images").attr("style", "transform: translate3d(0px, " + t + "px, 0px)");
 });
 
-$('.header__btn').on('click', function () {
-    $('.menu__items').toggleClass('active');
-});
-
-
-
 $('.language').on('click', function () {
     $('.language').toggleClass('language--active');
 });
@@ -33,25 +27,10 @@ $('.language__link').on('click', function () {
     $('.language__link').toggleClass('language__link--active');
 });
 
+// $('.language').on('click', function () {
+//     $('.language').toggleClass('language--active');
+// })
 
-// let link = document.querySelector('.menu__link');
-// document.querySelectorAll('.header__link').forEach((item) =>
-//     item.addEventListener('click', () => {
-//         const parent = item;
-//         if (parent.classList.contains('active')) {
-//             parent.classList.remove('active');
-//             parent.classList.add('close');
-//         }
-//         else {
-//             parent.classList.add('active');
-//             parent.classList.remove('close');
-//         }
-//     })
-// )
-
-$('.header__btn').on('click', function () {
-    $('.header__btn').add('active');
-});
 
 // -------!!!
 $('.menu__link').on('click', function () {
@@ -71,64 +50,69 @@ $('.menu__link').on('click', function () {
 document.querySelectorAll('.header__btn').forEach((item) =>
     item.addEventListener('click', () => {
         const parent = item;
-        if (parent.classList.contains('active')) {
-            parent.classList.remove('active');
-            // parent.classList.add('close');
-        }
-        else {
-            parent.classList.add('active');
-            // parent.classList.remove('close');
-        }
+
+        btn.classList.toggle('active');
+        // if (parent.classList.contains('active')) {
+        //     parent.classList.remove('active');
+        //     // parent.classList.add('close');
+        // }
+        // else {
+        //     parent.classList.add('active');
+        //     // parent.classList.remove('close');
+        // }
     })
 )
-let items = document.querySelector('.menu__items')
+
+$('.header__btn').on('click', function () {
+    $('.menu__inner').toggleClass('active');
+});
+
+$('.header__btn').on('click', function () {
+    $('.header__btn').add('active');
+});
+
+
+// для меню что бы закрывалось, что была анимация закрытия
+const items = document.querySelector('.menu__inner')
+// const link = document.querySelector('.language__link');
+const btn = document.querySelector('.header__btn')
 document.querySelectorAll('.menu a').forEach((item) =>
     item.addEventListener('click', () => {
         const parent = items;
+        // link.classList.toggle('language__link--active');
+        // btn.classList.toggle('active');
+
         if (parent.classList.contains('active')) {
             parent.classList.remove('active');
             parent.classList.add('close');
+            // btn.classList.add('active');
         }
         else {
             parent.classList.add('active');
             parent.classList.remove('close');
+            // btn.classList.remove('active');
         }
     })
 )
 
-// let items = document.querySelector('.menu__items')
-// document.querySelectorAll('.menu a').forEach((item) =>
-//     item.addEventListener('click', () => {
-//         const parent = items;
-//         if (parent.classList.contains('active')) {
-//             parent.classList.remove('active');
-//             parent.classList.add('close');
-//         }
-//         else {
-//             parent.classList.add('active');
-//             parent.classList.remove('close');
-//         }
-//     })
+
+
+// document.querySelectorAll('.language__link').forEach(() =>
+
+// item.addEventListener('click', () => {
+//     // const parent = item;
+
+//     if (item.classList.contains('language__link--active')) {
+//         item.classList.toggle('language__link--active');
+//     }
+//     else {
+//         item.classList.toggle('language__link--active');
+//         // item.classList.remove('accordion__wrapper--active');
+//     }
+// })
 // )
 
-let item = document.querySelector('.language__link');
-
-document.querySelectorAll('.language__link').forEach((item) =>
-
-    item.addEventListener('click', () => {
-        const parent = item;
-
-        if (parent.classList.contains('language__link--active')) {
-            parent.classList.toggle('language__link--active');
-        }
-        else {
-            parent.classList.toggle('language__link--active');
-            parent.classList.remove('accordion__wrapper--active');
-        }
-    })
-)
-
-const swipercasey = new Swiper('.swipercasey', {
+const slidercasey = new Swiper('.swipercasey', {
     slidesPerView: 3,
     loop: true,
     loopedslides: 1,
@@ -220,12 +204,12 @@ $(document).ready(function () {
 
 
 
-// $('').on('click', function () {
-//     $('.modal').toggleClass('modal-active');
+$('.menu__button').on('click', function () {
+    $('.modal').toggleClass('modal-active');
 
-//     /*$('.header__logo').toggleClass('menu__list--active');
-//     $('.intro__btn').toggleClass('menu__list--active');*/
-// });
+    /*$('.header__logo').toggleClass('menu__list--active');
+    $('.intro__btn').toggleClass('menu__list--active');*/
+});
 
 // close modal
 $('.modal').click(function () {
