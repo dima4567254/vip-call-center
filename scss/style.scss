@@ -186,9 +186,10 @@
 
         &--active {
             border-bottom: 3px solid $hover;
+
             @media (max-width: 1200px) {
-                color:$hover;
-             }
+                color: $hover;
+            }
         }
     }
 
@@ -257,7 +258,6 @@
         // margin-right: 30px;
         // padding: 10px;
         z-index: 1;
-
     }
 
     @media (max-width: 992px) {
@@ -349,6 +349,10 @@
         @media (max-width: 992px) {
             display: block;
         }
+    }
+
+    &--active {
+        // display: block;
     }
 }
 
@@ -2062,6 +2066,7 @@
         left: -46%;
         width: 641px;
         height: 577px;
+        z-index: -1;
 
 
         // 520.75 400.5 280.25 160

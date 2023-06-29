@@ -9,6 +9,7 @@ AOS.init({
     disable: 'mobile',
     // easing: "cubic-bezier(.4, .8, .74, 1)", once: !0
     // 'tablet', 'mobile',
+    // активация библиотеки AOS
 })
 
 $(window).on("scroll", function (e) {
@@ -17,107 +18,82 @@ $(window).on("scroll", function (e) {
     (a = window.innerWidth < 992 ? 30 : 100), window.scrollY > a ? (s.addClass("active"), AOS.refresh({ duration: 800, easing: "cubic-bezier(.4, .8, .74, 1)", once: !0 })) : s.removeClass("active");
     var t = (-10 * window.scrollY) / 100;
     $(".about__images, .intro__images, .services__images, .swiper-casey__images, .partners__images, .slider-reviews__images").attr("style", "transform: translate3d(0px, " + t + "px, 0px)");
-});
-
-$('.language').on('click', function () {
-    $('.language').toggleClass('language--active');
-});
-
-$('.language__link').on('click', function () {
-    $('.language__link').toggleClass('language__link--active');
+    // для скролла в верх вниз декора
 });
 
 // $('.language').on('click', function () {
 //     $('.language').toggleClass('language--active');
-// })
+//     // открывать все языки
+// });
 
-
-// -------!!!
-$('.menu__link').on('click', function () {
-    $('.header__btn').toggleClass('active');
-    // if (parent.classList.contains('active')) {
-    //     parent.classList.remove('active');
-    //     parent.classList.add('close');
-    // }
-    // else {
-    //     parent.classList.add('active');
-    //     parent.classList.remove('close');
-    // }
-    // для крестика и для меню и что бы закрывалось меню после выбора сcылки
+$('.language__link').on('click', function () {
+    $('.language__link').toggleClass('language__link--active');
+    // мигалка языков
 });
 
-// let link = document.querySelector('.menu__link');
-document.querySelectorAll('.header__btn').forEach((item) =>
+document.querySelectorAll('.language__link').forEach((item) =>
+
     item.addEventListener('click', () => {
         const parent = item;
 
-        btn.classList.toggle('active');
-        // if (parent.classList.contains('active')) {
-        //     parent.classList.remove('active');
-        //     // parent.classList.add('close');
-        // }
-        // else {
-        //     parent.classList.add('active');
-        //     // parent.classList.remove('close');
-        // }
-    })
-)
-
-$('.header__btn').on('click', function () {
-    $('.menu__inner').toggleClass('active');
-});
-
-$('.header__btn').on('click', function () {
-    $('.header__btn').add('active');
-});
-
-
-// для меню что бы закрывалось, что была анимация закрытия
-const items = document.querySelector('.menu__inner')
-// const link = document.querySelector('.language__link');
-const btn = document.querySelector('.header__btn')
-document.querySelectorAll('.menu a').forEach((item) =>
-    item.addEventListener('click', () => {
-        const parent = items;
-        // link.classList.toggle('language__link--active');
-        // btn.classList.toggle('active');
-
-        if (parent.classList.contains('active')) {
-            parent.classList.remove('active');
-            parent.classList.add('close');
-            // btn.classList.add('active');
+        if (parent.classList.contains('language__link--active')) {
+            parent.classList.toggle('language__link--active');
         }
         else {
-            parent.classList.add('active');
-            parent.classList.remove('close');
-            // btn.classList.remove('active');
+            parent.classList.toggle('language__link--active');
+            parent.classList.remove('accordion__wrapper--active');
         }
     })
 )
 
+// let items = document.querySelector('.language__link');
 
+// // document.querySelectorAll('.language__link').forEach((item) =>
 
-// document.querySelectorAll('.language__link').forEach(() =>
-
-// item.addEventListener('click', () => {
+// items.addEventListener('click', () => {
 //     // const parent = item;
-
-//     if (item.classList.contains('language__link--active')) {
-//         item.classList.toggle('language__link--active');
+//     // items.classList.toggle('language__link--active');
+//     if (items.classList.contains('language__link--active')) {
+//         items.classList.toggle('language__link--active');
 //     }
 //     else {
-//         item.classList.toggle('language__link--active');
-//         // item.classList.remove('accordion__wrapper--active');
+//         items.classList.toggle('language__link--active');
+//         items.classList.remove('accordion__wrapper--active');
 //     }
 // })
-// )
+// // )
+// let items = document.querySelector('.language__link');
+// $('.language__link').on('click', function () {
+//     $('.language__link').toggleClass('language__link--active');
+//     // мигалка языков
+// });
+
+
+
+
+
+$('.header__btn, .menu__link').on('click', function () {
+    $('.menu__inner').toggleClass('active');
+    // для меню закрытия +
+});
+
+$('.header__btn').on('click', function () {
+    $('.header__btn').toggleClass('active');
+    // для открытия
+});
+
+$('.menu__link').on('click', function () {
+    $('.header__btn').toggleClass('active');
+    // для появления крестика  +
+});
+
+
 
 const slidercasey = new Swiper('.swipercasey', {
     slidesPerView: 3,
     loop: true,
     loopedslides: 1,
     spaceBetween: 30,
-    /*растояние*/
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -206,9 +182,7 @@ $(document).ready(function () {
 
 $('.menu__button').on('click', function () {
     $('.modal').toggleClass('modal-active');
-
-    /*$('.header__logo').toggleClass('menu__list--active');
-    $('.intro__btn').toggleClass('menu__list--active');*/
+    // для открытия модального окона
 });
 
 // close modal
@@ -242,9 +216,74 @@ $(".menu a").on("click", function (event) {
     var id = $(this).attr('href'),
         top = $(id).offset().top;
     tops = top - 100;
-    // px = px;
-    // + 'px'
-    // console.log(top);
-    // console.log(tops);
     $('body,html').animate({ scrollTop: tops }, 1500);
 });
+
+// $('.menu__link').on('click', function () {
+//     $('.header__inner').toggleClass('active');
+// });
+
+// для меню что бы закрывалось, что была анимация закрытия
+// const items = document.querySelector('.menu__inner')
+// const link = document.querySelector('.language__link');
+// const btn = document.querySelector('.header__btn')
+// document.querySelectorAll('.menu a').forEach((item) =>
+//     item.addEventListener('click', () => {
+//         const parent = items;
+//         // link.classList.toggle('language__link--active');
+//         // btn.classList.toggle('active');
+
+//         if (parent.classList.contains('active')) {
+//             parent.classList.remove('active');
+//             parent.classList.add('close');
+//             // btn.classList.add('active');
+//         }
+//         else {
+//             parent.classList.add('active');
+//             parent.classList.remove('close');
+//             // btn.classList.remove('active');
+//         }
+//     })
+// )
+
+
+
+// document.querySelectorAll('.language__link').forEach(() =>
+
+// item.addEventListener('click', () => {
+//     // const parent = item;
+
+//     if (item.classList.contains('language__link--active')) {
+//         item.classList.toggle('language__link--active');
+//     }
+//     else {
+//         item.classList.toggle('language__link--active');
+//         // item.classList.remove('accordion__wrapper--active');
+//     }
+// })
+// )
+
+// $('.language').on('click', function () {
+//     $('.language').toggleClass('language--active');
+// })
+
+
+// -------!!!
+
+
+// let link = document.querySelector('.menu__link');
+// document.querySelectorAll('.header__btn').forEach((item) =>
+//     item.addEventListener('click', () => {
+//         const parent = item;
+
+//         btn.classList.toggle('active');
+//         // if (parent.classList.contains('active')) {
+//         //     parent.classList.remove('active');
+//         //     // parent.classList.add('close');
+//         // }
+//         // else {
+//         //     parent.classList.add('active');
+//         //     // parent.classList.remove('close');
+//         // }
+//     })
+// )
