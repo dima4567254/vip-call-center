@@ -1,3 +1,6 @@
+
+
+
 AOS.init({
     // delay: 100, // values from 0 to 3000, with step 50ms
     duration: 900, //длительность
@@ -163,6 +166,21 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    $('.faq__accordion > li  >.faq__text').hide();
+
+    $('.faq__accordion > li ').click(function () {
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active").find(".faq__text").slideUp();
+        } else {
+            $(".faq__accordion > li  .active .faq__text").slideUp();
+            $(".faq__accordion > li  .active").removeClass("active");
+            $(this).addClass("active").find(".faq__text").slideDown();
+        }
+        return false;
+    });
+});
+
 
 // open modal
 // $(' .price__link--scout').click(function () {
@@ -180,10 +198,50 @@ $(document).ready(function () {
 
 
 
-$('.menu__button').on('click', function () {
-    $('.modal').toggleClass('modal-active');
-    // для открытия модального окона
-});
+
+// $('.header__button').on('click', function () {
+//     $('.modal').add('modal-active');
+//     // для открытия модального окона
+// });
+// $('.menu__button').on('click', function () {
+//     $('.modal').add('modal-active');
+//     // для открытия модального окона
+// });
+// let button = document.querySelector('.menu__button, .header__button, .about__btn');
+// let modal = document.querySelector('.modal');
+// button.addEventListener('click', () => {
+//     modal.classList.add('modal-active');
+// });
+
+// $(' .header__button').click(function () {
+//     $('.modal').css('display', 'flex');
+//     $('.modal__inner').css('display', 'inline');
+// });
+
+// const buttonModal = document.querySelector('.header__button, .about__btn');
+// buttonModal.addEventListener('click', () => {
+//     modalWindow.classList.add('modal-active'); /*добовляем класс*/
+//     document.onkeydown = function (event) {
+//         if (event.keyCode == 27) {
+//             modalWindow.classList.remove('modal-active');
+//         }
+//     }
+// });
+// -----------------------
+// let data = this.getAttribute('data');
+const modalWindow = document.querySelector('.modal');
+let elements = this.getAttribute("modal");
+for (let i = 0; i < elements.length; i++) {/*прокручиваем в цикле все элементы*/
+    elements[i].addEventListener('click', function () {  /*при клике на элемент */
+        modalWindow.classList.add('modal-active');
+        document.onkeydown = function (event) {
+            if (event.keyCode == 27) {
+                modalWindow.classList.remove('modal-active');
+            }
+        }
+    })
+}
+
 
 // close modal
 $('.modal').click(function () {
@@ -215,8 +273,10 @@ $(".menu a").on("click", function (event) {
     event.preventDefault();
     var id = $(this).attr('href'),
         top = $(id).offset().top;
-    tops = top - 100;
+    // tops = top - 100;
+    tops = top - 50;
     $('body,html').animate({ scrollTop: tops }, 1500);
+
 });
 
 // $('.menu__link').on('click', function () {
