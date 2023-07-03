@@ -1,6 +1,6 @@
 AOS.init({
     // delay: 100, // values from 0 to 3000, with step 50ms
-    duration: 900, //длительность
+    duration: 900, //длительность работает900
     // once: false, // whether animation should happen only once - while scrolling down
     mirror: true,
     once: true,
@@ -35,7 +35,10 @@ document.querySelectorAll('.language__link').forEach((item) =>
         }
         else {
             parent.classList.toggle('language__link--active');
-            parent.classList.remove('language__link--active');
+            // parent.classList.remove('language__link--active');
+            // parent.classList.remove('accordion__wrapper--active');
+            
+            
         }
     })
 )
@@ -55,7 +58,7 @@ $('.menu__link').on('click', function () {
     // для появления крестика  +
 });
 
-const slidercasey = new Swiper('.swipercasey', {
+const slidercasey = new Swiper('.slidercasey', {
     slidesPerView: 3,
     loop: true,
     loopedslides: 1,
@@ -80,7 +83,7 @@ const slidercasey = new Swiper('.swipercasey', {
     },
 });
 
-const swiperclients = new Swiper('.swiperclients', {
+const sliderclients = new Swiper('.sliderclients', {
     slidesPerView: 1,
     loop: true,
     navigation: {
@@ -391,7 +394,7 @@ $(document).ready(function () {
 // )
 
 const modalWindow = document.querySelector('.modal');
-let elements = document.querySelectorAll('.modal-active');
+let elements = document.querySelectorAll('.modal-window');
 
 for (let i = 0; i < elements.length; i++) {/*прокручиваем в цикле все элементы*/
     elements[i].addEventListener('click', function () {  /*при клике на элемент */
@@ -407,8 +410,8 @@ for (let i = 0; i < elements.length; i++) {/*прокручиваем в цик�
     })
 }
 
-$('.modal-active').on('click', function () {
-    $('.modal').toggle('modal-open');
+$('.modal-window').on('click', function () {
+    $('.modal').add('modal-open');
     // для появления крестика  +
 });
 

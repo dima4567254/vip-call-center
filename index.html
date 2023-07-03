@@ -16,31 +16,22 @@
 
 <!-- 290 стоит ли делать сылкой весь блок -->
 <!-- заполнить блоки -->
+<!--  оптимизировать скрипт -->
 
-<!-- иконки в футере -->
 
 <!-- наести порядок в папках осталось только npm aos -->
 
 
-<!-- проверить валидатор  -->
+
 <!-- проверить фокусы -->
 <!-- проверить скролл  -->
 <!-- сделать веб пи -->
 
-<!-- проверить скролл  -->
-
-<!-- modal-active придумать другое название -->
-<!--  оптимизировать скрипт -->
-<!-- work 768 -->
 
 
+<!-- иконки в футере -->
 
-<!-- обратная анимция на акардионе -->
-<!-- оптимизировать и убрать лишнее для анимации -->
-
-<!-- анимацию на модал -->
-<!-- возможно надо сделать бем блок имагес -->
-<!-- опять язык сломался -->
+<!-- посмотреть что там с шрифтами -->
 
 <body>
     <header class="header">
@@ -62,12 +53,12 @@
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#swiper-casey">
+                            <a class="menu__link" href="#slider-casey">
                                 Кейси
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#swiper-casey">
+                            <a class="menu__link" href="#slider-casey">
                                 Звіти
                             </a>
                         </li>
@@ -82,7 +73,7 @@
                             </a>
                         </li>
                     </ul>
-                    <button class="menu__button btn button--start modal-active" type="button">
+                    <button class="menu__button btn button--start modal-window" type="button">
                         <span>Зв'язатись з нами</span>
                     </button>
                 </div>
@@ -92,7 +83,6 @@
                             <a class="language__link language__link--active" href="#">
                                 ua
                             </a>
-                            <!-- /ua -->
                             <a class="language__link" href="#">
                                 ru
                             </a>
@@ -102,9 +92,8 @@
                             </use>
                         </svg>
                         <span class="sr-only">Значок стрілки</span>
-                        <!-- /ru -->
                     </div>
-                    <button class="header__button btn btn--start modal-active" type="button">
+                    <button class="header__button btn btn--start modal-window" type="button">
                         <span>Зв'язатись з нами</span>
                     </button>
                     <button class="header__btn" type="button">
@@ -133,12 +122,12 @@
                             </p>
                         </div>
                         <form class="content__form form" data-aos="fade-up" data-aos-delay="450">
-                            <label class="form__label" for="name">
+                            <label class="sr-only" for="content-input">
                                 Введіть ваше ім'я*
                             </label>
                             <input class="form__input form__input--form" id="content-input" type="text" name="name"
                                 placeholder="ім'я*" required oninvalid="this.setCustomValidity('введіть ваше ім`я')">
-                            <label class="form__label" for="tel">
+                            <label class="sr-only" for="intro-input">
                                 Введіть ваш телефон*
                             </label>
                             <input class="form__input form__input--form" id="intro-input" type="tel" name="tel"
@@ -160,7 +149,7 @@
             </div>
         </section>
 
-        <section class="about section section--bem" id="about">
+        <section class="about section" id="about">
             <div class="container">
                 <img class="about__images about__images--decor" src="../images/icons/decor3.svg" alt="Декор">
                 <div class="about__wrapper">
@@ -200,7 +189,7 @@
                                 </p>
                             </div>
                         </div>
-                        <button class="about__btn btn btn--start modal-active" type="button" data-aos="fade-up"
+                        <button class="about__btn btn btn--start modal-window" type="button" data-aos="fade-up"
                             data-aos-delay="450">
                             <span>детальніше</span>
                         </button>
@@ -209,7 +198,7 @@
             </div>
         </section>
 
-        <section class="autonomously section section--bem">
+        <section class="autonomously section">
             <div class="container">
                 <div class="autonomously__wrapper">
                     <div class="autonomously__box">
@@ -231,7 +220,7 @@
             </div>
         </section>
 
-        <section class="advantages section section--bem">
+        <section class="advantages section">
             <div class="container">
                 <div class="advantages__box">
                     <h2 class="advantages__title title" data-aos="fade-up" data-aos-delay="100">
@@ -321,7 +310,7 @@
             </div>
         </section>
 
-        <section class="services section section--bem" id="services">
+        <section class="services section" id="services">
             <img class="services__images" src="../images/icons/decor4.svg" alt="Декор">
             <img class="services__images services__images--decor" src="../images/icons/decor5.svg" alt="Декор">
             <div class="container">
@@ -371,7 +360,7 @@
                                 <p>Від маржі</p>
                             </div>
                         </div>
-                        <button class="services__btn btn btn--start modal-active" type="button">
+                        <button class="services__btn btn btn--start modal-window" type="button">
                             <span>Детальніше</span>
                         </button>
                     </li>
@@ -411,7 +400,7 @@
                                 <p>Від маржі</p>
                             </div>
                         </div>
-                        <button class="services__btn btn btn--standard modal-active" type="button">
+                        <button class="services__btn btn btn--standard modal-window" type="button">
                             <span>Детальніше</span>
                         </button>
                     </li>
@@ -449,86 +438,86 @@
                                 <p>Від маржі</p>
                             </div>
                         </div>
-                        <button class="services__btn btn btn--start modal-active" type="button">
+                        <button class="services__btn btn btn--start modal-window" type="button">
                             <span>Детальніше</span>
                         </button>
                     </li>
                 </ul>
             </div>
         </section>
-        <!-- переделать ходябы на слайдер !!!-->
-        <section class="swiper-casey section section--bem" id="swiper-casey">
+
+        <section class="slider-casey section" id="slider-casey">
             <div class="container container--slider">
-                <img class="swiper-casey__images" src="../images/icons/decor6.svg" alt="Декор">
-                <h2 class="swiper-casey__title title" data-aos="fade-up">
+                <img class="slider-casey__images" src="../images/icons/decor6.svg" alt="Декор">
+                <h2 class="slider-casey__title title" data-aos="fade-up">
                     Кейси
                 </h2>
-                <div class="swiper-casey__wrapper swipercasey" data-aos="fromOpacity" data-aos-delay="100">
+                <div class="slider-casey__wrapper slidercasey" data-aos="fromOpacity" data-aos-delay="100">
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-                    <ul class="swiper-wrapper swiper-casey__items">
+                    <ul class="swiper-wrapper slider-casey__items">
                         <li class="swiper-slide">
-                            <div class="swiper-casey__item ">
-                                <img class="swiper-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
-                                <div class="swiper-casey__inner">
-                                    <h3 class="swiper-casey__subtitle">
+                            <div class="slider-casey__item ">
+                                <img class="slider-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
+                                <div class="slider-casey__inner">
+                                    <h3 class="slider-casey__subtitle">
                                         Пульсоксиметр
                                     </h3>
-                                    <div class="swiper-casey__text">
+                                    <div class="slider-casey__text">
                                         <p>
                                             Кількість лідів:
                                             <span>2766</span>
                                         </p>
                                     </div>
-                                    <div class="swiper-casey__list">
-                                        <div class="swiper-casey__item">
-                                            <div class="swiper-casey__first">
+                                    <div class="slider-casey__list">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
                                                 Показник
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Аппрув
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Апсейл
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Середній чек
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Викуп
                                             </div>
                                         </div>
-                                        <div class="swiper-casey__item">
-                                            <div class="swiper-casey__first">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
                                                 До
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 65%
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 48%
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 255<span>грн</span>
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 67%
                                             </div>
                                         </div>
-                                        <div class="swiper-casey__item">
-                                            <div class="swiper-casey__first">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
                                                 Після
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 95%
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 96%
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 460<span>грн</span>
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 88%
                                             </div>
                                         </div>
@@ -537,67 +526,67 @@
                             </div>
                         </li>
                         <li class="swiper-slide">
-                            <div class="swiper-casey__item">
-                                <img class="swiper-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
-                                <div class="swiper-casey__inner">
-                                    <h3 class="swiper-casey__subtitle">
+                            <div class="slider-casey__item">
+                                <img class="slider-casey__img" src="images/sani.jpg" alt="Пульсоксиметр">
+                                <div class="slider-casey__inner">
+                                    <h3 class="slider-casey__subtitle">
                                         Палочки от засоров Sani sticks
                                     </h3>
-                                    <div class="swiper-casey__text">
+                                    <div class="slider-casey__text">
                                         <p>
                                             Кількість лідів:
                                             <span>8000</span>
                                         </p>
                                     </div>
-                                    <div class="swiper-casey__list">
-                                        <div class="swiper-casey__item">
-                                            <div class="swiper-casey__first">
+                                    <div class="slider-casey__list">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
                                                 Показник
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Аппрув
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Апсейл
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Середній чек
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Викуп
                                             </div>
                                         </div>
-                                        <div class="swiper-casey__item">
-                                            <div class="swiper-casey__first">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
                                                 До
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 65%
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 48%
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 255<span>грн</span>
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 67%
                                             </div>
                                         </div>
-                                        <div class="swiper-casey__item">
-                                            <div class="swiper-casey__first">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
                                                 Після
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 95%
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 96%
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 460<span>грн</span>
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 88%
                                             </div>
                                         </div>
@@ -606,135 +595,67 @@
                             </div>
                         </li>
                         <li class="swiper-slide">
-                        <li class="swiper-casey__item">
-                            <img class="swiper-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
-                            <div class="swiper-casey__inner">
-                                <h3 class="swiper-casey__subtitle">
-                                    Постельное белье
-                                </h3>
-                                <div class="swiper-casey__text">
-                                    <p>
-                                        Кількість лідів:
-                                        <span>1200</span>
-                                    </p>
-                                </div>
-                                <div class="swiper-casey__list">
-                                    <div class="swiper-casey__item">
-                                        <div class="swiper-casey__first">
-                                            Показник
-                                        </div>
-                                        <div class="swiper-casey__indicator">
-                                            Аппрув
-                                        </div>
-                                        <div class="swiper-casey__indicator">
-                                            Апсейл
-                                        </div>
-                                        <div class="swiper-casey__indicator">
-                                            Середній чек
-                                        </div>
-                                        <div class="swiper-casey__indicator">
-                                            Викуп
-                                        </div>
-                                    </div>
-                                    <div class="swiper-casey__item">
-                                        <div class="swiper-casey__first">
-                                            До
-                                        </div>
-                                        <div class="swiper-casey__to">
-                                            65%
-                                        </div>
-                                        <div class="swiper-casey__to">
-                                            48%
-                                        </div>
-                                        <div class="swiper-casey__to">
-                                            255<span>грн</span>
-                                        </div>
-                                        <div class="swiper-casey__to">
-                                            67%
-                                        </div>
-                                    </div>
-                                    <div class="swiper-casey__item">
-                                        <div class="swiper-casey__first">
-                                            Після
-                                        </div>
-                                        <div class="swiper-casey__after">
-                                            95%
-                                        </div>
-                                        <div class="swiper-casey__after">
-                                            96%
-                                        </div>
-                                        <div class="swiper-casey__after">
-                                            460<span>грн</span>
-                                        </div>
-                                        <div class="swiper-casey__after">
-                                            88%
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="swiper-slide">
-                            <div class="swiper-casey__item">
-                                <img class="swiper-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
-                                <div class="swiper-casey__inner">
-                                    <h3 class="swiper-casey__subtitle ">
-                                        Пульсоксиметр
+                            <div class="slider-casey__item">
+                                <img class="slider-casey__img" src="images/bedtime.jpg" alt="Пульсоксиметр">
+                                <div class="slider-casey__inner">
+                                    <h3 class="slider-casey__subtitle">
+                                        Постельное белье
                                     </h3>
-                                    <div class="swiper-casey__text">
+                                    <div class="slider-casey__text">
                                         <p>
                                             Кількість лідів:
-                                            <span>2766</span>
+                                            <span>1200</span>
                                         </p>
                                     </div>
-                                    <div class="swiper-casey__list">
-                                        <div class="swiper-casey__item">
-                                            <div class="swiper-casey__first">
+                                    <div class="slider-casey__list">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
                                                 Показник
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Аппрув
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Апсейл
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Середній чек
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Викуп
                                             </div>
                                         </div>
-                                        <div class="swiper-casey__item">
-                                            <div class="swiper-casey__first">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
                                                 До
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 65%
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 48%
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 255<span>грн</span>
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 67%
                                             </div>
                                         </div>
-                                        <div class="swiper-casey__item">
-                                            <div class="swiper-casey__first">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
                                                 Після
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 95%
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 96%
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 460<span>грн</span>
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 88%
                                             </div>
                                         </div>
@@ -743,67 +664,67 @@
                             </div>
                         </li>
                         <li class="swiper-slide">
-                            <div class="swiper-casey__item">
-                                <img class="swiper-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
-                                <div class="swiper-casey__inner">
-                                    <h3 class="swiper-casey__subtitle">
+                            <div class="slider-casey__item ">
+                                <img class="slider-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
+                                <div class="slider-casey__inner">
+                                    <h3 class="slider-casey__subtitle">
                                         Пульсоксиметр
                                     </h3>
-                                    <div class="swiper-casey__text">
+                                    <div class="slider-casey__text">
                                         <p>
                                             Кількість лідів:
                                             <span>2766</span>
                                         </p>
                                     </div>
-                                    <div class="swiper-casey__list">
-                                        <div class="swiper-casey__item">
-                                            <div class="swiper-casey__first">
+                                    <div class="slider-casey__list">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
                                                 Показник
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Аппрув
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Апсейл
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Середній чек
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Викуп
                                             </div>
                                         </div>
-                                        <div class="swiper-casey__item">
-                                            <div class="swiper-casey__first">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
                                                 До
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 65%
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 48%
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 255<span>грн</span>
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 67%
                                             </div>
                                         </div>
-                                        <div class="swiper-casey__item">
-                                            <div class="swiper-casey__first">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
                                                 Після
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 95%
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 96%
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 460<span>грн</span>
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 88%
                                             </div>
                                         </div>
@@ -812,67 +733,67 @@
                             </div>
                         </li>
                         <li class="swiper-slide">
-                            <div class="swiper-casey__item">
-                                <img class="swiper-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
-                                <div class="swiper-casey__inner">
-                                    <h3 class="swiper-casey__subtitle">
-                                        Пульсоксиметр
+                            <div class="slider-casey__item">
+                                <img class="slider-casey__img" src="images/sani.jpg" alt="Пульсоксиметр">
+                                <div class="slider-casey__inner">
+                                    <h3 class="slider-casey__subtitle">
+                                        Палочки от засоров Sani sticks
                                     </h3>
-                                    <div class="swiper-casey__text">
+                                    <div class="slider-casey__text">
                                         <p>
                                             Кількість лідів:
-                                            <span>2766</span>
+                                            <span>8000</span>
                                         </p>
                                     </div>
-                                    <div class="swiper-casey__list">
-                                        <div class="swiper-casey__item">
-                                            <div class="swiper-casey__first">
+                                    <div class="slider-casey__list">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
                                                 Показник
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Аппрув
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Апсейл
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Середній чек
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Викуп
                                             </div>
                                         </div>
-                                        <div class="swiper-casey__item">
-                                            <div class="swiper-casey__first">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
                                                 До
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 65%
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 48%
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 255<span>грн</span>
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 67%
                                             </div>
                                         </div>
-                                        <div class="swiper-casey__item">
-                                            <div class="swiper-casey__first">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
                                                 Після
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 95%
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 96%
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 460<span>грн</span>
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 88%
                                             </div>
                                         </div>
@@ -881,67 +802,274 @@
                             </div>
                         </li>
                         <li class="swiper-slide">
-                            <div class="swiper-casey__item">
-                                <img class="swiper-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
-                                <div class="swiper-casey__inner">
-                                    <h3 class="swiper-casey__subtitle">
+                            <div class="slider-casey__item">
+                                <img class="slider-casey__img" src="images/bedtime.jpg" alt="Пульсоксиметр">
+                                <div class="slider-casey__inner">
+                                    <h3 class="slider-casey__subtitle">
+                                        Постельное белье
+                                    </h3>
+                                    <div class="slider-casey__text">
+                                        <p>
+                                            Кількість лідів:
+                                            <span>1200</span>
+                                        </p>
+                                    </div>
+                                    <div class="slider-casey__list">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
+                                                Показник
+                                            </div>
+                                            <div class="slider-casey__indicator">
+                                                Аппрув
+                                            </div>
+                                            <div class="slider-casey__indicator">
+                                                Апсейл
+                                            </div>
+                                            <div class="slider-casey__indicator">
+                                                Середній чек
+                                            </div>
+                                            <div class="slider-casey__indicator">
+                                                Викуп
+                                            </div>
+                                        </div>
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
+                                                До
+                                            </div>
+                                            <div class="slider-casey__to">
+                                                65%
+                                            </div>
+                                            <div class="slider-casey__to">
+                                                48%
+                                            </div>
+                                            <div class="slider-casey__to">
+                                                255<span>грн</span>
+                                            </div>
+                                            <div class="slider-casey__to">
+                                                67%
+                                            </div>
+                                        </div>
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
+                                                Після
+                                            </div>
+                                            <div class="slider-casey__after">
+                                                95%
+                                            </div>
+                                            <div class="slider-casey__after">
+                                                96%
+                                            </div>
+                                            <div class="slider-casey__after">
+                                                460<span>грн</span>
+                                            </div>
+                                            <div class="slider-casey__after">
+                                                88%
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="slider-casey__item ">
+                                <img class="slider-casey__img" src="images/pulse.jpg" alt="Пульсоксиметр">
+                                <div class="slider-casey__inner">
+                                    <h3 class="slider-casey__subtitle">
                                         Пульсоксиметр
                                     </h3>
-                                    <div class="swiper-casey__text">
+                                    <div class="slider-casey__text">
                                         <p>
                                             Кількість лідів:
                                             <span>2766</span>
                                         </p>
                                     </div>
-                                    <div class="swiper-casey__list">
-                                        <div class="swiper-casey__item">
-                                            <div class="swiper-casey__first">
+                                    <div class="slider-casey__list">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
                                                 Показник
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Аппрув
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Апсейл
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Середній чек
                                             </div>
-                                            <div class="swiper-casey__indicator">
+                                            <div class="slider-casey__indicator">
                                                 Викуп
                                             </div>
                                         </div>
-                                        <div class="swiper-casey__item">
-                                            <div class="swiper-casey__first">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
                                                 До
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 65%
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 48%
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 255<span>грн</span>
                                             </div>
-                                            <div class="swiper-casey__to">
+                                            <div class="slider-casey__to">
                                                 67%
                                             </div>
                                         </div>
-                                        <div class="swiper-casey__item">
-                                            <div class="swiper-casey__first">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
                                                 Після
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 95%
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 96%
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
                                                 460<span>грн</span>
                                             </div>
-                                            <div class="swiper-casey__after">
+                                            <div class="slider-casey__after">
+                                                88%
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="slider-casey__item">
+                                <img class="slider-casey__img" src="images/sani.jpg" alt="Пульсоксиметр">
+                                <div class="slider-casey__inner">
+                                    <h3 class="slider-casey__subtitle">
+                                        Палочки от засоров Sani sticks
+                                    </h3>
+                                    <div class="slider-casey__text">
+                                        <p>
+                                            Кількість лідів:
+                                            <span>8000</span>
+                                        </p>
+                                    </div>
+                                    <div class="slider-casey__list">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
+                                                Показник
+                                            </div>
+                                            <div class="slider-casey__indicator">
+                                                Аппрув
+                                            </div>
+                                            <div class="slider-casey__indicator">
+                                                Апсейл
+                                            </div>
+                                            <div class="slider-casey__indicator">
+                                                Середній чек
+                                            </div>
+                                            <div class="slider-casey__indicator">
+                                                Викуп
+                                            </div>
+                                        </div>
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
+                                                До
+                                            </div>
+                                            <div class="slider-casey__to">
+                                                65%
+                                            </div>
+                                            <div class="slider-casey__to">
+                                                48%
+                                            </div>
+                                            <div class="slider-casey__to">
+                                                255<span>грн</span>
+                                            </div>
+                                            <div class="slider-casey__to">
+                                                67%
+                                            </div>
+                                        </div>
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
+                                                Після
+                                            </div>
+                                            <div class="slider-casey__after">
+                                                95%
+                                            </div>
+                                            <div class="slider-casey__after">
+                                                96%
+                                            </div>
+                                            <div class="slider-casey__after">
+                                                460<span>грн</span>
+                                            </div>
+                                            <div class="slider-casey__after">
+                                                88%
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="slider-casey__item">
+                                <img class="slider-casey__img" src="images/bedtime.jpg" alt="Пульсоксиметр">
+                                <div class="slider-casey__inner">
+                                    <h3 class="slider-casey__subtitle">
+                                        Постельное белье
+                                    </h3>
+                                    <div class="slider-casey__text">
+                                        <p>
+                                            Кількість лідів:
+                                            <span>1200</span>
+                                        </p>
+                                    </div>
+                                    <div class="slider-casey__list">
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
+                                                Показник
+                                            </div>
+                                            <div class="slider-casey__indicator">
+                                                Аппрув
+                                            </div>
+                                            <div class="slider-casey__indicator">
+                                                Апсейл
+                                            </div>
+                                            <div class="slider-casey__indicator">
+                                                Середній чек
+                                            </div>
+                                            <div class="slider-casey__indicator">
+                                                Викуп
+                                            </div>
+                                        </div>
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
+                                                До
+                                            </div>
+                                            <div class="slider-casey__to">
+                                                65%
+                                            </div>
+                                            <div class="slider-casey__to">
+                                                48%
+                                            </div>
+                                            <div class="slider-casey__to">
+                                                255<span>грн</span>
+                                            </div>
+                                            <div class="slider-casey__to">
+                                                67%
+                                            </div>
+                                        </div>
+                                        <div class="slider-casey__item">
+                                            <div class="slider-casey__first">
+                                                Після
+                                            </div>
+                                            <div class="slider-casey__after">
+                                                95%
+                                            </div>
+                                            <div class="slider-casey__after">
+                                                96%
+                                            </div>
+                                            <div class="slider-casey__after">
+                                                460<span>грн</span>
+                                            </div>
+                                            <div class="slider-casey__after">
                                                 88%
                                             </div>
                                         </div>
@@ -954,10 +1082,10 @@
             </div>
         </section>
 
-        <section class="clients section section--bem" id="clients">
+        <section class="clients section" id="clients">
             <div class="container">
                 <div class="clients__wrapper">
-                    <div class="clients__box" data-aos="fade-up" data-aos-delay="150">
+                    <div class="clients__box" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">
                         <h2 class="clients__title title">
                             Хто наші клієнти?
                         </h2>
@@ -1015,14 +1143,14 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="clients__inner swiperclients" data-aos="fromOpacity">
+                    <div class="clients__inner sliderclients" data-aos="fromOpacity">
                         <div class="button-next">
                             <span></span>
                         </div>
                         <div class="button-prev">
                             <span></span>
                         </div>
-                        <div class="swiper-wrapper">
+                        <div class="swiper-wrapper" data-aos="fromOpacity" data-aos-delay="150">
                             <div class="swiper-slide">
                                 <a class="clients__link" href="images/schedule1.jpg" data-fancybox="gallery">
                                     <div class="clients__images">
@@ -1050,7 +1178,7 @@
             </div>
         </section>
 
-        <section class="partners section section--bem">
+        <section class="partners section">
             <img class="partners__images" src="../images/icons/decor7.svg" alt="Декор">
             <div class="container">
                 <h2 class="partners__title title" data-aos="fade-up">
@@ -1094,7 +1222,7 @@
             </div>
         </section>
 
-        <section class="work section section--bem">
+        <section class="work section">
             <div class="container">
                 <div class="work__box">
                     <h2 class="work__title title" data-aos="fade-up" data-aos-delay="100">
@@ -1124,13 +1252,13 @@
                         <p>Ви платите тільки за підтверджені замовлення</p>
                     </li>
                 </ul>
-                <form class="work__form form" data-aos="fade-up" data-aos-delay="700">
-                    <label class="sr-only" for="name">
+                <form class="work__form form" data-aos="fade-up" data-aos-delay="600">
+                    <label class="sr-only" for="work-text">
                         Введіть ваше ім'я*
                     </label>
                     <input class="form__input" id="work-text" type="text" name="name" placeholder="Введіть ваше ім'я*"
                         required oninvalid="this.setCustomValidity('введіть ваше ім`я')">
-                    <label class="sr-only" for="tel">
+                    <label class="sr-only" for="work-tel">
                         Введіть ваш телефон*
                     </label>
                     <input class="form__input" id="work-tel" type="tel" name="tel" placeholder=" Введіть ваш телефон*"
@@ -1141,7 +1269,7 @@
                         </span>
                     </button>
                 </form>
-                <div class="work__text">
+                <div class="work__text" data-aos="fade-up" data-aos-delay="700">
                     <p>
                         відпрацюємо новим клієнтам перші
                         <span>50 лідів безкоштовно</span>
@@ -1150,7 +1278,7 @@
             </div>
         </section>
 
-        <section class="slider-reviews section section--bem" id="slider-reviews">
+        <section class="slider-reviews section" id="slider-reviews">
             <div class="container container--slider">
                 <img class="slider-reviews__images" src="../images/icons/decor8.svg" alt="Декор">
                 <img class="slider-reviews__images slider-reviews__images--reviews" src="../images/icons/decor9.svg"
@@ -1159,8 +1287,6 @@
                     Відгуки
                 </h2>
                 <div class="slider-reviews__wrapper sliderreviews" data-aos="fromOpacity" data-aos-delay="500">
-                    <!-- fromOpacity data-aos="userFadeUp" -->
-                    <!-- !!!не знаю такой аимации -->
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="slider-reviews__items swiper-wrapper">
@@ -1182,8 +1308,6 @@
                                         с допами вы перекрываете все мои расходы.
                                     </p>
                                 </div>
-                                <div class=""></div>
-                                <!-- !!! -->
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -1208,7 +1332,6 @@
                                         Рекомендую смело всем этот КЦ
                                     </p>
                                 </div>
-                                <div class=""></div>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -1226,7 +1349,6 @@
                                         все слажено и оперативно.
                                     </p>
                                 </div>
-                                <div class=""></div>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -1244,7 +1366,6 @@
                                         все слажено и оперативно.
                                     </p>
                                 </div>
-                                <div class=""></div>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -1262,7 +1383,6 @@
                                         все слажено и оперативно.
                                     </p>
                                 </div>
-                                <div class=""></div>
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -1280,14 +1400,13 @@
                                         все слажено и оперативно.
                                     </p>
                                 </div>
-                                <div class=""></div>
-                                <!-- !!! -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <section class="faq">
             <div class="container">
                 <h2 class="faq__title title" data-aos="fade-up" data-aos-delay="100">
@@ -1413,10 +1532,9 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" data-aos="fromOpacity" data-aos-delay="500">
         <div class="container">
             <div class="footer__items">
-                <!-- data-aos="userFadeUp" items -->
                 <div class="footer__item">
                     <a class="footer__logo logo" href="#">
                         <img class="logo__menu" src="images/logo.svg" alt="логотип">
@@ -1424,21 +1542,25 @@
                     <ul class="social">
                         <li class="social__item">
                             <a class="social__link" href="#">
-                                <svg class="social__svg" width="32px" height="32px">
+                                <svg class="social__svg" width="30px" height="30px" fill="#2c2f3b">
                                     <use xlink:href="images/sprite.svg#instagram">
                                     </use>
                                 </svg>
                                 <span class="sr-only">Значок інстаграм</span>
                             </a>
+                        </li>
+                        <li class="social__item">
                             <a class="social__link" href="#">
-                                <svg class="social__svg" width="32px" height="32px">
+                                <svg class="social__svg" width="30px" height="30px" fill="#2c2f3b">
                                     <use xlink:href="images/sprite.svg#facebook">
                                     </use>
                                 </svg>
                                 <span class="sr-only">Значок фейсбук</span>
                             </a>
+                        </li>
+                        <li class="social__item">
                             <a class="social__link" href="#">
-                                <svg class="social__svg" width="32px" height="32px">
+                                <svg class="social__svg" width="30px" height="30px" fill="#2c2f3b">
                                     <use xlink:href="images/sprite.svg#telegram">
                                     </use>
                                 </svg>
@@ -1525,12 +1647,12 @@
                         Зв'язатись з нами
                     </div>
                     <form class="footer__form">
-                        <label class="sr-only" for="name">
+                        <label class="sr-only" for="footer-text">
                             Введіть ваше Iм'я*
                         </label>
                         <input class="footer__input" id="footer-text" type="text" name="name" placeholder="ім'я*"
                             required oninvalid="this.setCustomValidity('введіть ваше ім`я')">
-                        <label class="sr-only" for="tel">
+                        <label class="sr-only" for="footer-tel">
                             Введіть ваш Телефон*
                         </label>
                         <input class="footer__input" id="footer-tel" type="tel" name="tel" placeholder="телефон*"
@@ -1543,11 +1665,11 @@
             </div>
         </div>
     </footer>
-    <!-- !!! -->
+
     <div class="modal">
         <div class="modal__inner">
             <div class="content">
-                <button class="content__btn modal-active" type="button">
+                <button class="content__btn modal-window" type="button">
                     <span class="sr-only">Закрити модальне вікно</span>
                 </button>
                 <h2 class="content__title">
@@ -1560,12 +1682,12 @@
                     </p>
                 </div>
                 <form class="content__form form">
-                    <label class="sr-only" for="name">
+                    <label class="sr-only" for="modal-text">
                         Введіть ваше ім'я*
                     </label>
                     <input class="form__input form__input--form" id="modal-text" type="text" name="name"
                         placeholder="ім'я*" required oninvalid="this.setCustomValidity('введіть ваше ім`я')">
-                    <label class="sr-only" for="tel">
+                    <label class="sr-only" for="modal-tel">
                         Введіть ваш телефон*
                     </label>
                     <input class="form__input form__input--form" id="modal-tel" type="tel" name="tel"

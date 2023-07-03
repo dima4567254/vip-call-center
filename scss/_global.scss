@@ -62,11 +62,8 @@ main {
     border: 0;
 }
 
-
-
-.btn span {
-    position: relative;
-    z-index: 1;
+.header-fixed {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .btn {
@@ -120,60 +117,57 @@ main {
     }
 }
 
-
+.btn span {
+    position: relative;
+    z-index: 1;
+}
 
 .main {
     flex-grow: 1;
 }
 
-
-
 .title {
     @include line-height(56, 56, px, );
+    margin-bottom: 50px;
 
     @media (max-width: 1200px) {
-        font-size: 34px;
+        font-size: 48px;
+        margin-bottom: 35px;
     }
 
     @media (max-width: 992px) {
-        font-size: 32px;
+        font-size: 41px;
+        margin-bottom: 30px;
     }
 
     @media (max-width: 768px) {
-        font-size: 30px;
+        font-size: 33px;
+        margin-bottom: 25px;
     }
 
     @media (max-width: 576px) {
         font-size: 26px;
+        margin-bottom: 20px;
+    }
+}
+
+.section {
+    padding: $padding-main 0;
+
+    @media (max-width: 992px) {
+        padding: $padding-992 0;
     }
 
-    &--bem {
-        margin-bottom: 70px;
+    @media (max-width: 768px) {
+        padding: $padding-768 0;
+    }
 
-        @media (max-width: 1200px) {
-            margin-bottom: 60px;
-        }
-
-        @media (max-width: 992px) {
-            margin-bottom: 50px;
-        }
-
-        @media (max-width: 768px) {
-            margin-bottom: 40px;
-        }
-
-        @media (max-width: 576px) {
-            margin-bottom: 30px;
-        }
+    @media (max-width: 576px) {
+        padding: $padding-576 0;
     }
 }
 
 .form {
-
-    &__label {
-        display: none;
-    }
-
     &__input {
         border-radius: 4px;
         padding: 6px 10px;
@@ -220,23 +214,7 @@ main {
     }
 }
 
-.section {
-    &--bem {
-        padding: $padding-main 0;
 
-        @media (max-width: 992px) {
-            padding: $padding-992 0;
-        }
-
-        @media (max-width: 768px) {
-            padding: $padding-768 0;
-        }
-
-        @media (max-width: 576px) {
-            padding: $padding-576 0;
-        }
-    }
-}
 
 @keyframes my-animation {
     0% {
@@ -256,182 +234,56 @@ main {
     }
 }
 
-// animation-name: faq-close;
-
-// animation-duration: 5s;
-// animation-timing-function: linear;
-// animation-iteration-count: infinite;
-
-
-@keyframes faq-close {
-    0% {
-
-        ::before {
-            transform: rotate(0deg);
-        }
-
-        ::after {
-            transform: rotate(0deg);
-        }
-
-        // .faq__box .close::before {
-        //     transform: rotate(0deg);
-        // }
-
-        // .faq__box .close::after {
-        //     transform: rotate(0deg);
-        // }
-        // .faq__box .close::before {
-        //     transform: rotate(320deg);
-        // }
-
-        // .faq__box .close::after {
-        //     transform: rotate(220deg);
-        // }
-
-        // .close .faq__box::before {
-        //     transform: rotate(320deg);
-        // }
-
-        // .close .faq__box::after {
-        //     transform: rotate(220deg);
-        // }
-
-
-
-        // .faq {
-        //     &__box {
-        //         &::before {
-        // transform: rotate(200deg);
-        // height: 20px;
-
-        // }
-        // }
-
-        // &::after {
-        // transform: rotate(0deg);
-        // }
-        // ----------------
-        // плюс
-        // .faq__box::before {
-        //     transform: rotate(270deg);
-        // }
-
-        // .faq__box::after {
-        //     transform: rotate(180deg);
-        // }
-
-        // // ------------
-
-        // // умножить
-        // .faq__box::before {
-        //     transform: rotate(320deg);
-        // }
-
-        // .faq__box::after {
-        //     transform: rotate(220deg);
-        // }
-    }
-
-    100% {
-        // .close.faq__box::before {
-        //     transform: rotate(270deg);
-        // }
-
-        // .close.faq__box::after {
-        //     transform: rotate(180deg);
-        // }
-        // .close .faq__box::before {
-        //     transform: rotate(270deg);
-        // }
-
-        // .close .faq__box::after {
-        //     transform: rotate(180deg);
-        // }
-
-        .faq__box .close::before {
-            transform: rotate(270deg);
-        }
-
-        .faq__box .close::after {
-            transform: rotate(180deg);
-        }
-
-        // .faq__box::before {
-        // transform: rotate(270deg);
-        // }
-
-        // .faq__box::after {
-        //     transform: rotate(180deg);
-        // }
-        // &::before {
-        //     transform: rotate(360deg);
-        // }
-
-        // &::after {
-        //     transform: rotate(450deg);
-        // }
-
-        // .active .faq__box:before {
-        //     transform: rotate(320deg);
-        // }
-
-        // .active .faq__box:after {
-        //     transform: rotate(220deg);
-        // }
-    }
-
-    // 75% {
-    //     // transform: rotate(-5deg);
-    // }
-
-    // 100% {
-    //     // transform: rotate(0deg);
-    // }
-}
-
-
 .swiper-slide {
     height: auto !important;
 }
 
-.animate__animated.animate__fadeInLeft {
-    --animate-duration: 2s;
-    --animate-delay: 25s;
-}
+// .animate__animated.animate__fadeInLeft {
+//     // --animate-duration: 2s;
+//     --animate-duration: 0.5s;
+//     --animate-delay: 25s;
+// }
 
-:root {
-    --animate-delay: 0.5s;
-}
+// :root {
+//     // --animate-delay: 0.5s;
+//     --animate-delay: 0.5s;
+// }
 
 // [data-aos="fromOpacity"] {
 //     opacity: 0;
 //     transition-property: opacity;
 // }
 
-[data-aos="fromOpacity"].aos-animate {
+[data-aos='fromOpacity'].aos-animate {
     opacity: 1;
 }
 
+[data-aos='fromOpacity'] {
+    opacity: 0;
+
+}
+// работает низ
 [data-aos="userFadeUp"] {
     transform: translateY(25px);
     opacity: 0;
 }
 
 [data-aos="userFadeUp"].aos-animate {
+    //+2
     opacity: 1;
     transform: translateY(0);
 }
 
-[data-aos="clipRight"] {
-    clip-path: inset(0 100% 0 0);
-}
+// [data-aos="clipRight"] {
+//     clip-path: inset(0 100% 0 0);
+// }
 
-[data-aos="clipRight"].aos-animate {
-    clip-path: inset(0 0 0 0);
-}
+// [data-aos="clipRight"].aos-animate {
+//     clip-path: inset(0 0 0 0);
+// }
 
-[data-aos][data-aos][data-aos-duration="800"],
-body[data-aos-duration="800"] [data-aos] {
-    transition-duration: .8s;
-}
+// [data-aos][data-aos][data-aos-duration="800"],
+// body[data-aos-duration="800"] [data-aos] {
+//     // transition-duration: .8s;
+//     transition-duration: 0.5s;
+// }

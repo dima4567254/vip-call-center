@@ -5,6 +5,195 @@
 @import 'libs';
 
 // !!!
+
+// проверить на лишнее.
+.button-next span,
+.button-prev span {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -25px;
+        right: -25px;
+        width: 50px;
+        height: 50px;
+        background-image: url('../images/icons/arrow.svg');
+        background-position: center;
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+    }
+}
+
+.button-next {
+    right: 0;
+    transform: rotate(-90deg);
+}
+
+.button-prev {
+    left: 0;
+    transform: rotate(90deg);
+}
+
+.button-next,
+.button-prev {
+    position: absolute;
+    border-radius: 4px;
+    background-color: $hover;
+    padding: 24px;
+    color: $white;
+    border-radius: 4px;
+    top: 50%;
+    width: 50px;
+    z-index: 10;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: all 0.6s ease-in-out;
+        background-image: linear-gradient(204deg, #2fbeff, #1b70b6);
+    }
+
+    &:hover {
+        opacity: 1;
+
+        &:before {
+            opacity: 1;
+        }
+    }
+}
+
+.button-next:after,
+.rtl .button-prev:after,
+.button-prev:after,
+.rtl .button-next:after {
+    font-size: 20px;
+    z-index: 1;
+}
+
+// стили сладера
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    font-size: 20px;
+    z-index: 1;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    border-radius: 4px;
+    background-color: $hover;
+    padding: 24px;
+    color: $white;
+    border-radius: 4px;
+    top: 54%;
+
+    @media (max-width: 1200px) {
+        top: 5%;
+    }
+
+    @media (max-width: 992px) {
+        top: 20px;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: all 0.6s ease-in-out;
+        background-image: linear-gradient(204deg, #2fbeff, #1b70b6);
+    }
+
+    &:hover {
+        opacity: 1;
+
+        &:before {
+            opacity: 1;
+        }
+    }
+}
+
+.swiper-button-next span,
+.swiper-button-prev span {
+    position: relative;
+    z-index: 1;
+}
+
+.active .faq__box:before {
+    transform: rotate(310deg);
+}
+
+.active .faq__box:after {
+    transform: rotate(230deg);
+}
+
+.active .accordion__box:after {
+    transform: rotate(90deg);
+}
+
+.clients__images,
+.fancybox-content {
+    position: relative;
+
+    &::after,
+    &::before {
+        position: absolute;
+        font-size: 24px;
+        padding: 5px 41px 8px;
+        background-color: $black1;
+
+        @media (max-width: 1200px) {
+            padding: 8px 32px 8px;
+        }
+
+        @media (max-width: 992px) {
+            padding: 8px 25px 8px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 8px 17px 8px;
+        }
+
+        @media (max-width: 576px) {
+            padding: 5px 10px 5px;
+        }
+    }
+
+    &::before {
+        content: "До";
+        bottom: 7%;
+        right: 0;
+        border-radius: 8px 0 0 8px;
+        z-index: 1;
+    }
+
+    &:after {
+        content: "Після";
+        z-index: 1;
+        top: 7%;
+        left: 0;
+        border-radius: 0 8px 8px 0;
+    }
+}
+
 .header {
     padding: 11px 0px;
     position: fixed;
@@ -15,11 +204,7 @@
     background-color: transparent;
 
     &__button {
-        padding: 8px 35px 9px;
-
-        @media (max-width: 1400px) {
-            padding: 8px 25px 9px;
-        }
+        padding: 8px 25px 9px;
 
         @media (max-width: 1200px) {
             display: none;
@@ -41,10 +226,6 @@
             background-color: transparent;
             padding: 0;
             z-index: 10;
-            // animation-name: btn-close;
-            // animation-duration: 2s;
-            // animation-timing-function: linear;
-            // animation-iteration-count: 1;
 
             &.active {
                 span {
@@ -58,7 +239,6 @@
                 }
             }
 
-            // // &.close {
             span {
                 height: 3px;
                 width: 70%;
@@ -79,16 +259,10 @@
                 transform: rotate(0deg);
             }
         }
-
-        @media (max-width: 576px) {
-            order: 0; //!!!
-        }
     }
 }
 
-.header-fixed {
-    background-color: rgba(0, 0, 0, 0.5);
-}
+
 
 .menu {
     display: flex;
@@ -101,15 +275,17 @@
         height: 78px;
         object-fit: cover;
         z-index: 1;
+        margin-right: 10px;
 
         @media (max-width: 992px) {
             width: 170px;
             height: 56px;
+            margin-right: 0px;
         }
     }
 
     &__inner {
-        margin-right: 10px;
+        // margin-right: 10px;
         display: flex;
 
         @media (max-width: 1200px) {
@@ -145,10 +321,6 @@
         width: 100%;
         gap: 40px;
 
-        @media (max-width: 1400px) {
-            gap: 20px;
-        }
-
         @media (max-width: 1200px) {
             z-index: 5;
             display: block;
@@ -179,7 +351,7 @@
     }
 
     &__link {
-        padding: 5px 10px;
+        padding: 5px 0px;
         position: relative;
         font-size: 18px;
 
@@ -388,6 +560,7 @@
             @media (max-width: 768px) {
                 width: 280px;
                 height: 250px;
+                right: -40%;
             }
 
             @media (max-width: 576px) {
@@ -412,8 +585,6 @@
             padding-top: 75px;
             display: grid;
         }
-
-        @media (max-width: 576px) {}
     }
 
     &__img {
@@ -452,13 +623,11 @@
 }
 
 .content {
-    // &__inner {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-right: 10px;
-    transition: all 6s ease-in-out;
-    // max-width: 600px;
+    // transition: all 6s ease-in-out;
 
     @media (max-width: 992px) {
         max-width: 600px;
@@ -469,7 +638,6 @@
         margin-right: 0;
     }
 
-    // }
 
     &__title {
         @include line-height(56, 56, px, );
@@ -671,10 +839,6 @@
         }
     }
 
-    &__title {
-        margin-bottom: 15px;
-    }
-
     &__btn {
         padding: 8px 28px;
     }
@@ -714,14 +878,6 @@
 
         @media (max-width: 768px) {
             max-width: 100%;
-        }
-    }
-
-    &__title {
-        margin-bottom: 25px;
-
-        @media (max-width: 576px) {
-            margin-bottom: 20px;
         }
     }
 
@@ -793,14 +949,6 @@
         @media (max-width: 768px) {
             margin-bottom: 25px;
         }
-
-        @media (max-width: 576px) {
-            margin-bottom: 20px;
-        }
-    }
-
-    &__title {
-        margin-bottom: 25px;
 
         @media (max-width: 576px) {
             margin-bottom: 20px;
@@ -900,12 +1048,12 @@
         @media (max-width: 992px) {
             width: 435px;
             height: 525px;
+            left: -43%;
         }
 
         @media (max-width: 768px) {
             width: 305px;
             height: 365px;
-            left: inherit;
         }
 
         @media (max-width: 576px) {
@@ -928,6 +1076,7 @@
             @media (max-width: 992px) {
                 width: 310px;
                 height: 465px;
+                right: -32%;
             }
 
             @media (max-width: 768px) {
@@ -963,14 +1112,6 @@
         }
     }
 
-    &__title {
-        margin-bottom: 25px;
-
-        @media (max-width: 576px) {
-            margin-bottom: 20px;
-        }
-    }
-
     &__text {
         @include line-height(18, 22, px, );
         margin: 0 auto;
@@ -985,7 +1126,7 @@
         gap: 30px;
 
         @media (max-width: 1200px) {
-            gap: 25px;
+            gap: 20px;
         }
 
         @media (max-width: 992px) {
@@ -1129,139 +1270,8 @@
     }
 }
 
-// проверить на лишнее.
-.button-next span,
-.button-prev span {
-    position: relative;
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: -25px;
-        right: -25px;
-        width: 50px;
-        height: 50px;
-        background-image: url('../images/icons/arrow.svg');
-        background-position: center;
-        background-size: 20px 20px;
-        background-repeat: no-repeat;
-    }
-}
-
-.button-next {
-    right: 0;
-    transform: rotate(-90deg);
-}
-
-.button-prev {
-    left: 0;
-    transform: rotate(90deg);
-}
-
-.button-next,
-.button-prev {
-    position: absolute;
-    border-radius: 4px;
-    background-color: $hover;
-    padding: 24px;
-    color: $white;
-    border-radius: 4px;
-    top: 50%;
-    width: 50px;
-    z-index: 10;
-
-    &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        transition: all 0.6s ease-in-out;
-        background-image: linear-gradient(204deg, #2fbeff, #1b70b6);
-    }
-
-    &:hover {
-        opacity: 1;
-
-        &:before {
-            opacity: 1;
-        }
-    }
-}
-
-.button-next:after,
-.rtl .button-prev:after,
-.button-prev:after,
-.rtl .button-next:after {
-    font-size: 20px;
-    z-index: 1;
-}
-
-// стили сладера
-.swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after,
-.swiper-button-prev:after,
-.swiper-rtl .swiper-button-next:after {
-    font-size: 20px;
-    z-index: 1;
-}
-
-.swiper-button-next {
-    right: 0;
-}
-
-.swiper-button-prev {
-    left: 0;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-    border-radius: 4px;
-    background-color: $hover;
-    padding: 24px;
-    color: $white;
-    border-radius: 4px;
-    top: 54%;
-
-    @media (max-width: 1200px) {
-        top: 5%;
-    }
-
-    @media (max-width: 992px) {
-        top: 20px;
-    }
-
-    &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        transition: all 0.6s ease-in-out;
-        background-image: linear-gradient(204deg, #2fbeff, #1b70b6);
-    }
-
-    &:hover {
-        opacity: 1;
-
-        &:before {
-            opacity: 1;
-        }
-    }
-}
-
-.swiper-button-next span,
-.swiper-button-prev span {
-    position: relative;
-    z-index: 1;
-}
-
 //!!!! добавить в глобал снипеты все что нужно для слайдера
-.swiper-casey {
+.slider-casey {
     position: relative;
 
     &__images {
@@ -1281,6 +1291,7 @@
         @media (max-width: 992px) {
             width: 220px;
             height: 345px;
+            left: -20%;
         }
 
         @media (max-width: 768px) {
@@ -1301,24 +1312,7 @@
     }
 
     &__title {
-        margin-bottom: 50px;
         text-align: center;
-
-        @media (max-width: 1200px) {
-            margin-bottom: 40px;
-        }
-
-        @media (max-width: 992px) {
-            margin-bottom: 30px;
-        }
-
-        @media (max-width: 768px) {
-            margin-bottom: 25px;
-        }
-
-        @media (max-width: 576px) {
-            margin-bottom: 20px;
-        }
     }
 
     &__items {
@@ -1419,14 +1413,6 @@
 
         @media (max-width: 768px) {
             width: 100%;
-        }
-    }
-
-    &__title {
-        margin-bottom: 25px;
-
-        @media (max-width: 576px) {
-            margin-bottom: 20px;
         }
     }
 
@@ -1534,63 +1520,6 @@
     }
 }
 
-.active .faq__box:before {
-    transform: rotate(310deg);
-}
-
-.active .faq__box:after {
-    transform: rotate(230deg);
-}
-
-.active .accordion__box:after {
-    transform: rotate(90deg);
-}
-
-.clients__images,
-.fancybox-content {
-    position: relative;
-
-    &::after,
-    &::before {
-        position: absolute;
-        font-size: 24px;
-        padding: 5px 41px 8px;
-        background-color: $black1;
-
-        @media (max-width: 1200px) {
-            padding: 8px 32px 8px;
-        }
-
-        @media (max-width: 992px) {
-            padding: 8px 25px 8px;
-        }
-
-        @media (max-width: 768px) {
-            padding: 8px 17px 8px;
-        }
-
-        @media (max-width: 576px) {
-            padding: 5px 10px 5px;
-        }
-    }
-
-    &::before {
-        content: "До";
-        bottom: 7%;
-        right: 0;
-        border-radius: 8px 0 0 8px;
-        z-index: 1;
-    }
-
-    &:after {
-        content: "Після";
-        z-index: 1;
-        top: 7%;
-        left: 0;
-        border-radius: 0 8px 8px 0;
-    }
-}
-
 .partners {
     position: relative;
 
@@ -1611,6 +1540,7 @@
         @media (max-width: 992px) {
             width: 234px;
             height: 205px;
+            right: -20%;
         }
 
         @media (max-width: 768px) {
@@ -1625,16 +1555,7 @@
     }
 
     &__title {
-        margin-bottom: 35px;
         text-align: center;
-
-        @media (max-width: 1200px) {
-            margin-bottom: 25px;
-        }
-
-        @media (max-width: 992px) {
-            margin-bottom: 20px;
-        }
     }
 
     &__wrapper {
@@ -1670,14 +1591,6 @@
 .work {
     &__box {
         text-align: center;
-    }
-
-    &__title {
-        margin-bottom: 25px;
-
-        @media (max-width: 576px) {
-            margin-bottom: 20px;
-        }
     }
 
     &__text {
@@ -1726,6 +1639,7 @@
         display: flex;
         align-items: center;
         width: 23%;
+        // width: 250px;
 
         @media (max-width: 1200px) {
             width: 31%;
@@ -1733,6 +1647,7 @@
 
         @media (max-width: 768px) {
             width: 48%;
+            padding: 10px;
         }
 
         @media (max-width: 576px) {
@@ -1763,7 +1678,7 @@
     }
 
     &__item p {
-        max-width: 170px
+        // max-width: 170px
     }
 
     &__form {
@@ -1808,12 +1723,14 @@
             width: 400px;
             height: 360px;
             top: 14%;
+            left: -44%;
         }
 
         @media (max-width: 768px) {
             width: 280px;
             height: 250px;
-            left: -33%;
+            left: -40%;
+
         }
 
         @media (max-width: 576px) {
@@ -1832,7 +1749,6 @@
             @media (max-width: 1200px) {
                 width: 954px;
                 height: 405px;
-                right: -53%;
                 bottom: 0;
             }
 
@@ -1844,7 +1760,7 @@
             @media (max-width: 768px) {
                 width: 498px;
                 height: 217px;
-                right: -69%;
+                right: -75%;
             }
 
             @media (max-width: 576px) {
@@ -1861,24 +1777,7 @@
     }
 
     &__title {
-        margin-bottom: 50px;
         text-align: center;
-
-        @media (max-width: 1200px) {
-            margin-bottom: 40px;
-        }
-
-        @media (max-width: 992px) {
-            margin-bottom: 30px;
-        }
-
-        @media (max-width: 768px) {
-            margin-bottom: 25px;
-        }
-
-        @media (max-width: 576px) {
-            margin-bottom: 20px;
-        }
     }
 
     &__items {
@@ -1905,6 +1804,7 @@
         @media (max-width: 768px) {
             padding: 15px 20px;
             margin: 0 auto;
+            max-width: 300px;
         }
 
         @media (max-width: 576px) {
@@ -1958,24 +1858,8 @@
     }
 
     &__title {
-        margin-bottom: 50px;
         text-align: center;
 
-        @media (max-width: 1200px) {
-            margin-bottom: 40px;
-        }
-
-        @media (max-width: 992px) {
-            margin-bottom: 30px;
-        }
-
-        @media (max-width: 768px) {
-            margin-bottom: 25px;
-        }
-
-        @media (max-width: 576px) {
-            margin-bottom: 20px;
-        }
     }
 
     &__accordion {
@@ -1984,16 +1868,16 @@
         user-select: none;
         position: relative;
         padding-right: 10px;
-        // margin-right: 10px;
-    }
 
-    @media (max-width: 768px) {
-        margin-bottom: 25px;
-        max-width: 100%;
-    }
+        @media (max-width: 768px) {
+            margin-bottom: 25px;
+            max-width: 100%;
+        }
 
-    @media (max-width: 576px) {
-        margin-bottom: 20px;
+        @media (max-width: 576px) {
+            margin-bottom: 20px;
+            padding-right: 0px;
+        }
     }
 
     &__item {
@@ -2118,7 +2002,7 @@
     }
 
     &__text {
-        max-width: 235px;
+        // max-width: 235px;
         line-height: 1.2;
     }
 
@@ -2251,9 +2135,18 @@
         margin-bottom: 20px;
     }
 
-    // !!!поменять иконки
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     &__link {
+        background-color: $hover;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+
         &:not(:last-child) {
             margin-right: 40px;
 

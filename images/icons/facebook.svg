@@ -1,13 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>icon-facebook</title>
-    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="XL" transform="translate(-359.000000, -7095.000000)" fill="#2FBEFF" fill-rule="nonzero">
-            <g id="Group-33" transform="translate(0.000000, 6964.000000)">
-                <g id="icon-facebook" transform="translate(359.000000, 131.000000)">
-                    <path d="M31.7217391,15.8608696 C31.7217391,7.10115319 24.6205859,0 15.8608696,0 C7.10115319,0 0,7.10115319 0,15.8608696 C0,24.6205859 7.10115319,31.7217391 15.8608696,31.7217391 L16.1391304,31.7217391 L16.1391304,19.3706667 L12.7313623,19.3706667 L12.7313623,15.3971014 L16.1391304,15.3971014 L16.1391304,12.4772174 C15.995517,11.0743941 16.4800533,9.67992957 17.4625819,8.66840824 C18.4451106,7.65688691 19.8248988,7.13201417 21.2313043,7.23478261 C22.2518155,7.23110787 23.2717667,7.28312725 24.2866087,7.3906087 L24.2866087,10.9449275 L22.2015072,10.9449275 C20.556058,10.9449275 20.2388406,11.725913 20.2388406,12.8742029 L20.2388406,15.3971014 L24.1715942,15.3971014 L23.6595942,19.3688116 L20.2388406,19.3688116 L20.2388406,31.1058551 C27.0362571,29.1511808 31.7193802,22.9337486 31.7217391,15.8608696 Z" id="Path_279"></path>
-                </g>
-            </g>
-        </g>
-    </g>
+<svg id="_fb_ic" xmlns="http://www.w3.org/2000/svg" width="38" height="35.28" viewBox="0 0 38 35.28">
+  <!-- <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #202020;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #fee301;
+      }
+    </style>
+  </defs>
+  <path id="Прямокутник_16" data-name="Прямокутник 16" class="cls-1" d="M794,6477.9h38v35.29H794V6477.9Z" transform="translate(-794 -6477.91)"/> -->
+  <path id="Forma_1" data-name="Forma 1" class="cls-2" d="M809.73,6508.34h5.114v-12.35h3.431s0.322-1.99.479-4.17h-3.89v-2.84a1.206,1.206,0,0,1,1.109-.99h2.786v-4.33h-3.79c-5.365,0-5.239,4.16-5.239,4.78v3.4h-2.489v4.15h2.489v12.35h0Z" transform="translate(-794 -6477.91)"/>
 </svg>
