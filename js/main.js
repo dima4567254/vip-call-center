@@ -1,6 +1,3 @@
-
-
-
 AOS.init({
     // delay: 100, // values from 0 to 3000, with step 50ms
     duration: 900, //длительность
@@ -24,11 +21,6 @@ $(window).on("scroll", function (e) {
     // для скролла в верх вниз декора
 });
 
-// $('.language').on('click', function () {
-//     $('.language').toggleClass('language--active');
-//     // открывать все языки
-// });
-
 $('.language__link').on('click', function () {
     $('.language__link').toggleClass('language__link--active');
     // мигалка языков
@@ -38,42 +30,15 @@ document.querySelectorAll('.language__link').forEach((item) =>
 
     item.addEventListener('click', () => {
         const parent = item;
-
         if (parent.classList.contains('language__link--active')) {
             parent.classList.toggle('language__link--active');
         }
         else {
             parent.classList.toggle('language__link--active');
-            parent.classList.remove('accordion__wrapper--active');
+            parent.classList.remove('language__link--active');
         }
     })
 )
-
-// let items = document.querySelector('.language__link');
-
-// // document.querySelectorAll('.language__link').forEach((item) =>
-
-// items.addEventListener('click', () => {
-//     // const parent = item;
-//     // items.classList.toggle('language__link--active');
-//     if (items.classList.contains('language__link--active')) {
-//         items.classList.toggle('language__link--active');
-//     }
-//     else {
-//         items.classList.toggle('language__link--active');
-//         items.classList.remove('accordion__wrapper--active');
-//     }
-// })
-// // )
-// let items = document.querySelector('.language__link');
-// $('.language__link').on('click', function () {
-//     $('.language__link').toggleClass('language__link--active');
-//     // мигалка языков
-// });
-
-
-
-
 
 $('.header__btn, .menu__link').on('click', function () {
     $('.menu__inner').toggleClass('active');
@@ -89,8 +54,6 @@ $('.menu__link').on('click', function () {
     $('.header__btn').toggleClass('active');
     // для появления крестика  +
 });
-
-
 
 const slidercasey = new Swiper('.swipercasey', {
     slidesPerView: 3,
@@ -151,6 +114,52 @@ const sliderreviews = new Swiper('.sliderreviews', {
     },
 });
 
+// $(document).ready(function () {
+//     $('.accordion > li  >.accordion__text').hide();
+
+//     $('.accordion > li ').click(function () {
+//         if ($(this).hasClass("active")) {
+//             $(this).removeClass("active").find(".accordion__text").slideUp();
+//         } else {
+//             $(".accordion > li  .active .accordion__text").slideUp();
+//             $(".accordion > li  .active").removeClass("active");
+//             $(this).addClass("active").find(".accordion__text").slideDown();
+
+//         }
+//         return false;
+//     });
+// });
+
+// $(document).ready(function () {
+//     $('.accordion > li > .accordion__text').hide();
+
+//     $('.accordion > li').click(function () {
+//         if ($(this).hasClass("active")) {
+//             $(this).removeClass("active").find(".accordion__text").slideUp();
+//         } else {
+//             $(".accordion > li.active .accordion__text").slideUp();
+//             $(".accordion > li.active").removeClass("active");
+//             $(this).addClass("active").find(".accordion__text").slideDown();
+//         }
+//         return false;
+//     });
+// });
+
+// $(document).ready(function () {
+//     $('.faq__accordion > li > .faq__text').hide();
+
+//     $('.faq__accordion > li').click(function () {
+//         if ($(this).hasClass("active")) {
+//             $(this).removeClass("active").find(".faq__text").slideUp();
+//         } else {
+//             $(".faq__accordion > li.active .faq__text").slideUp();
+//             $(".faq__accordion > li.active").removeClass("active");
+//             $(this).addClass("active").find(".faq__text").slideDown();
+//         }
+//         return false;
+//     });
+// });
+
 $(document).ready(function () {
     $('.accordion > li  >.accordion__text').hide();
 
@@ -182,66 +191,226 @@ $(document).ready(function () {
 });
 
 
-// open modal
-// $(' .price__link--scout').click(function () {
-//     $('.modal--scout').show();
-//     $('.modal__inner').css('display', 'inline-block');
-// });
-// $('.price__link--leader').click(function () {
-//     $('.modal--leader').show();
-//     $('.modal__inner').css('display', 'inline-block');
-// });
-// $('.price__link--operator').click(function () {
-//     $('.modal--operator').show();
-//     $('.modal__inner').css('display', 'inline-block');
-// });
 
+// $(document).ready(function () {
+//     $('.faq__accordion > li  >.faq__text').hide();//прячет текст
 
+//     $('.faq__accordion > li ').click(function () {//при клике на
+//         // $('.faq__wrapper').toggleClass('active');
+//         if ($(this).hasClass("active")) {//если есть класс то
+//             $(this).removeClass("active").find(".faq__text").slideUp(); //удаляет класс актив находит класс текст делает слайд
+//             // $(this).add("close");
 
-
-// $('.header__button').on('click', function () {
-//     $('.modal').add('modal-active');
-//     // для открытия модального окона
-// });
-// $('.menu__button').on('click', function () {
-//     $('.modal').add('modal-active');
-//     // для открытия модального окона
-// });
-// let button = document.querySelector('.menu__button, .header__button, .about__btn');
-// let modal = document.querySelector('.modal');
-// button.addEventListener('click', () => {
-//     modal.classList.add('modal-active');
-// });
-
-// $(' .header__button').click(function () {
-//     $('.modal').css('display', 'flex');
-//     $('.modal__inner').css('display', 'inline');
-// });
-
-// const buttonModal = document.querySelector('.header__button, .about__btn');
-// buttonModal.addEventListener('click', () => {
-//     modalWindow.classList.add('modal-active'); /*добовляем класс*/
-//     document.onkeydown = function (event) {
-//         if (event.keyCode == 27) {
-//             modalWindow.classList.remove('modal-active');
+//         } else {
+//             $(".faq__accordion > li  .active .faq__text").slideUp();
+//             //!!! $(".faq__accordion > li  .active").removeClass("active");
+//             // $(".faq__accordion > li  .close").removeClass("active");
+//             $(this).addClass("active").find(".faq__text").slideDown();
+//             // $(this).remove("close");
+//             // $('.faq__box').add('active');
 //         }
-//     }
+//         return false;
+//     });
 // });
-// -----------------------
-// let data = this.getAttribute('data');
+
+
+
+// $('.faq__item').on('click', function () {
+//     $('.faq__btn').toggleClass('active');
+//     // для открытия
+// });
+// $('.faq__item').on('click', function () {
+//     $('.faq__btn').add('active');
+//     // для открытия
+// });
+// $('.faq__inner, .faq__text p').on('click', function () {
+//     $(this).next().slideToggle();
+//     // $('.questions__btn').add('active');
+//     // $(this).toggleClass('questions__text--active');
+//     // $(this)('.faq__text').slideToggle('faq__text--active');
+// });
+
+// $(document).ready(function () {
+//     $('.faq__accordion > li  >.faq__text').hide();//прячет текст
+// });
+
+// let item = document.querySelector('.faq__item');
+// // let text = document.querySelector('.faq__text');
+// let box = document.querySelector('.faq__btn');
+// // // text.classList.hide();
+// item.addEventListener('click', () => {
+//     // text.classList.add('faq__text--active');
+
+//     if (box.classList.contains('active')) {
+//         box.classList.remove('active');
+
+//     }
+//     else {
+//         let elements = document.getElementsByClassName("accordion__btn");
+//         // for (let i = 0; i < elements.length; i++) {
+//         //     // elements[i].addEventListener('click', function () {
+
+//         //         for (let i = 0; i < elements.length; i++) {
+//         //             // elements[i].classList.add('active');
+//         //             box.classList.add('active');
+//         //         }
+
+//         //     // })
+//         // }
+//     }
+
+// let elements = document.getElementsByClassName("faq__btn");
+// for (let i = 0; i < elements.length; i++) {
+//     box.classList.add('active');
+//     elements[i].addEventListener('click', function () {
+//         for (let i = 0; i < elements.length; i++) {
+//             // elements[i].classList.remove('active');
+//             box.classList.add('active');
+//         }
+//         // this.classList.add('active');
+//     })
+// }
+// $('.faq__wrapper').toggleClass('active');
+// if (box.classList.contains('active')) {
+//     box.classList.remove('active');
+//     // box.classList.add('close');
+// }
+// else {
+//     box.classList.add('active');
+//     // box.classList.remove('close');
+// }
+// });
+
+
+// $(document).ready(function () {
+//     $('.accordion-list > li > .answer').hide();
+
+//     $('.accordion-list > li').click(function () {
+//         if ($(this).hasClass("active")) {
+//             $(this).removeClass("active").find(".answer").slideUp();
+//         } else {
+//             $(".accordion-list > li.active .answer").slideUp();
+//             $(".accordion-list > li.active").removeClass("active");
+//             $(this).addClass("active").find(".answer").slideDown();
+//         }
+//         return false;
+//     });
+// });
+
+// $('.faq__item').on('click', function () {
+//     $(this).next().toggleClass('faq__text--active');
+// });
+
+// $('.faq__box').on('click', function () {
+//     $(this).next().slideToggle();
+//     // $(this).toggleClass('questions__text--active');
+//     $(this)('.faq__text').slideToggle('faq__text--active');
+// });
+
+// $('.faq__btn').on('click', function () {
+//     $('.faq__btn').toggleClass('active');
+// });
+
+
+// $('.faq__inner').on('click', function () {
+//     $(this).next().slideToggle();
+//     // $('.questions__btn').add('active');
+//     // $(this).toggleClass('questions__text--active');
+//     $(this)('.faq__text').slideToggle('faq__text--active');
+// });
+
+// $('.questions__item').on('click', function () {
+//     $('.questions__btn').toggleClass('active');
+// });
+// -----------------------------
+// $('.faq__inner, .faq__text p').on('click', function () {
+//     $(this).next().slideToggle();
+//     // $('.questions__btn').add('active');
+//     // $(this).toggleClass('questions__text--active');
+//     // $(this)('.faq__text').slideToggle('faq__text--active');
+// });
+// let item = document.querySelector('.faq__item');
+// let btn = document.querySelector('.faq__btn');
+// item.addEventListener('click', () => {
+//     // btn.classList.add('active');
+//     if (btn.classList.contains('active')) {
+//         btn.classList.remove('active');
+//         // btn.classList.add('close');
+//     }
+//     else {
+//         btn.classList.add('active');
+//         // btn.classList.remove('close');
+
+//         // text.classList.toggle('active');
+//         // parent.classList.toggleClass('accordion__wrapper--active');
+//     }
+
+// })
+
+// / -----------------------------
+// $('.questions__box').on('click', function () {
+//     $('.questions__btn').add('active');
+// });
+// -------------------------------------------------------
+// $('.accordion__wrapper').on('click', function () {
+//     $(this).next().toggleClass('accordion__text--active');
+// });
+
+// $(document).ready(function () {
+//     $(".accordion__wrapper").click(function () {
+//         $(this).toggleClass("accordion__wrapper--active");
+//     });
+// });
+// выключил
+// -------------------------------------------------------
+
+
+// $('.faq__item').on('click', function () {
+//     $('.faq__box').add('active');
+//     // для открытия
+// });
+// let text = document.querySelector('.faq__text');
+// let items = document.querySelectorAll('.faq__item').forEach((item) =>
+
+//     item.addEventListener('click', () => {
+//         const parent = item;
+//         // const parent = item.parentNode;
+
+//         if (text.classList.contains('active')) {
+//             text.classList.remove('active');
+//             text.classList.add('close');
+//         }
+//         else {
+//             text.classList.add('active');
+//             text.classList.remove('close');
+
+//             // text.classList.toggle('active');
+//             // parent.classList.toggleClass('accordion__wrapper--active');
+//         }
+//     })
+// )
+
 const modalWindow = document.querySelector('.modal');
-let elements = this.getAttribute("modal");
+let elements = document.querySelectorAll('.modal-active');
+
 for (let i = 0; i < elements.length; i++) {/*прокручиваем в цикле все элементы*/
     elements[i].addEventListener('click', function () {  /*при клике на элемент */
-        modalWindow.classList.add('modal-active');
+        modalWindow.classList.add('modal-open');
+        // if (modalWindow.classList.contains('modal-open')) {
+        //     modalWindow.classList.remove('modal-open');
+        // }
         document.onkeydown = function (event) {
             if (event.keyCode == 27) {
-                modalWindow.classList.remove('modal-active');
+                modalWindow.classList.remove('modal-open');
             }
         }
     })
 }
 
+$('.modal-active').on('click', function () {
+    $('.modal').toggle('modal-open');
+    // для появления крестика  +
+});
 
 // close modal
 $('.modal').click(function () {
@@ -249,7 +418,7 @@ $('.modal').click(function () {
     var select = $('.modal__inner');
     if ($(event.target).closest(select).length)
         return;
-    $('.modal').toggleClass('modal-active');
+    $('.modal').toggleClass('modal-open');
     $(document).unbind('click');
     event.stopPropagation();
     // });
@@ -276,74 +445,5 @@ $(".menu a").on("click", function (event) {
     // tops = top - 100;
     tops = top - 50;
     $('body,html').animate({ scrollTop: tops }, 1500);
-
 });
 
-// $('.menu__link').on('click', function () {
-//     $('.header__inner').toggleClass('active');
-// });
-
-// для меню что бы закрывалось, что была анимация закрытия
-// const items = document.querySelector('.menu__inner')
-// const link = document.querySelector('.language__link');
-// const btn = document.querySelector('.header__btn')
-// document.querySelectorAll('.menu a').forEach((item) =>
-//     item.addEventListener('click', () => {
-//         const parent = items;
-//         // link.classList.toggle('language__link--active');
-//         // btn.classList.toggle('active');
-
-//         if (parent.classList.contains('active')) {
-//             parent.classList.remove('active');
-//             parent.classList.add('close');
-//             // btn.classList.add('active');
-//         }
-//         else {
-//             parent.classList.add('active');
-//             parent.classList.remove('close');
-//             // btn.classList.remove('active');
-//         }
-//     })
-// )
-
-
-
-// document.querySelectorAll('.language__link').forEach(() =>
-
-// item.addEventListener('click', () => {
-//     // const parent = item;
-
-//     if (item.classList.contains('language__link--active')) {
-//         item.classList.toggle('language__link--active');
-//     }
-//     else {
-//         item.classList.toggle('language__link--active');
-//         // item.classList.remove('accordion__wrapper--active');
-//     }
-// })
-// )
-
-// $('.language').on('click', function () {
-//     $('.language').toggleClass('language--active');
-// })
-
-
-// -------!!!
-
-
-// let link = document.querySelector('.menu__link');
-// document.querySelectorAll('.header__btn').forEach((item) =>
-//     item.addEventListener('click', () => {
-//         const parent = item;
-
-//         btn.classList.toggle('active');
-//         // if (parent.classList.contains('active')) {
-//         //     parent.classList.remove('active');
-//         //     // parent.classList.add('close');
-//         // }
-//         // else {
-//         //     parent.classList.add('active');
-//         //     // parent.classList.remove('close');
-//         // }
-//     })
-// )
