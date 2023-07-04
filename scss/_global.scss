@@ -7,6 +7,7 @@ body {
 body {
     // font-weight: 400;
     font-family: 'PTSans';
+    // font-family: Open Sans Regular;
     font-size: 16px;
     line-height: 1.7;
     // @include line-height(16, 28, $px,);
@@ -30,6 +31,21 @@ body {
         line-height: 1.2;
     }
 }
+
+body {
+    background-color: #1b1e27;
+    
+}
+
+html.active,
+main {
+    overflow: hidden;
+}
+
+html.active {
+    pointer-events: none;
+}
+// !!!
 
 main {
     overflow: hidden;
@@ -62,7 +78,9 @@ main {
     border: 0;
 }
 
-
+.header-fixed {
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
 .btn {
     border-radius: 4px;
