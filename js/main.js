@@ -24,11 +24,13 @@ $(window).on("scroll", function (e) {
 $('.language__link').on('click', function () {
     $('.language__link').toggleClass('language__link--active');
     // мигалка языков
+    console.log(1);
 });
 
 document.querySelectorAll('.language__link').forEach((item) =>
 
     item.addEventListener('click', () => {
+        console.log(2);
         const parent = item;
         if (parent.classList.contains('language__link--active')) {
             parent.classList.toggle('language__link--active');
@@ -42,7 +44,30 @@ document.querySelectorAll('.language__link').forEach((item) =>
         }
     })
 )
+// -----------------
+// рез копия
+// $('.language__link').on('click', function () {
+//     $('.language__link').toggleClass('language__link--active');
+//     // мигалка языков
+// });
 
+// document.querySelectorAll('.language__link').forEach((item) =>
+
+//     item.addEventListener('click', () => {
+//         const parent = item;
+//         if (parent.classList.contains('language__link--active')) {
+//             parent.classList.toggle('language__link--active');
+//         }
+//         else {
+//             parent.classList.toggle('language__link--active');
+//             // parent.classList.remove('language__link--active');
+//             // parent.classList.remove('accordion__wrapper--active');
+
+
+//         }
+//     })
+// )
+// -----------------
 $('.header__btn, .menu__link').on('click', function () {
     $('.menu__inner').toggleClass('active');
     // для меню закрытия +
