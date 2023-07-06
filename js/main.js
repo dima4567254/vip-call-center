@@ -423,7 +423,7 @@ let elements = document.querySelectorAll('.modal-window');
 
 for (let i = 0; i < elements.length; i++) {/*прокручиваем в цикле все элементы*/
     elements[i].addEventListener('click', function () {  /*при клике на элемент */
-        modalWindow.classList.add('modal-open');
+        modalWindow.classList.toggle('modal-open');
         // if (modalWindow.classList.contains('modal-open')) {
         //     modalWindow.classList.remove('modal-open');
         // }

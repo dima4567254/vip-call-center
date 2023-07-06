@@ -36,6 +36,7 @@
 <!-- проверить работу модального окна -->
 <!-- разобраться с гитом  -->
 <!-- убрать картинку и переместить в нову юветку -->
+<!-- поставить крестик правильно на 320 -->
 
 <body>
     <header class="header">
@@ -1669,16 +1670,18 @@
             </div>
         </div>
     </footer>
-
+<!-- вариант на флекс -->
     <div class="modal">
         <div class="modal__inner">
             <div class="content">
-                <button class="content__btn modal-window" type="button">
-                    <span class="sr-only">Закрити модальне вікно</span>
-                </button>
-                <h2 class="content__title">
-                    Аутсорсинговий call-center для товарного бізнесу
-                </h2>
+                <div class="content__wrapper">
+                    <h2 class="content__title">
+                        Аутсорсинговий call-center для товарного бізнесу
+                    </h2>
+                    <button class="content__btn modal-window" type="button">
+                        <span class="sr-only">Закрити модальне вікно</span>
+                    </button>
+                </div>
                 <div class="content__text">
                     <p>
                         збільшимо ваш прибуток мінімум
@@ -1714,4 +1717,5 @@
     <script src="js/main.min.js?_v=20230616232959"></script>
 
 </body>
+
 </html>
