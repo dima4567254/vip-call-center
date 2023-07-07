@@ -34,7 +34,7 @@ body {
 
 body {
     background-color: #1b1e27;
-    
+
 }
 
 html.active,
@@ -45,6 +45,7 @@ main {
 html.active {
     pointer-events: none;
 }
+
 // !!!
 
 main {
@@ -94,6 +95,10 @@ main {
     &--start {
         &:before {
             background-image: linear-gradient(204deg, #2fbeff, #1b70b6);
+
+            @media (max-width: 1200px) {
+                display: none;
+            }
         }
     }
 
@@ -184,37 +189,41 @@ main {
 }
 
 .form {
+    margin-bottom: 20px;
+
     &__input {
         border-radius: 4px;
         padding: 6px 10px;
+        // padding: 14px 10px;
         color: $black2;
         font-size: 14px;
         border: none;
-        margin-right: 10px;
+        // margin-right: 10px;
 
-        &--form {
-            @media (max-width: 1200px) {
-                margin-bottom: 25px;
-            }
 
-            @media (max-width: 992px) {
-                margin-bottom: 20px;
-            }
-
-            @media (max-width: 768px) {
-                margin-bottom: 15px;
-                width: 100%;
-            }
+        @media (max-width: 992px) {
+            padding: 15px;
         }
 
         @media (max-width: 768px) {
             width: 100%;
-            margin-right: 0;
+            //  margin-right: 0;}
         }
 
-        @media (max-width: 576px) {
-            margin-bottom: 10px;
-        }
+         @media (max-width: 768px) {
+             margin-bottom: 20px;
+             // width: 100%;
+             // переделать для родителя
+         }
+
+         @media (max-width: 576px) {
+             // width: 100%;
+             // выключить
+         }
+
+        // @media (max-width: 576px) {
+        //     margin-bottom: 10px;
+        // }
 
         &::placeholder {
             color: rgb(118, 118, 118);
@@ -224,8 +233,43 @@ main {
     &__btn {
         padding: 8px 33px;
 
+        @media (max-width: 992px) {
+            // display: none;
+            // max-width: 50px;
+            // text-align: center;
+            display: inline-grid;
+            justify-content: center;
+            align-items: center;
+            padding: 14px;
+        }
+
         @media (max-width: 768px) {
             width: 100%;
+        }
+
+        @media (max-width: 576px) {
+            // width: 100%;
+            // выключить
+        }
+    }
+
+    // &__btn span {
+    //     @media (max-width: 992px) {
+    //         // display: none;
+    //     }
+
+    // }
+
+    // &__text{
+
+    // }
+
+    &__svg {
+        display: none;
+
+        @media (max-width: 992px) {
+            display: block;
+            // z-index: 999;
         }
     }
 }
@@ -233,6 +277,24 @@ main {
 
 
 @keyframes my-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(1deg);
+    }
+
+    75% {
+        transform: rotate(-1deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes telegram {
     0% {
         transform: rotate(0deg);
     }
@@ -278,6 +340,7 @@ main {
     opacity: 0;
 
 }
+
 // работает низ
 [data-aos="userFadeUp"] {
     transform: translateY(25px);

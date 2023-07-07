@@ -39,8 +39,8 @@ document.querySelectorAll('.language__link').forEach((item) =>
             parent.classList.toggle('language__link--active');
             // parent.classList.remove('language__link--active');
             // parent.classList.remove('accordion__wrapper--active');
-            
-            
+
+
         }
     })
 )
@@ -423,10 +423,15 @@ let elements = document.querySelectorAll('.modal-window');
 
 for (let i = 0; i < elements.length; i++) {/*прокручиваем в цикле все элементы*/
     elements[i].addEventListener('click', function () {  /*при клике на элемент */
-        modalWindow.classList.add('modal-open');
-        // if (modalWindow.classList.contains('modal-open')) {
-        //     modalWindow.classList.remove('modal-open');
-        // }
+
+
+        if (modalWindow.classList.contains('modal-open')) {
+            modalWindow.classList.remove('modal-open');
+        } else {
+            modalWindow.classList.add('modal-open');
+        }
+
+
         document.onkeydown = function (event) {
             if (event.keyCode == 27) {
                 modalWindow.classList.remove('modal-open');
@@ -435,10 +440,10 @@ for (let i = 0; i < elements.length; i++) {/*прокручиваем в цик�
     })
 }
 
-$('.modal-window').on('click', function () {
-    $('.modal').add('modal-open');
-    // для появления крестика  +
-});
+// $('.modal-window').on('click', function () {
+//     $('.modal').toggle('modal-open');
+//     // для появления крестика  +
+// });
 
 // close modal
 $('.modal').click(function () {

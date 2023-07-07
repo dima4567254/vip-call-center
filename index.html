@@ -17,8 +17,6 @@
 <!-- 290 стоит ли делать сылкой весь блок -->
 <!-- заполнить блоки -->
 <!--  оптимизировать скрипт -->
-
-
 <!-- наести порядок в папках осталось только npm aos -->
 
 
@@ -28,12 +26,14 @@
 <!-- сделать веб пи -->
 
 
-<!-- языки плохо нажимаются -->
 <!-- большой телефон на 1366 768 -->
+<!-- 113 -->
+<!-- форма и модал -->
+<!-- подумать сделать обратно модал бем блок -->
 
-<!-- модульность -->
-<!-- еще раз посмотреть сайт -->
-<!-- проверить работу модального окна -->
+<!-- форма в низу не похоже на форму в интро -->
+<!-- 768 проверил но только проблемма выше -->
+<!-- почистить блоки что переделывал -->
 
 <body>
     <header class="header">
@@ -97,6 +97,7 @@
                     </div>
                     <button class="header__button btn btn--start modal-window" type="button">
                         <span>Зв'язатись з нами</span>
+
                     </button>
                     <button class="header__btn" type="button">
                         <span></span>
@@ -113,33 +114,37 @@
                 <img class="intro__images" src="../images/icons/decor1.svg" alt="Декор">
                 <img class="intro__images intro__images--decor" src="../images/icons/decor2.svg" alt="Декор">
                 <div class="intro__wrapper">
-                    <div class="intro__inner content">
-                        <h1 class="content__title" data-aos="fade-up" data-aos-delay="150">
+                    <div class="intro__content">
+                        <h1 class="intro__title" data-aos="fade-up" data-aos-delay="150">
                             Аутсорсинговий call-center для товарного бізнесу
                         </h1>
-                        <div class="content__text" data-aos="fade-up" data-aos-delay="300">
+                        <div class="intro__text" data-aos="fade-up" data-aos-delay="300">
                             <p>
                                 збільшимо ваш прибуток мінімум
                                 <span>у 2 рази</span>
                             </p>
                         </div>
-                        <form class="content__form form" data-aos="fade-up" data-aos-delay="450">
+                        <form class=" intro-form form" data-aos="fade-up" data-aos-delay="450">
                             <label class="sr-only" for="content-input">
                                 Введіть ваше ім'я*
                             </label>
-                            <input class="form__input form__input--form" id="content-input" type="text" name="name"
+                            <input class="intro-form__input" id="content-input" type="text" name="name"
                                 placeholder="ім'я*" required oninvalid="this.setCustomValidity('введіть ваше ім`я')">
                             <label class="sr-only" for="intro-input">
                                 Введіть ваш телефон*
                             </label>
-                            <input class="form__input form__input--form" id="intro-input" type="tel" name="tel"
+                            <input class="intro-form__input " id="intro-input" type="tel" name="tel"
                                 placeholder="телефон*" required
                                 oninvalid="this.setCustomValidity('Введіть ваш телефон')">
-                            <button class="form__btn btn btn--start" type="submit">
+                            <button class="intro-form__btn btn btn--start" type="submit">
                                 <span>Надіслати</span>
+                                <svg class="intro-form__svg" width="17px" height="16px">
+                                    <use xlink:href="images/sprite.svg#send">
+                                    </use>
+                                </svg>
                             </button>
                         </form>
-                        <div class="content__text" data-aos="fade-up" data-aos-delay="600">
+                        <div class="intro__text" data-aos="fade-up" data-aos-delay="600">
                             <p>
                                 відпрацюємо новим клієнтам перші
                                 <span>50 лідів безкоштовно</span>
@@ -1254,21 +1259,23 @@
                         <p>Ви платите тільки за підтверджені замовлення</p>
                     </li>
                 </ul>
-                <form class="work__form form" data-aos="fade-up" data-aos-delay="600">
-                    <label class="sr-only" for="work-text">
+                <form class="work__form intro-form form" data-aos="fade-up" data-aos-delay="600">
+                    <label class="sr-only" for="content-input">
                         Введіть ваше ім'я*
                     </label>
-                    <input class="form__input" id="work-text" type="text" name="name" placeholder="Введіть ваше ім'я*"
+                    <input class="intro-form__input" id="content-input" type="text" name="name" placeholder="ім'я*"
                         required oninvalid="this.setCustomValidity('введіть ваше ім`я')">
-                    <label class="sr-only" for="work-tel">
+                    <label class="sr-only" for="intro-input">
                         Введіть ваш телефон*
                     </label>
-                    <input class="form__input" id="work-tel" type="tel" name="tel" placeholder=" Введіть ваш телефон*"
+                    <input class="intro-form__input " id="intro-input" type="tel" name="tel" placeholder="телефон*"
                         required oninvalid="this.setCustomValidity('Введіть ваш телефон')">
-                    <button class="form__btn btn btn--start" type="submit">
-                        <span>
-                            Надіслати
-                        </span>
+                    <button class="intro-form__btn btn btn--start" type="submit">
+                        <span>Надіслати</span>
+                        <svg class="intro-form__svg" width="17px" height="16px">
+                            <use xlink:href="images/sprite.svg#send">
+                            </use>
+                        </svg>
                     </button>
                 </form>
                 <div class="work__text" data-aos="fade-up" data-aos-delay="700">
@@ -1670,7 +1677,7 @@
 
     <div class="modal">
         <div class="modal__inner">
-            <div class="content">
+            <div class="content modal__content">
                 <button class="content__btn modal-window" type="button">
                     <span class="sr-only">Закрити модальне вікно</span>
                 </button>
@@ -1694,7 +1701,7 @@
                     </label>
                     <input class="form__input form__input--form" id="modal-tel" type="tel" name="tel"
                         placeholder="телефон*" required oninvalid="this.setCustomValidity('Введіть ваш телефон')">
-                    <button class="form__btn btn btn--start" type="submit">
+                    <button class="form__btn btn btn--start " type="submit">
                         <span>Надіслати</span>
                     </button>
                 </form>
@@ -1708,8 +1715,28 @@
         </div>
     </div>
 
+    <ul class="social social--global">
+        <li class="social__item">
+            <a class="social__link social__link--telegram" href="#">
+                <svg class="social__svg" width="50px" height="50px" fill="#ffffff">
+                    <use xlink:href="images/sprite.svg#telegram">
+                    </use>
+                </svg>
+            </a>
+        </li>
+        <li class="social__item">
+            <a class="social__link social__link--call" href="#">
+                <svg class="social__svg" width="20px" height="20px" fill="#ffffff">
+                    <use xlink:href="images/sprite.svg#call">
+                    </use>
+                </svg>
+            </a>
+        </li>
+    </ul>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20230630204110"></script>
     <script src="js/main.min.js?_v=20230616232959"></script>
 
 </body>
+
 </html>
