@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="679px" height="815px" viewBox="0 0 679 815" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Rectangle Copy 5</title>
-    <defs>
-        <linearGradient x1="55.2907735%" y1="4.21793457%" x2="43.5450348%" y2="100%" id="linearGradient-1">
-            <stop stop-color="#2FBEFF" offset="0%"></stop>
-            <stop stop-color="#1B70B6" offset="100%"></stop>
-        </linearGradient>
-    </defs>
-    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect id="Rectangle-Copy-5" fill="url(#linearGradient-1)" fill-rule="nonzero" transform="translate(339.500000, 407.500000) rotate(29.000000) translate(-339.500000, -407.500000) " x="135" y="29" width="409" height="757" rx="64"></rect>
-    </g>
-</svg>
+<svg width="679" height="815" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="55.291%" y1="4.218%" x2="43.545%" y2="100%" id="linearGradient-1"><stop stop-color="#2FBEFF" offset="0%"/><stop stop-color="#1B70B6" offset="100%"/></linearGradient></defs><g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect id="Rectangle-Copy-5" fill="url(#linearGradient-1)" fill-rule="nonzero" transform="rotate(29 339.5 407.5)" x="135" y="29" width="409" height="757" rx="64"/></g></svg>

@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="1110px" height="1110px" viewBox="0 0 1110 1110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Oval Copy</title>
-    <defs>
-        <linearGradient x1="16.4804058%" y1="12.7759289%" x2="16.4804058%" y2="86.9754566%" id="linearGradient-1">
-            <stop stop-color="#2FBEFF" offset="0%"></stop>
-            <stop stop-color="#1B70B6" offset="100%"></stop>
-        </linearGradient>
-    </defs>
-    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <circle id="Oval-Copy" fill="url(#linearGradient-1)" fill-rule="nonzero" cx="555" cy="555" r="555"></circle>
-    </g>
-</svg>
+<svg width="1110" height="1110" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient x1="16.48%" y1="12.776%" x2="16.48%" y2="86.975%" id="linearGradient-1"><stop stop-color="#2FBEFF" offset="0%"/><stop stop-color="#1B70B6" offset="100%"/></linearGradient></defs><g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><circle id="Oval-Copy" fill="url(#linearGradient-1)" fill-rule="nonzero" cx="555" cy="555" r="555"/></g></svg>
