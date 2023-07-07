@@ -83,6 +83,21 @@ main {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.logo {
+    &__menu {
+        object-fit: cover;
+        width: 235px;
+        height: 78px;
+
+        @media (max-width: 992px) {
+            width: 170px;
+            height: 56px;
+        }
+    }
+}
+
+
+
 .btn {
     border-radius: 4px;
     background-color: $hover;
@@ -92,14 +107,34 @@ main {
     color: $white;
     position: relative;
 
-    &--start {
-        &:before {
-            background-image: linear-gradient(204deg, #2fbeff, #1b70b6);
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: all .5s;
+        background-image: linear-gradient(204deg, #2fbeff, #1b70b6);
 
-            @media (max-width: 1200px) {
-                display: none;
-            }
+        @media (max-width: 1200px) {
+            display: none;
         }
+    }
+
+    &:focus {
+        color: $focus;
+    }
+
+    &:hover {
+        &:before {
+            opacity: 1;
+        }
+    }
+
+    &:active {
+        color: $active;
     }
 
     &--standard {
@@ -109,32 +144,14 @@ main {
         &:before {
             background-color: rgba(0, 0, 0, .1);
         }
-    }
 
-    &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        transition: all 0.6s ease-in-out;
-    }
-
-    &:focus {
-        color: $focus;
-    }
-
-    &:hover {
-
-        &:before {
-            opacity: 1;
+        &:focus {
+            color: $hover;
         }
-    }
 
-    &:active {
-        color: $active;
+        &:hover {
+            color: $white;
+        }
     }
 }
 
@@ -210,16 +227,16 @@ main {
             //  margin-right: 0;}
         }
 
-         @media (max-width: 768px) {
-             margin-bottom: 20px;
-             // width: 100%;
-             // переделать для родителя
-         }
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+            // width: 100%;
+            // переделать для родителя
+        }
 
-         @media (max-width: 576px) {
-             // width: 100%;
-             // выключить
-         }
+        @media (max-width: 576px) {
+            // width: 100%;
+            // выключить
+        }
 
         // @media (max-width: 576px) {
         //     margin-bottom: 10px;

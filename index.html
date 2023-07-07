@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/png">
     <link rel="shortcut icon" href="https://yoursite.ru/favicon.png" type="image/x-icon">
     <title>Аутсорсинговий call-center</title>
     <link rel="stylesheet" href="css/style.min.css?_v=20230604180731">
@@ -18,6 +18,7 @@
 <!-- заполнить блоки -->
 <!--  оптимизировать скрипт -->
 <!-- наести порядок в папках осталось только npm aos -->
+<!-- сгруппировать ховеры -->
 
 
 
@@ -25,15 +26,10 @@
 <!-- проверить скролл  -->
 <!-- сделать веб пи -->
 
-
-<!-- большой телефон на 1366 768 -->
 <!-- 113 -->
-<!-- форма и модал -->
-<!-- подумать сделать обратно модал бем блок -->
 
-<!-- форма в низу не похоже на форму в интро -->
-<!-- 768 проверил но только проблемма выше -->
-<!-- почистить блоки что переделывал -->
+
+<!-- intro-form не подходящие название -->
 
 <body>
     <header class="header">
@@ -95,7 +91,7 @@
                         </svg>
                         <span class="sr-only">Значок стрілки</span>
                     </div>
-                    <button class="header__button btn btn--start modal-window" type="button">
+                    <button class="header__button btn modal-window" type="button">
                         <span>Зв'язатись з нами</span>
 
                     </button>
@@ -136,7 +132,7 @@
                             <input class="intro-form__input " id="intro-input" type="tel" name="tel"
                                 placeholder="телефон*" required
                                 oninvalid="this.setCustomValidity('Введіть ваш телефон')">
-                            <button class="intro-form__btn btn btn--start" type="submit">
+                            <button class="intro-form__btn btn" type="submit">
                                 <span>Надіслати</span>
                                 <svg class="intro-form__svg" width="17px" height="16px">
                                     <use xlink:href="images/sprite.svg#send">
@@ -196,8 +192,8 @@
                                 </p>
                             </div>
                         </div>
-                        <button class="about__btn btn btn--start modal-window" type="button" data-aos="fade-up"
-                            data-aos-delay="450">
+                        <!--!!! -->
+                        <button class="about__btn btn modal-window" type="button" data-aos="fade-up">
                             <span>детальніше</span>
                         </button>
                     </div>
@@ -367,7 +363,7 @@
                                 <p>Від маржі</p>
                             </div>
                         </div>
-                        <button class="services__btn btn btn--start modal-window" type="button">
+                        <button class="services__btn btn modal-window" type="button">
                             <span>Детальніше</span>
                         </button>
                     </li>
@@ -445,7 +441,7 @@
                                 <p>Від маржі</p>
                             </div>
                         </div>
-                        <button class="services__btn btn btn--start modal-window" type="button">
+                        <button class="services__btn btn modal-window" type="button">
                             <span>Детальніше</span>
                         </button>
                     </li>
@@ -1260,17 +1256,17 @@
                     </li>
                 </ul>
                 <form class="work__form intro-form form" data-aos="fade-up" data-aos-delay="600">
-                    <label class="sr-only" for="content-input">
+                    <label class="sr-only" for="work-name">
                         Введіть ваше ім'я*
                     </label>
-                    <input class="intro-form__input" id="content-input" type="text" name="name" placeholder="ім'я*"
-                        required oninvalid="this.setCustomValidity('введіть ваше ім`я')">
-                    <label class="sr-only" for="intro-input">
+                    <input class="intro-form__input" id="work-name" type="text" name="name" placeholder="ім'я*" required
+                        oninvalid="this.setCustomValidity('введіть ваше ім`я')">
+                    <label class="sr-only" for="work-tel">
                         Введіть ваш телефон*
                     </label>
-                    <input class="intro-form__input " id="intro-input" type="tel" name="tel" placeholder="телефон*"
-                        required oninvalid="this.setCustomValidity('Введіть ваш телефон')">
-                    <button class="intro-form__btn btn btn--start" type="submit">
+                    <input class="intro-form__input" id="work-tel" type="tel" name="tel" placeholder="телефон*" required
+                        oninvalid="this.setCustomValidity('Введіть ваш телефон')">
+                    <button class="intro-form__btn btn" type="submit">
                         <span>Надіслати</span>
                         <svg class="intro-form__svg" width="17px" height="16px">
                             <use xlink:href="images/sprite.svg#send">
@@ -1666,7 +1662,7 @@
                         </label>
                         <input class="footer__input" id="footer-tel" type="tel" name="tel" placeholder="телефон*"
                             required oninvalid="this.setCustomValidity('Введіть ваш телефон')">
-                        <button class="footer__btn btn btn--start" type="submit">
+                        <button class="footer__btn btn" type="submit">
                             <span>Надіслати</span>
                         </button>
                     </form>
@@ -1677,40 +1673,38 @@
 
     <div class="modal">
         <div class="modal__inner">
-            <div class="content modal__content">
-                <button class="content__btn modal-window" type="button">
-                    <span class="sr-only">Закрити модальне вікно</span>
+            <button class="modal__btn modal-window" type="button">
+                <span class="sr-only">Закрити модальне вікно</span>
+            </button>
+            <h2 class="modal__title">
+                Аутсорсинговий call-center для товарного бізнесу
+            </h2>
+            <div class="modal__text">
+                <p>
+                    збільшимо ваш прибуток мінімум
+                    <span>у 2 рази</span>
+                </p>
+            </div>
+            <form class="modal__form form">
+                <label class="sr-only" for="modal-text">
+                    Введіть ваше ім'я*
+                </label>
+                <input class="form__input form__input--form" id="modal-text" type="text" name="name" placeholder="ім'я*"
+                    required oninvalid="this.setCustomValidity('введіть ваше ім`я')">
+                <label class="sr-only" for="modal-tel">
+                    Введіть ваш телефон*
+                </label>
+                <input class="form__input form__input--form" id="modal-tel" type="tel" name="tel" placeholder="телефон*"
+                    required oninvalid="this.setCustomValidity('Введіть ваш телефон')">
+                <button class="form__btn btn " type="submit">
+                    <span>Надіслати</span>
                 </button>
-                <h2 class="content__title">
-                    Аутсорсинговий call-center для товарного бізнесу
-                </h2>
-                <div class="content__text">
-                    <p>
-                        збільшимо ваш прибуток мінімум
-                        <span>у 2 рази</span>
-                    </p>
-                </div>
-                <form class="content__form form">
-                    <label class="sr-only" for="modal-text">
-                        Введіть ваше ім'я*
-                    </label>
-                    <input class="form__input form__input--form" id="modal-text" type="text" name="name"
-                        placeholder="ім'я*" required oninvalid="this.setCustomValidity('введіть ваше ім`я')">
-                    <label class="sr-only" for="modal-tel">
-                        Введіть ваш телефон*
-                    </label>
-                    <input class="form__input form__input--form" id="modal-tel" type="tel" name="tel"
-                        placeholder="телефон*" required oninvalid="this.setCustomValidity('Введіть ваш телефон')">
-                    <button class="form__btn btn btn--start " type="submit">
-                        <span>Надіслати</span>
-                    </button>
-                </form>
-                <div class="intro__text" data-aos="fade-up" data-aos-delay="600">
-                    <p>
-                        відпрацюємо новим клієнтам перші
-                        <span>50 лідів безкоштовно</span>
-                    </p>
-                </div>
+            </form>
+            <div class="intro__text" data-aos="fade-up" data-aos-delay="600">
+                <p>
+                    відпрацюємо новим клієнтам перші
+                    <span>50 лідів безкоштовно</span>
+                </p>
             </div>
         </div>
     </div>

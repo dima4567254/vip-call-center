@@ -3,10 +3,14 @@ AOS.init({
     duration: 900, //длительность работает900
     // once: false, // whether animation should happen only once - while scrolling down
     mirror: true,
-    once: true,
+    // once: true,
     disable: 'phone',
     disable: 'tablet',
     disable: 'mobile',
+    // ---
+    // anchorPlacement: 'top',
+    // offset: 200,
+    // throttleDelay: 99, 
     // easing: "cubic-bezier(.4, .8, .74, 1)", once: !0
     // 'tablet', 'mobile',
     // активация библиотеки AOS
