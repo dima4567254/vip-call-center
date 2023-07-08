@@ -1266,14 +1266,14 @@
             padding: 5px 10px;
         }
 
-        &--standard {
-            background-color: $white;
-            color: $hover;
+        // &--standard {
+        //     background-color: $white;
+        //     color: $hover;
 
-            &:before {
-                background-color: rgba(0, 0, 0, .1);
-            }
-        }
+        //     &:before {
+        //         background-color: rgba(0, 0, 0, .1);
+        //     }
+        // }
     }
 }
 
@@ -1523,6 +1523,7 @@
         padding-top: 10px;
     }
 }
+
 
 .partners {
     position: relative;

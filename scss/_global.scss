@@ -96,8 +96,6 @@ main {
     }
 }
 
-
-
 .btn {
     border-radius: 4px;
     background-color: $hover;
@@ -143,6 +141,7 @@ main {
 
         &:before {
             background-color: rgba(0, 0, 0, .1);
+            background-image: none ;
         }
 
         &:focus {
@@ -150,7 +149,7 @@ main {
         }
 
         &:hover {
-            color: $white;
+            color: $hover;
         }
     }
 }
