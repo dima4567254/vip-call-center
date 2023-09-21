@@ -1,108 +1,31 @@
-/*$Butler: 'Butler',
-sans-serif;*/
-
-$active: inherit;
+$active:inherit;
 $focus:inherit;
-// $active: #fb0909;
-// $focus:#14B4BE;
 $hover:#2fbeff;
-// $hover:red;
-
-
 $ac: #fcd7b6;
-// $default:$black;
 $white: #FFFFFF;
 $black: #000000;
 $black1: #1b1e27;
 $black2: #050512;
 $black3: #2c2f3b;
 $red:red;
-
 $silver: #808289;
 $orange: #ff932f;
 $green: #2fff93;
 $placeholder: silver;
-
-
-$title: #436372;
 $btn-menu:#1b1e27;
 
-
-/*$ac: #fcd7b6;
-
-/*accent*/
-// $orange: #FF9900;
-// $green:#14B4BE;
-// $green:#14B4BE;
-// $antique:#fde7d3;
-// $default: #243f4d;
-// $Cream: #feefe2;
-// $Crayola: #c2d2db;
-// $red: #e72828;
-// $red1 :#fe3e57;
-// $orange: #ffa500;
-
-
 //section
-$padding-main:50px;
-$padding-1200:45px;
-$padding-992:40px; //70
-$padding-768:35px; //50
-$padding-576:30px;
 
-// @mixin line-clamp-box($line-clamp, ) {
-//     display: -webkit-box;
-//     -webkit-line-clamp: $line-clamp;
-//     -webkit-box-orient: vertical;
-//     overflow: hidden;
-// }
-
-// @mixin line-clamp-inline($line-clamp, ) {
-//     display: -webkit-inline-flex;
-//     -webkit-line-clamp: $line-clamp;
-//     -webkit-box-orient: vertical;
-//     overflow: hidden;
-// }
-
-// @mixin line-clamp-one($max-width, ) {
-//     white-space: nowrap;
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-//     display: block;
-//     max-width: $max-width;
-// }
-
-// @mixin line-clamp($line-clamp, ) {
-//     display: -webkit-box;
-//     -webkit-line-clamp: $line-clamp;
-//     -webkit-box-orient: vertical;
-//     overflow: hidden;
-
-// }
-$px:px;
+// $padding-main:50px;
+// $padding-1200:50px;
+// $padding-992:50px; 
+// $padding-768:50px;
+// $padding-576:50px;
 
 @mixin line-height($font-size, $line-height, $px, ) {
     line-height: ($line-height / $font-size);
     font-size: ($font-size + $px);
 }
-
-
-$padding-main2:50;
-
-@mixin cum($padding-main, $cum, ) {
-    // line-height: ($line-height / $font-size);
-    // font-size: ($font-size + $px);
-    $cum: ($padding-main - 30);
-    // $padding-main: (-30 / 4);
-
-    // $cum = cum1 -30;
-
-}
-
-// var cum=tottal /4; //5
-// var $cum4=cum3 - cum; //30
-
-// $padding-576:30px;
 
 @function max($numbers...) {
     @return m#{a}x(#{$numbers});
@@ -111,43 +34,3 @@ $padding-main2:50;
 @function min($numbers...) {
     @return m#{i}n(#{$numbers});
 }
-
-// @include line-height(16, 28, $px, );
-
-// @mixin clamp($font-size,
-//     $line-height,
-//     $lines-to-show) {
-//     // display: block; // Fallback for non-webkit browsers
-//     display: -webkit-box;
-//     font-size: rem($font-size);
-//     max-height: rem(($font-size * $line-height * $lines-to-show)); // Fallback for non-webkit browsers
-//     line-height: $line-height;
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-//     -webkit-box-orient: vertical;
-//     -webkit-line-clamp: $lines-to-show;
-// }
-
-
-
-// @mixin line-height($font-size, $line-height, ) {
-
-//     line-height: ( $line-height / $font-size)
-// }
-/*
-@include clamp(5);
-*/
-
-// $browser-context: 16;
-
-// @function em($pixels, $context: $browser-context) {
-//   @if (unitless($pixels)) {
-//     $pixels: $pixels * 1px;
-//   }
-
-//   @if (unitless($context)) {
-//     $context: $context * 1px;
-//   }
-
-//   @return $pixels / $context * 1em;
-// }

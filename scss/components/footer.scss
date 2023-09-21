@@ -1,0 +1,160 @@
+.footer {
+    background-color: $black3;
+    padding: 20px 0 20px;
+
+    @media (max-width: 992px) {
+        padding: 20px 0 40px;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 35px;
+
+        @media (max-width: 992px) {
+            justify-content: flex-start;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            gap: 25px;
+        }
+
+        @media (max-width: 576px) {
+            gap: 20px;
+        }
+    }
+
+    &__item {
+        font-style: normal;
+        width: 20%;
+
+        &--sections,
+        &--contacts {
+            @media (max-width: 992px) {
+                order: 2;
+            }
+        }
+
+
+        @media (max-width: 992px) {
+            width: 31%;
+        }
+
+        @media (max-width: 768px) {
+            width: 40%;
+        }
+
+        @media (max-width: 576px) {
+            width: 100%;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 25px;
+        display: block;
+
+        @media (max-width: 576px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        line-height: 1.2;
+    }
+
+    &__title {
+        padding-top: 25px;
+        margin-bottom: 35px;
+        font-size: 20px;
+
+        @media (max-width: 992px) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 576px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__links {
+        display: grid;
+        gap: 20px;
+    }
+
+    &__link {
+        transition: color .5s;
+
+        &:focus {
+            color: $focus;
+        }
+
+        &:hover {
+            color: $hover;
+        }
+
+        &:active {
+            color: $active;
+        }
+    }
+
+    &__svg {
+        margin-right: 15px;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        transition: color .5s;
+
+        &:focus {
+            color: $focus;
+        }
+
+        &:hover {
+            color: $hover;
+        }
+
+        &:active {
+            color: $active;
+        }
+    }
+
+    &__input {
+        border-radius: 4px;
+        padding: 14px 10px;
+        width: 100%;
+        color: $black2;
+        font-size: 14px;
+        border: none;
+        margin: 0 10px 10px 0;
+
+        @media (max-width: 576px) {
+            padding: 10px;
+            margin-right: 0;
+        }
+
+        &::placeholder {
+            color: $silver;
+        }
+    }
+
+    &__btn {
+        padding: 14px 10px;
+        width: 100%;
+
+        @media (max-width: 576px) {
+            padding: 10px;
+        }
+    }
+}
