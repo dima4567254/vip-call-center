@@ -3,16 +3,11 @@ body {
     height: 100%;
 }
 
-// 400 600 700
 body {
-    // font-weight: 400;
     font-family: 'PTSans';
-    // font-family: Open Sans Regular;
     font-size: 16px;
     line-height: 1.7;
-    // @include line-height(16, 28, $px,);
     color: $white;
-    // letter-spacing: 0.6px;
     background-color: $black1;
 
     @media (max-width: 1200px) {
@@ -32,11 +27,7 @@ body {
     }
 }
 
-body {
-    background-color: #1b1e27;
-
-}
-
+// стили для декора
 html.active,
 main {
     overflow: hidden;
@@ -44,12 +35,6 @@ main {
 
 html.active {
     pointer-events: none;
-}
-
-// !!!
-
-main {
-    overflow: hidden;
 }
 
 .container {
@@ -87,11 +72,11 @@ main {
     &__menu {
         object-fit: cover;
         width: 235px;
-        height: 78px;
+        height: 75px;
 
         @media (max-width: 992px) {
             width: 170px;
-            height: 56px;
+            height: 55px;
         }
     }
 }
@@ -105,6 +90,7 @@ main {
     color: $white;
     position: relative;
 
+
     &:before {
         content: "";
         position: absolute;
@@ -113,7 +99,7 @@ main {
         height: 100%;
         width: 100%;
         opacity: 0;
-        transition: all .5s;
+        transition: opacity .5s;
         background-image: linear-gradient(204deg, #2fbeff, #1b70b6);
 
         @media (max-width: 1200px) {
@@ -141,7 +127,7 @@ main {
 
         &:before {
             background-color: rgba(0, 0, 0, .1);
-            background-image: none ;
+            background-image: none;
         }
 
         &:focus {
@@ -189,112 +175,104 @@ main {
 }
 
 .section {
-    padding: $padding-main 0;
+    padding: 50px 0;
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    gap: 40px;
+
+    @media (max-width: 1200px) {
+        gap: 35px;
+    }
 
     @media (max-width: 992px) {
-        padding: $padding-992 0;
+        gap: 30px;
+        justify-content: start;
     }
 
     @media (max-width: 768px) {
-        padding: $padding-768 0;
+        gap: 25px;
     }
 
     @media (max-width: 576px) {
-        padding: $padding-576 0;
+        gap: 20px;
     }
-}
 
-.form {
-    margin-bottom: 20px;
-
-    &__input {
-        border-radius: 4px;
-        padding: 6px 10px;
-        // padding: 14px 10px;
-        color: $black2;
-        font-size: 14px;
-        border: none;
-        // margin-right: 10px;
-
-
-        @media (max-width: 992px) {
-            padding: 15px;
-        }
-
-        @media (max-width: 768px) {
-            width: 100%;
-            //  margin-right: 0;}
-        }
-
-        @media (max-width: 768px) {
-            margin-bottom: 20px;
-            // width: 100%;
-            // переделать для родителя
-        }
+    &--global {
+        position: fixed;
+        bottom: 5%;
+        right: 3%;
+        z-index: 1;
+        margin-bottom: 0;
 
         @media (max-width: 576px) {
-            // width: 100%;
-            // выключить
-        }
-
-        // @media (max-width: 576px) {
-        //     margin-bottom: 10px;
-        // }
-
-        &::placeholder {
-            color: rgb(118, 118, 118);
+            gap: 0;
         }
     }
 
-    &__btn {
-        padding: 8px 33px;
+    &__link {
+        background-color: $hover;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        @media (max-width: 992px) {
-            // display: none;
-            // max-width: 50px;
-            // text-align: center;
-            display: inline-grid;
-            justify-content: center;
-            align-items: center;
-            padding: 14px;
+        &--call,
+        &--telegram {
+            background-image: linear-gradient(204deg, #2fbeff, #1b70b6);
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
         }
 
-        @media (max-width: 768px) {
-            width: 100%;
+        &--telegram {
+            animation-name: telegram;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+            @keyframes telegram {
+                0% {
+                    transform: rotate(0);
+                }
+
+                50% {
+                    transform: rotate(5deg);
+                }
+
+                75% {
+                    transform: rotate(-5deg);
+                }
+
+                100% {
+                    transform: rotate(0);
+                }
+            }
+
         }
 
-        @media (max-width: 576px) {
-            // width: 100%;
-            // выключить
-        }
-    }
+        &--call {
+            display: none;
 
-    // &__btn span {
-    //     @media (max-width: 992px) {
-    //         // display: none;
-    //     }
+            @media (max-width: 992px) {
+                display: flex;
+            }
 
-    // }
-
-    // &__text{
-
-    // }
-
-    &__svg {
-        display: none;
-
-        @media (max-width: 992px) {
-            display: block;
-            // z-index: 999;
+            @media (max-width: 576px) {
+                display: none;
+            }
         }
     }
 }
-
-
 
 @keyframes my-animation {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(0);
     }
 
     50% {
@@ -306,47 +284,15 @@ main {
     }
 
     100% {
-        transform: rotate(0deg);
+        transform: rotate(0);
     }
 }
 
-@keyframes telegram {
-    0% {
-        transform: rotate(0deg);
-    }
 
-    50% {
-        transform: rotate(5deg);
-    }
-
-    75% {
-        transform: rotate(-5deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
-}
 
 .swiper-slide {
     height: auto !important;
 }
-
-// .animate__animated.animate__fadeInLeft {
-//     // --animate-duration: 2s;
-//     --animate-duration: 0.5s;
-//     --animate-delay: 25s;
-// }
-
-// :root {
-//     // --animate-delay: 0.5s;
-//     --animate-delay: 0.5s;
-// }
-
-// [data-aos="fromOpacity"] {
-//     opacity: 0;
-//     transition-property: opacity;
-// }
 
 [data-aos='fromOpacity'].aos-animate {
     opacity: 1;
@@ -357,28 +303,12 @@ main {
 
 }
 
-// работает низ
 [data-aos="userFadeUp"] {
     transform: translateY(25px);
     opacity: 0;
 }
 
 [data-aos="userFadeUp"].aos-animate {
-    //+2
     opacity: 1;
     transform: translateY(0);
 }
-
-// [data-aos="clipRight"] {
-//     clip-path: inset(0 100% 0 0);
-// }
-
-// [data-aos="clipRight"].aos-animate {
-//     clip-path: inset(0 0 0 0);
-// }
-
-// [data-aos][data-aos][data-aos-duration="800"],
-// body[data-aos-duration="800"] [data-aos] {
-//     // transition-duration: .8s;
-//     transition-duration: 0.5s;
-// }
