@@ -37,7 +37,6 @@
             }
         }
 
-
         @media (max-width: 992px) {
             width: 31%;
         }
@@ -145,7 +144,7 @@
         }
 
         &::placeholder {
-            color: $silver;
+            color: $gray;
         }
     }
 
@@ -158,3 +157,4 @@
         }
     }
 }
+

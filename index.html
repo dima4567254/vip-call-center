@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/webp">
     <title>Аутсорсинговий call-center</title>
-    <link rel="stylesheet" href="css/style.min.css?_v=20230604180731">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css?_v=20230617194258" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css?_v=20230604180731">
 </head>
 
-<body>
-    <header class="header">
+<body class="wrapper">
+    <header id="header" class="header lock-padding">
         <div class="container container--big">
             <nav class="menu">
                 <a class="logo menu__logo" href="#">
@@ -31,6 +31,11 @@
                             </a>
                         </li>
                         <li class="menu__item">
+                            <a class="menu__link" href="#clients">
+                                До/Після
+                            </a>
+                        </li>
+                        <li class="menu__item">
                             <a class="menu__link" href="#slider-casey">
                                 Кейси
                             </a>
@@ -41,19 +46,14 @@
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#clients">
-                                До/Після
-                            </a>
-                        </li>
-                        <li class="menu__item">
                             <a class="menu__link" href="#slider-reviews">
                                 Відгуки
                             </a>
                         </li>
                     </ul>
-                    <button class="menu__button btn button--start modal-window" type="button">
+                    <a class="menu__button btn modal-window" href="#popup">
                         <span>Зв'язатись з нами</span>
-                    </button>
+                    </a>
                 </div>
                 <div class="menu__nav">
                     <div class="language">
@@ -71,10 +71,9 @@
                         </svg>
                         <span class="sr-only">Значок стрілки</span>
                     </div>
-                    <button class="header__button btn  modal-window" type="button">
+                    <a class="header__button btn modal-window" href="#popup">
                         <span>Зв'язатись з нами</span>
-
-                    </button>
+                    </a>
                     <button class="header__btn" type="button">
                         <span></span>
                         <span class="sr-only">Відкрити меню</span>
@@ -87,8 +86,8 @@
     <main class="main">
         <section class="intro">
             <div class="container">
-                <img class="intro__images" src="images/icons/decor1.svg" alt="Декор">
-                <img class="intro__images intro__images--decor" src="images/icons/decor2.svg" alt="Декор">
+                <img class="intro__images" src="images/icons/circle.svg" alt="Коло">
+                <img class="intro__images intro__images--decor" src="images/icons/blot.svg" alt="Декор">
                 <div class="intro__wrapper">
                     <div class="intro__content">
                         <h1 class="intro__title" data-aos="fade-up" data-aos-delay="150">
@@ -127,10 +126,31 @@
                 </div>
             </div>
         </section>
+        <section class="autonomously section">
+            <div class="container">
+                <div class="autonomously__wrapper">
+                    <div class="autonomously__box">
+                        <h2 class="autonomously__title title">
+                            ми працюємо автономно
+                        </h2>
+                        <div class="autonomously__text">
+                            <p>
+                                Завдяки установці генератора та старлінка, ми працюємо в автономному режимі. Ми 24/7
+                                на
+                                зв'язку
+                                та
+                                завжди можемо надавати послуги у повному обсязі.
+                            </p>
+                        </div>
+                    </div>
+                    <img class="autonomously__img" src="images/generator.webp" alt="Генератор">
+                </div>
+            </div>
+        </section>
 
         <section class="about section" id="about">
             <div class="container">
-                <img class="about__images about__images--decor" src="images/icons/decor3.svg" alt="Декор">
+                <img class="about__images about__images--decor" src="images/icons/inspire.svg" alt="Декор">
                 <div class="about__wrapper">
                     <div class="about__img"></div>
                     <div class="about__box">
@@ -168,33 +188,145 @@
                                 </p>
                             </div>
                         </div>
-                        <button class="about__btn btn modal-window" type="button" data-aos="fade-up">
-                            <span>детальніше</span>
-                        </button>
+                        <a class="about__button btn modal-window" href="#popup" data-aos="fade-up">
+                            <span>Детальніше</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="autonomously section">
+        <section class="services section" id="services">
+            <img class="services__images" src="images/icons/rectangle.svg" alt="Декор">
+            <img class="services__images services__images--decor" src="images/icons/triangle-down.svg" alt="Декор">
             <div class="container">
-                <div class="autonomously__wrapper">
-                    <div class="autonomously__box">
-                        <h2 class="autonomously__title title">
-                            ми працюємо автономно
-                        </h2>
-                        <div class="autonomously__text">
-                            <p>
-                                Завдяки установці генератора та старлінка, ми працюємо в автономному режимі. Ми 24/7
-                                на
-                                зв'язку
-                                та
-                                завжди можемо надавати послуги у повному обсязі.
-                            </p>
-                        </div>
+                <div class="services__box">
+                    <h2 class="services__title title" data-aos="fade-up" data-aos-delay="100">
+                        Послуги
+                    </h2>
+                    <div class="services__text" data-aos="fade-up" data-aos-delay="200">
+                        Більше лідів - тим приємніша ціна
                     </div>
-                    <img class="autonomously__img" src="images/generator.webp" alt="Генератор">
                 </div>
+                <ul class="services__list">
+                    <li class="services__item" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="services__subtitle">
+                            мінімум
+                        </h3>
+                        <ul class="services__items">
+                            <li class="services__info">
+                                Кількість лідів на день: 30-50
+                            </li>
+                            <li class="services__info">
+                                Персональний менеджер 24/7
+                            </li>
+                            <li class="services__info">
+                                Унікальні скрипти під ваш оффер
+                            </li>
+                            <li class="services__info">
+                                Дожим замовлення до викупу: БЕЗКОШТОВНО
+                            </li>
+                            <li class="services__info">
+                                Секретні фішки щодо збільшення прибутку у ПОДАРУНОК 🎁
+                            </li>
+                            <li class="services__info">
+                                База топ постачальників у ПОДАРУНОК
+                                🎁
+                            </li>
+                        </ul>
+                        <div class="services__inner">
+                            <div class="services__subtext">
+                                <p>25<span>грн</span></p>
+                                Підтверджене замовлення
+                            </div>
+                            <div class="services__subtext">
+                                <p>25<span>%</span></p>
+                                <p>Від маржі</p>
+                            </div>
+                        </div>
+                        <a class="services__button btn modal-window" href="#popup">
+                            <span>Детальніше</span>
+                        </a>
+                    </li>
+                    <li class="services__item services__item--standard" data-aos-delay="400" data-aos="fade-up">
+                        <h3 class="services__subtitle">
+                            стандарт
+                        </h3>
+                        <ul class="services__items">
+                            <li class="services__info">
+                                Кількість лідів на день: 50-100
+                            </li>
+                            <li class="services__info">
+                                Персональний менеджер 24/7
+                            </li>
+                            <li class="services__info">
+                                Унікальні скрипти під ваш оффер
+                            </li>
+                            <li class="services__info">
+                                Дожим замовлення до викупу: БЕЗКОШТОВНО
+                            </li>
+                            <li class="services__info">
+                                Секретні фішки щодо збільшення прибутку у ПОДАРУНОК 🎁
+                            </li>
+                            <li class="services__info">
+                                База топ постачальників у ПОДАРУНОК 🎁
+                            </li>
+                        </ul>
+                        <div class="services__inner">
+                            <div class="services__subtext">
+                                <p>24<span>грн</span></p>
+                                <p>
+                                    Підтверджене замовлення
+                                </p>
+                            </div>
+                            <div class="services__subtext">
+                                <p>23<span>%</span></p>
+                                <p>Від маржі</p>
+                            </div>
+                        </div>
+                        <a class="services__btn btn btn--standard modal-window" href="#popup">
+                            <span>Детальніше</span>
+                        </a>
+                    </li>
+                    <li class="services__item" data-aos="fade-up" data-aos-delay="500">
+                        <h3 class="services__subtitle">
+                            преміум
+                        </h3>
+                        <ul class="services__items">
+                            <li class="services__info">
+                                Кількість лідів на день: >100
+                            </li>
+                            <li class="services__info">
+                                Персональний менеджер 24/7
+                            </li>
+                            <li class="services__info">
+                                Унікальні скрипти під ваш оффер
+                            </li>
+                            <li class="services__info">
+                                Дожим замовлення до викупу: БЕЗКОШТОВНО
+                            </li>
+                            <li class="services__info">
+                                Секретні фішки щодо збільшення прибутку у ПОДАРУНОК 🎁
+                            </li>
+                            <li class="services__info">
+                                База топ постачальників у ПОДАРУНОК 🎁
+                            </li>
+                        </ul>
+                        <div class="services__inner">
+                            <div class="services__subtext">
+                                <p>24<span>грн</span></p>
+                                <p>Підтверджене замовлення</p>
+                            </div>
+                            <div class="services__subtext">
+                                <p>23<span>%</span></p>
+                                <p>Від маржі</p>
+                            </div>
+                        </div>
+                        <a class="services__btn btn modal-window" href="#popup">
+                            <span>Детальніше</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -246,7 +378,7 @@
                             </p>
                         </div>
                     </li>
-                    <li class="advantages__item advantages__item--advantages" data-aos="fade-up" data-aos-delay="500">
+                    <li class="advantages__item" data-aos="fade-up" data-aos-delay="500">
                         <svg class="advantages__svg" width="48px" height="48px">
                             <use xlink:href="images/sprite.svg#schedule">
                             </use>
@@ -286,143 +418,107 @@
             </div>
         </section>
 
-        <section class="services section" id="services">
-            <img class="services__images" src="images/icons/decor4.svg" alt="Декор">
-            <img class="services__images services__images--decor" src="images/icons/decor5.svg" alt="Декор">
+        <section class="clients section" id="clients">
             <div class="container">
-                <div class="services__box">
-                    <h2 class="services__title title" data-aos="fade-up" data-aos-delay="100">
-                        Послуги
-                    </h2>
-                    <div class="services__text" data-aos="fade-up" data-aos-delay="200">
-                        Більше лідів - тим приємніша ціна
+                <div class="clients__wrapper">
+                    <div class="clients__box" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">
+                        <h2 class="clients__title title">
+                            Хто наші клієнти?
+                        </h2>
+                        <ul class="accordion">
+                            <li class="accordion__item" data-aos="fade-up" data-aos-delay="300">
+                                <div class="accordion__inner">
+                                    <h3 class="accordion__subtitle">
+                                        Лендінг
+                                    </h3>
+                                    <div class="accordion__box">
+                                        <span class="sr-only">Aнімована іконка крестика</span>
+                                    </div>
+                                </div>
+                                <div class="accordion__text">
+                                    <p>
+                                        Лендінги завжди складали основну частину нашого портфелю. Головне, не
+                                        забувайте
+                                        -
+                                        більше лідів дешевші дзвінки.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="accordion__item" data-aos="fade-up" data-aos-delay="450">
+                                <div class="accordion__inner">
+                                    <h3 class="accordion__subtitle">
+                                        cpa-мережі
+                                    </h3>
+                                    <div class="accordion__box">
+                                        <span class="sr-only">Aнімована іконка крестика</span>
+                                    </div>
+                                </div>
+                                <div class="accordion__text">
+                                    <p>
+                                        Останнім часом для CPA-мереж професійний колл-центр став життєвою необхідністю.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="accordion__item" data-aos="fade-up" data-aos-delay="600">
+                                <div class="accordion__inner">
+                                    <h3 class="accordion__subtitle">
+                                        інтернет-магазини
+                                    </h3>
+                                    <div class="accordion__box">
+                                        <span class="sr-only">
+                                            Aнімована іконка крестика
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="accordion__text">
+                                    <p>
+                                        Інтернет-магазинам важливо підтримувати свій статус і репутацію. Співпраця з
+                                        професійним колл-центром може стати ідеальним компромісом між якістю
+                                        обслуговування і
+                                        делегуванням обов’язків.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clients__inner sliderclients" data-aos="fromOpacity">
+                        <div class="button-next">
+                            <span></span>
+                        </div>
+                        <div class="button-prev">
+                            <span></span>
+                        </div>
+                        <ul class="swiper-wrapper" data-aos="fromOpacity" data-aos-delay="150">
+                            <li class="swiper-slide">
+                                <a class="clients__link" href="images/schedule.webp" data-fancybox="gallery">
+                                    <div class="clients__images">
+                                        <img class="clients__img" src="images/schedule.webp" alt="Графік">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a class="clients__link" href="images/schedule.webp" data-fancybox="gallery">
+                                    <div class="clients__images">
+                                        <img class="clients__img" src="images/schedule.webp" alt="Графік">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a class="clients__link" href="images/schedule.webp" data-fancybox="gallery">
+                                    <div class="clients__images">
+                                        <img class="clients__img" src="images/schedule.webp" alt="Графік">
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <ul class="services__list">
-                    <li class="services__item" data-aos="fade-up" data-aos-delay="300">
-                        <h3 class="services__subtitle">
-                            мінімум
-                        </h3>
-                        <ul class="services__items">
-                            <li class="services__info">
-                                Кількість лідів на день: 30-50
-                            </li>
-                            <li class="services__info">
-                                Персональний менеджер 24/7
-                            </li>
-                            <li class="services__info">
-                                Унікальні скрипти під ваш оффер
-                            </li>
-                            <li class="services__info">
-                                Дожим замовлення до викупу: БЕЗКОШТОВНО
-                            </li>
-                            <li class="services__info">
-                                Секретні фішки щодо збільшення прибутку у ПОДАРУНОК 🎁
-                            </li>
-                            <li class="services__info">
-                                База топ постачальників у ПОДАРУНОК
-                                🎁
-                            </li>
-                        </ul>
-                        <div class="services__inner">
-                            <div class="services__subtext">
-                                <p>25<span>грн</span></p>
-                                Підтверджене замовлення
-                            </div>
-                            <div class="services__subtext">
-                                <p>25<span>%</span></p>
-                                <p>Від маржі</p>
-                            </div>
-                        </div>
-                        <button class="services__btn btn  modal-window" type="button">
-                            <span>Детальніше</span>
-                        </button>
-                    </li>
-                    <li class="services__item services__item--standard" data-aos-delay="400" data-aos="fade-up">
-                        <h3 class="services__subtitle">
-                            стандарт
-                        </h3>
-                        <ul class="services__items">
-                            <li class="services__info">
-                                Кількість лідів на день: 50-100
-                            </li>
-                            <li class="services__info">
-                                Персональний менеджер 24/7
-                            </li>
-                            <li class="services__info">
-                                Унікальні скрипти під ваш оффер
-                            </li>
-                            <li class="services__info">
-                                Дожим замовлення до викупу: БЕЗКОШТОВНО
-                            </li>
-                            <li class="services__info">
-                                Секретні фішки щодо збільшення прибутку у ПОДАРУНОК 🎁
-                            </li>
-                            <li class="services__info">
-                                База топ постачальників у ПОДАРУНОК 🎁
-                            </li>
-                        </ul>
-                        <div class="services__inner">
-                            <div class="services__subtext">
-                                <p>24<span>грн</span></p>
-                                <p>
-                                    Підтверджене замовлення
-                                </p>
-                            </div>
-                            <div class="services__subtext">
-                                <p>23<span>%</span></p>
-                                <p>Від маржі</p>
-                            </div>
-                        </div>
-                        <button class="services__btn btn btn--standard modal-window" type="button">
-                            <span>Детальніше</span>
-                        </button>
-                    </li>
-                    <li class="services__item" data-aos="fade-up" data-aos-delay="500">
-                        <h3 class="services__subtitle">
-                            преміум
-                        </h3>
-                        <ul class="services__items">
-                            <li class="services__info">
-                                Кількість лідів на день: >100
-                            </li>
-                            <li class="services__info">
-                                Персональний менеджер 24/7
-                            </li>
-                            <li class="services__info">
-                                Унікальні скрипти під ваш оффер
-                            </li>
-                            <li class="services__info">
-                                Дожим замовлення до викупу: БЕЗКОШТОВНО
-                            </li>
-                            <li class="services__info">
-                                Секретні фішки щодо збільшення прибутку у ПОДАРУНОК 🎁
-                            </li>
-                            <li class="services__info">
-                                База топ постачальників у ПОДАРУНОК 🎁
-                            </li>
-                        </ul>
-                        <div class="services__inner">
-                            <div class="services__subtext">
-                                <p>24<span>грн</span></p>
-                                <p>Підтверджене замовлення</p>
-                            </div>
-                            <div class="services__subtext">
-                                <p>23<span>%</span></p>
-                                <p>Від маржі</p>
-                            </div>
-                        </div>
-                        <button class="services__btn btn  modal-window" type="button">
-                            <span>Детальніше</span>
-                        </button>
-                    </li>
-                </ul>
             </div>
         </section>
 
         <section class="slider-casey section" id="slider-casey">
             <div class="container container--slider">
-                <img class="slider-casey__images" src="images/icons/decor6.svg" alt="Декор">
+                <img class="slider-casey__images" src="images/icons/triangle-top.svg" alt="Декор">
                 <h2 class="slider-casey__title title" data-aos="fade-up">
                     Кейси
                 </h2>
@@ -837,148 +933,6 @@
             </div>
         </section>
 
-        <section class="clients section" id="clients">
-            <div class="container">
-                <div class="clients__wrapper">
-                    <div class="clients__box" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">
-                        <h2 class="clients__title title">
-                            Хто наші клієнти?
-                        </h2>
-                        <ul class="accordion">
-                            <li class="accordion__item" data-aos="fade-up" data-aos-delay="300">
-                                <div class="accordion__inner">
-                                    <h3 class="accordion__subtitle">
-                                        Лендінг
-                                    </h3>
-                                    <div class="accordion__box accordion__box--clients">
-                                        <span class="sr-only">Aнімована іконка крестика</span>
-                                    </div>
-                                </div>
-                                <div class="accordion__text">
-                                    <p>
-                                        Лендінги завжди складали основну частину нашого портфелю. Головне, не
-                                        забувайте
-                                        -
-                                        більше лідів дешевші дзвінки.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="accordion__item" data-aos="fade-up" data-aos-delay="450">
-                                <div class="accordion__inner">
-                                    <h3 class="accordion__subtitle">
-                                        cpa-мережі
-                                    </h3>
-                                    <div class="accordion__box accordion__box--clients">
-                                        <span class="sr-only">Aнімована іконка крестика</span>
-                                    </div>
-                                </div>
-                                <div class="accordion__text">
-                                    <p>
-                                        Останнім часом для CPA-мереж професійний колл-центр став життєвою необхідністю.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="accordion__item" data-aos="fade-up" data-aos-delay="600">
-                                <div class="accordion__inner">
-                                    <h3 class="accordion__subtitle">
-                                        інтернет-магазини
-                                    </h3>
-                                    <div class="accordion__box accordion__box--clients">
-                                        <span class="sr-only">
-                                            Aнімована іконка крестика
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="accordion__text">
-                                    <p>
-                                        Інтернет-магазинам важливо підтримувати свій статус і репутацію. Співпраця з
-                                        професійним колл-центром може стати ідеальним компромісом між якістю
-                                        обслуговування і
-                                        делегуванням обов’язків.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="clients__inner sliderclients" data-aos="fromOpacity">
-                        <div class="button-next">
-                            <span></span>
-                        </div>
-                        <div class="button-prev">
-                            <span></span>
-                        </div>
-                        <ul class="swiper-wrapper" data-aos="fromOpacity" data-aos-delay="150">
-                            <li class="swiper-slide">
-                                <a class="clients__link" href="images/schedule.webp" data-fancybox="gallery">
-                                    <div class="clients__images">
-                                        <img class="clients__img" src="images/schedule.webp" alt="Графік">
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a class="clients__link" href="images/schedule.webp" data-fancybox="gallery">
-                                    <div class="clients__images">
-                                        <img class="clients__img" src="images/schedule.webp" alt="Графік">
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a class="clients__link" href="images/schedule.webp" data-fancybox="gallery">
-                                    <div class="clients__images">
-                                        <img class="clients__img" src="images/schedule.webp" alt="Графік">
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="partners section">
-            <img class="partners__images" src="images/icons/decor7.svg" alt="Декор">
-            <div class="container">
-                <h2 class="partners__title title" data-aos="fade-up">
-                    Наші партнери
-                </h2>
-                <ul class="partners__wrapper">
-                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/prom.svg" alt="prom">
-                    </li>
-                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/allo.webp" alt="allo">
-                    </li>
-                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/crm.svg" alt="crm">
-                    </li>
-                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/sales-drive.webp" alt="sales-drive">
-                    </li>
-                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/nova-poshta.webp" alt="nova-poshta">
-                    </li>
-                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/citrus.webp" alt="citrus">
-                    </li>
-                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/rozetka.webp" alt="rozetka">
-                    </li>
-                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/trendcrm.svg" alt="trendcrm">
-                    </li>
-                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/nextel.webp" alt="nextel">
-                    </li>
-                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/binotel.webp" alt="binotel">
-                    </li>
-                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/ukrposhta.webp" alt="ukrposhta">
-                    </li>
-                </ul>
-            </div>
-        </section>
-
         <section class="work section">
             <div class="container">
                 <div class="work__box">
@@ -1037,8 +991,8 @@
 
         <section class="slider-reviews section" id="slider-reviews">
             <div class="container container--slider">
-                <img class="slider-reviews__images" src="images/icons/decor8.svg" alt="Декор">
-                <img class="slider-reviews__images slider-reviews__images--reviews" src="images/icons/decor9.svg"
+                <img class="slider-reviews__images" src="images/icons/deas.svg" alt="Декор">
+                <img class="slider-reviews__images slider-reviews__images--reviews" src="images/icons/forms.svg"
                     alt="Декор">
                 <h2 class="slider-reviews__title title" data-aos="fade-up" data-aos-delay="100">
                     Відгуки
@@ -1336,6 +1290,50 @@
                 </ul>
             </div>
         </section>
+
+        <section class="partners section">
+            <img class="partners__images" src="images/icons/diamond.svg" alt="Декор">
+            <div class="container">
+                <h2 class="partners__title title" data-aos="fade-up">
+                    Наші партнери
+                </h2>
+                <ul class="partners__wrapper">
+                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
+                        <img class="partners__img" src="images/partners/prom.svg" alt="prom">
+                    </li>
+                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
+                        <img class="partners__img" src="images/partners/allo.webp" alt="allo">
+                    </li>
+                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
+                        <img class="partners__img" src="images/partners/crm.svg" alt="crm">
+                    </li>
+                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
+                        <img class="partners__img" src="images/partners/sales-drive.webp" alt="sales-drive">
+                    </li>
+                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
+                        <img class="partners__img" src="images/partners/nova-poshta.webp" alt="nova-poshta">
+                    </li>
+                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
+                        <img class="partners__img" src="images/partners/citrus.webp" alt="citrus">
+                    </li>
+                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
+                        <img class="partners__img" src="images/partners/rozetka.webp" alt="rozetka">
+                    </li>
+                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
+                        <img class="partners__img" src="images/partners/trendcrm.svg" alt="trendcrm">
+                    </li>
+                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
+                        <img class="partners__img" src="images/partners/nextel.webp" alt="nextel">
+                    </li>
+                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
+                        <img class="partners__img" src="images/partners/binotel.webp" alt="binotel">
+                    </li>
+                    <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
+                        <img class="partners__img" src="images/partners/ukrposhta.webp" alt="ukrposhta">
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
 
     <footer class="footer" data-aos="fromOpacity" data-aos-delay="500">
@@ -1416,24 +1414,24 @@
                         Контакти
                     </div>
                     <div class="footer__links">
-                        <a class="footer__box" href="tel:+380732200255">
+                        <a class="footer__box" href="tel:+380730025225">
                             <svg class="footer__svg" width="24px" height="24px">
                                 <use xlink:href="images/sprite.svg#tel">
                                 </use>
                             </svg>
                             <span class="sr-only">Значок трубки</span>
                             <div class="footer__info">
-                                +38 (073) 2200255
+                                +38 (073) 0025225
                             </div>
                         </a>
-                        <a class="footer__box" href="igorkovalI333@gmail.com:">
+                        <a class="footer__box" href="vip-call-center@gmail.com:">
                             <svg class="footer__svg" width="24px" height="24px">
                                 <use xlink:href="images/sprite.svg#mail">
                                 </use>
                             </svg>
                             <span class="sr-only">Значок електронної пошти</span>
                             <div class="footer__info">
-                                igorkovalI333@gmail.com
+                                vip-call-center@gmail.com
                             </div>
                         </a>
                         <a class="footer__box" href="#">
@@ -1443,7 +1441,7 @@
                             </svg>
                             <span class="sr-only">Значок локації</span>
                             <div class="footer__info">
-                                г. Одеса, вул. Львовська, 48/2
+                                г. Одеса, вул. Улица Академика Королева, 112
                             </div>
                         </a>
                     </div>
@@ -1463,7 +1461,7 @@
                         </label>
                         <input class="footer__input" id="footer-tel" type="tel" name="tel" placeholder="телефон*"
                             required oninvalid="this.setCustomValidity('Введіть ваш телефон')">
-                        <button class="footer__btn btn " type="submit">
+                        <button class="footer__btn btn" type="submit">
                             <span>Надіслати</span>
                         </button>
                     </form>
@@ -1472,11 +1470,11 @@
         </div>
     </footer>
 
-    <div class="modal">
+    <div class="modal" id="popup">
         <div class="modal__inner">
-            <button class="modal__btn modal-window" type="button">
+            <a class="modal__btn modal-window close-popup" href="#popup">
                 <span class="sr-only">Закрити модальне вікно</span>
-            </button>
+            </a>
             <h2 class="modal__title">
                 Аутсорсинговий call-center для товарного бізнесу
             </h2>
@@ -1488,12 +1486,12 @@
                 <label class="sr-only" for="modal-text">
                     Введіть ваше ім'я*
                 </label>
-                <input class="form__input form__input--form" id="modal-text" type="text" name="name" placeholder="ім'я*"
+                <input class="form__input" id="modal-text" type="text" name="name" placeholder="ім'я*"
                     required oninvalid="this.setCustomValidity('введіть ваше ім`я')">
                 <label class="sr-only" for="modal-tel">
                     Введіть ваш телефон*
                 </label>
-                <input class="form__input form__input--form" id="modal-tel" type="tel" name="tel" placeholder="телефон*"
+                <input class="form__input" id="modal-tel" type="tel" name="tel" placeholder="телефон*"
                     required oninvalid="this.setCustomValidity('Введіть ваш телефон')">
                 <button class="form__btn btn  " type="submit">
                     <span>Надіслати</span>
@@ -1531,5 +1529,4 @@
     <script src="js/main.min.js?_v=20230616232959"></script>
 
 </body>
-
 </html>
