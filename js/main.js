@@ -77,8 +77,6 @@ const sliderreviews = new Swiper('.sliderreviews', {
     loop: true,
     loopedslides: 1,
     spaceBetween: 30,
-    // loop: true,
-    // loopedSlides: 3,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',

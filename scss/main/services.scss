@@ -7,6 +7,7 @@
         height: 840px;
         top: -41%;
         left: -26%;
+        z-index: -1;
 
         @media (max-width: 1200px) {
             width: 570px;
@@ -183,7 +184,7 @@
         margin-left: 10px;
     }
 
-    &__btn {
+    &__link {
         padding: 8px 40px;
         margin: 50px auto 0;
         display: block;

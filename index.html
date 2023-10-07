@@ -51,7 +51,7 @@
                             </a>
                         </li>
                     </ul>
-                    <a class="menu__button btn modal-window" href="#popup">
+                    <a class="menu__button link modal-window" href="#popup">
                         <span>Зв'язатись з нами</span>
                     </a>
                 </div>
@@ -71,7 +71,7 @@
                         </svg>
                         <span class="sr-only">Значок стрілки</span>
                     </div>
-                    <a class="header__button btn modal-window" href="#popup">
+                    <a class="header__button link modal-window" href="#popup">
                         <span>Зв'язатись з нами</span>
                     </a>
                     <button class="header__btn" type="button">
@@ -106,10 +106,10 @@
                             <label class="sr-only" for="intro-input">
                                 Введіть ваш телефон*
                             </label>
-                            <input class="intro-form__input " id="intro-input" type="tel" name="tel"
+                            <input class="intro-form__input" id="intro-input" type="tel" name="tel"
                                 placeholder="телефон*" required
                                 oninvalid="this.setCustomValidity('Введіть ваш телефон')">
-                            <button class="intro-form__btn btn " type="submit">
+                            <button class="intro-form__link link" type="submit">
                                 <span>Надіслати</span>
                                 <svg class="intro-form__svg" width="17px" height="16px">
                                     <use xlink:href="images/sprite.svg#send">
@@ -188,7 +188,7 @@
                                 </p>
                             </div>
                         </div>
-                        <a class="about__button btn modal-window" href="#popup" data-aos="fade-up">
+                        <a class="about__link link modal-window" href="#popup" data-aos="fade-up" data-aos-delay="350">
                             <span>Детальніше</span>
                         </a>
                     </div>
@@ -244,7 +244,7 @@
                                 <p>Від маржі</p>
                             </div>
                         </div>
-                        <a class="services__button btn modal-window" href="#popup">
+                        <a class="services__link link modal-window" href="#popup">
                             <span>Детальніше</span>
                         </a>
                     </li>
@@ -284,7 +284,7 @@
                                 <p>Від маржі</p>
                             </div>
                         </div>
-                        <a class="services__btn btn btn--standard modal-window" href="#popup">
+                        <a class="services__link link link--standard modal-window" href="#popup">
                             <span>Детальніше</span>
                         </a>
                     </li>
@@ -322,11 +322,110 @@
                                 <p>Від маржі</p>
                             </div>
                         </div>
-                        <a class="services__btn btn modal-window" href="#popup">
+                        <a class="services__link link modal-window" href="#popup">
                             <span>Детальніше</span>
                         </a>
                     </li>
                 </ul>
+            </div>
+        </section>
+        <section class="clients section" id="clients">
+            <div class="container">
+                <div class="clients__wrapper">
+                    <div class="clients__box" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">
+                        <h2 class="clients__title title">
+                            Хто наші клієнти?
+                        </h2>
+                        <ul class="accordion">
+                            <li class="accordion__item" data-aos="fade-up" data-aos-delay="300">
+                                <div class="accordion__inner">
+                                    <h3 class="accordion__subtitle">
+                                        Лендінг
+                                    </h3>
+                                    <div class="accordion__box">
+                                        <span class="sr-only">Aнімована іконка крестика</span>
+                                    </div>
+                                </div>
+                                <div class="accordion__text">
+                                    <p>
+                                        Лендінги завжди складали основну частину нашого портфелю. Головне, не
+                                        забувайте
+                                        -
+                                        більше лідів дешевші дзвінки.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="accordion__item" data-aos="fade-up" data-aos-delay="450">
+                                <div class="accordion__inner">
+                                    <h3 class="accordion__subtitle">
+                                        cpa-мережі
+                                    </h3>
+                                    <div class="accordion__box">
+                                        <span class="sr-only">Aнімована іконка крестика</span>
+                                    </div>
+                                </div>
+                                <div class="accordion__text">
+                                    <p>
+                                        Останнім часом для CPA-мереж професійний колл-центр став життєвою
+                                        необхідністю.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="accordion__item" data-aos="fade-up" data-aos-delay="600">
+                                <div class="accordion__inner">
+                                    <h3 class="accordion__subtitle">
+                                        інтернет-магазини
+                                    </h3>
+                                    <div class="accordion__box">
+                                        <span class="sr-only">
+                                            Aнімована іконка крестика
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="accordion__text">
+                                    <p>
+                                        Інтернет-магазинам важливо підтримувати свій статус і репутацію.
+                                        Співпраця з
+                                        професійним колл-центром може стати ідеальним компромісом між якістю
+                                        обслуговування і
+                                        делегуванням обов’язків.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clients__inner sliderclients" data-aos="fromOpacity">
+                        <div class="button-next">
+                            <span></span>
+                        </div>
+                        <div class="button-prev">
+                            <span></span>
+                        </div>
+                        <ul class="swiper-wrapper" data-aos="fromOpacity" data-aos-delay="150">
+                            <li class="swiper-slide">
+                                <a class="clients__link" href="images/schedule.webp" data-fancybox="gallery">
+                                    <div class="clients__images">
+                                        <img class="clients__img" src="images/schedule.webp" alt="Графік">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a class="clients__link" href="images/schedule.webp" data-fancybox="gallery">
+                                    <div class="clients__images">
+                                        <img class="clients__img" src="images/schedule.webp" alt="Графік">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a class="clients__link" href="images/schedule.webp" data-fancybox="gallery">
+                                    <div class="clients__images">
+                                        <img class="clients__img" src="images/schedule.webp" alt="Графік">
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -415,104 +514,6 @@
                         </div>
                     </li>
                 </ul>
-            </div>
-        </section>
-
-        <section class="clients section" id="clients">
-            <div class="container">
-                <div class="clients__wrapper">
-                    <div class="clients__box" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">
-                        <h2 class="clients__title title">
-                            Хто наші клієнти?
-                        </h2>
-                        <ul class="accordion">
-                            <li class="accordion__item" data-aos="fade-up" data-aos-delay="300">
-                                <div class="accordion__inner">
-                                    <h3 class="accordion__subtitle">
-                                        Лендінг
-                                    </h3>
-                                    <div class="accordion__box">
-                                        <span class="sr-only">Aнімована іконка крестика</span>
-                                    </div>
-                                </div>
-                                <div class="accordion__text">
-                                    <p>
-                                        Лендінги завжди складали основну частину нашого портфелю. Головне, не
-                                        забувайте
-                                        -
-                                        більше лідів дешевші дзвінки.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="accordion__item" data-aos="fade-up" data-aos-delay="450">
-                                <div class="accordion__inner">
-                                    <h3 class="accordion__subtitle">
-                                        cpa-мережі
-                                    </h3>
-                                    <div class="accordion__box">
-                                        <span class="sr-only">Aнімована іконка крестика</span>
-                                    </div>
-                                </div>
-                                <div class="accordion__text">
-                                    <p>
-                                        Останнім часом для CPA-мереж професійний колл-центр став життєвою необхідністю.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="accordion__item" data-aos="fade-up" data-aos-delay="600">
-                                <div class="accordion__inner">
-                                    <h3 class="accordion__subtitle">
-                                        інтернет-магазини
-                                    </h3>
-                                    <div class="accordion__box">
-                                        <span class="sr-only">
-                                            Aнімована іконка крестика
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="accordion__text">
-                                    <p>
-                                        Інтернет-магазинам важливо підтримувати свій статус і репутацію. Співпраця з
-                                        професійним колл-центром може стати ідеальним компромісом між якістю
-                                        обслуговування і
-                                        делегуванням обов’язків.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="clients__inner sliderclients" data-aos="fromOpacity">
-                        <div class="button-next">
-                            <span></span>
-                        </div>
-                        <div class="button-prev">
-                            <span></span>
-                        </div>
-                        <ul class="swiper-wrapper" data-aos="fromOpacity" data-aos-delay="150">
-                            <li class="swiper-slide">
-                                <a class="clients__link" href="images/schedule.webp" data-fancybox="gallery">
-                                    <div class="clients__images">
-                                        <img class="clients__img" src="images/schedule.webp" alt="Графік">
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a class="clients__link" href="images/schedule.webp" data-fancybox="gallery">
-                                    <div class="clients__images">
-                                        <img class="clients__img" src="images/schedule.webp" alt="Графік">
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a class="clients__link" href="images/schedule.webp" data-fancybox="gallery">
-                                    <div class="clients__images">
-                                        <img class="clients__img" src="images/schedule.webp" alt="Графік">
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -974,7 +975,7 @@
                     </label>
                     <input class="intro-form__input" id="work-tel" type="tel" name="tel" placeholder="телефон*" required
                         oninvalid="this.setCustomValidity('Введіть ваш телефон')">
-                    <button class="intro-form__btn btn " type="submit">
+                    <button class="intro-form__link link " type="submit">
                         <span>Надіслати</span>
                         <svg class="intro-form__svg" width="17px" height="16px">
                             <use xlink:href="images/sprite.svg#send">
@@ -1461,7 +1462,7 @@
                         </label>
                         <input class="footer__input" id="footer-tel" type="tel" name="tel" placeholder="телефон*"
                             required oninvalid="this.setCustomValidity('Введіть ваш телефон')">
-                        <button class="footer__btn btn" type="submit">
+                        <button class="footer__link link" type="submit">
                             <span>Надіслати</span>
                         </button>
                     </form>
@@ -1472,7 +1473,7 @@
 
     <div class="modal" id="popup">
         <div class="modal__inner">
-            <a class="modal__btn modal-window close-popup" href="#popup">
+            <a class="modal__link close-popup" href="#popup">
                 <span class="sr-only">Закрити модальне вікно</span>
             </a>
             <h2 class="modal__title">
@@ -1486,14 +1487,14 @@
                 <label class="sr-only" for="modal-text">
                     Введіть ваше ім'я*
                 </label>
-                <input class="form__input" id="modal-text" type="text" name="name" placeholder="ім'я*"
-                    required oninvalid="this.setCustomValidity('введіть ваше ім`я')">
+                <input class="form__input" id="modal-text" type="text" name="name" placeholder="ім'я*" required
+                    oninvalid="this.setCustomValidity('введіть ваше ім`я')">
                 <label class="sr-only" for="modal-tel">
                     Введіть ваш телефон*
                 </label>
-                <input class="form__input" id="modal-tel" type="tel" name="tel" placeholder="телефон*"
-                    required oninvalid="this.setCustomValidity('Введіть ваш телефон')">
-                <button class="form__btn btn  " type="submit">
+                <input class="form__input" id="modal-tel" type="tel" name="tel" placeholder="телефон*" required
+                    oninvalid="this.setCustomValidity('Введіть ваш телефон')">
+                <button class="form__link link" type="submit">
                     <span>Надіслати</span>
                 </button>
             </form>
@@ -1529,4 +1530,5 @@
     <script src="js/main.min.js?_v=20230616232959"></script>
 
 </body>
+
 </html>

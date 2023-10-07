@@ -196,7 +196,7 @@
         }
     }
 
-    &__btn {
+    &__link {
         padding: 8px 33px;
 
         @media (max-width: 992px) {
@@ -207,7 +207,7 @@
         }
     }
 
-    &__btn span {
+    &__link span {
         @media (max-width: 992px) {
             display: none;
         }

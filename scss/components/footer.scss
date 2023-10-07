@@ -2,8 +2,8 @@
     background-color: $black3;
     padding: 20px 0 20px;
 
-    @media (max-width: 992px) {
-        padding: 20px 0 40px;
+    @media (max-width: 1200px) {
+        padding: 20px 0 60px;
     }
 
     &__items {
@@ -89,6 +89,10 @@
     &__links {
         display: grid;
         gap: 20px;
+
+        @media (max-width: 576px) {
+            padding-right: 50px;
+        }
     }
 
     &__link {
@@ -148,7 +152,7 @@
         }
     }
 
-    &__btn {
+    &__link {
         padding: 14px 10px;
         width: 100%;
 
@@ -157,4 +161,3 @@
         }
     }
 }
-
