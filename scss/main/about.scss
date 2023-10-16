@@ -43,11 +43,11 @@
     &__img {
         height: 680px;
         width: 46%;
-        background-image: url('../images/man.webp');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
         border-radius: 16px;
+        background-image: url('../images/dist/man.jpg');
 
         @media (max-width: 992px) {
             width: 50%;
@@ -105,7 +105,15 @@
         }
     }
 
-    &__btn {
-        padding: 8px 28px;
+    &__link {
+        padding: 12px 32px 13px;
     }
 }
+
+// body.avif .about__img {
+//     background-image: url('../images/dist/man.avif');
+// }
+
+// body.webp .about__img {
+//     background-image: url('../images/dist/man.webp');
+// }

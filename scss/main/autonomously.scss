@@ -54,7 +54,6 @@
             right: -37%;
             height: 145px;
             width: 30%;
-            background-image: url('../images/icons/lamp.webp');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -81,6 +80,7 @@
 
         @media (max-width: 992px) {
             width: 350px;
+            height: 270px;
         }
 
         @media (max-width: 768px) {
@@ -98,4 +98,12 @@
             max-width: 250px;
         }
     }
+}
+
+body.avif .autonomously__text::before {
+    background-image: url('../images/dist/lamp.avif');
+}
+
+body.webp .about__img {
+    background-image: url('../images/dist/lamp.webp');
 }

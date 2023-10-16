@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/webp">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <title>Аутсорсинговий call-center</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css?_v=20230617194258" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css?_v=20230604180731">
@@ -51,7 +51,7 @@
                             </a>
                         </li>
                     </ul>
-                    <a class="menu__button btn modal-window" href="#popup">
+                    <a class="menu__button link modal-window" href="#popup">
                         <span>Зв'язатись з нами</span>
                     </a>
                 </div>
@@ -71,7 +71,7 @@
                         </svg>
                         <span class="sr-only">Значок стрілки</span>
                     </div>
-                    <a class="header__button btn modal-window" href="#popup">
+                    <a class="header__button link modal-window" href="#popup">
                         <span>Зв'язатись з нами</span>
                     </a>
                     <button class="header__btn" type="button">
@@ -106,10 +106,10 @@
                             <label class="sr-only" for="intro-input">
                                 Введіть ваш телефон*
                             </label>
-                            <input class="intro-form__input " id="intro-input" type="tel" name="tel"
+                            <input class="intro-form__input" id="intro-input" type="tel" name="tel"
                                 placeholder="телефон*" required
                                 oninvalid="this.setCustomValidity('Введіть ваш телефон')">
-                            <button class="intro-form__btn btn " type="submit">
+                            <button class="intro-form__link link" type="submit">
                                 <span>Надіслати</span>
                                 <svg class="intro-form__svg" width="17px" height="16px">
                                     <use xlink:href="images/sprite.svg#send">
@@ -122,7 +122,10 @@
                             <span>50 лідів безкоштовно</span>
                         </div>
                     </div>
-                    <img class="intro__img" src="images/tel.webp" alt="телефон">
+                    <picture>
+                        <source srcset="images/dist/tel.avif" type="image/avif">
+                        <source srcset="images/dist/tel.webp" type="image/webp"><img class="intro__img"
+                            src="images/dist/tel.jpg" alt="телефон"></picture>
                 </div>
             </div>
         </section>
@@ -143,7 +146,10 @@
                             </p>
                         </div>
                     </div>
-                    <img class="autonomously__img" src="images/generator.webp" alt="Генератор">
+                    <picture>
+                        <source srcset="images/dist/generator.avif" type="image/avif">
+                        <source srcset="images/dist/generator.webp" type="image/webp"><img class="autonomously__img"
+                            src="images/dist/generator.png" alt="Генератор"></picture>
                 </div>
             </div>
         </section>
@@ -188,7 +194,7 @@
                                 </p>
                             </div>
                         </div>
-                        <a class="about__button btn modal-window" href="#popup" data-aos="fade-up">
+                        <a class="about__link link modal-window" href="#popup" data-aos="fade-up" data-aos-delay="350">
                             <span>Детальніше</span>
                         </a>
                     </div>
@@ -244,7 +250,7 @@
                                 <p>Від маржі</p>
                             </div>
                         </div>
-                        <a class="services__button btn modal-window" href="#popup">
+                        <a class="services__link link modal-window" href="#popup">
                             <span>Детальніше</span>
                         </a>
                     </li>
@@ -284,7 +290,7 @@
                                 <p>Від маржі</p>
                             </div>
                         </div>
-                        <a class="services__btn btn btn--standard modal-window" href="#popup">
+                        <a class="services__link link link--standard modal-window" href="#popup">
                             <span>Детальніше</span>
                         </a>
                     </li>
@@ -322,11 +328,122 @@
                                 <p>Від маржі</p>
                             </div>
                         </div>
-                        <a class="services__btn btn modal-window" href="#popup">
+                        <a class="services__link link modal-window" href="#popup">
                             <span>Детальніше</span>
                         </a>
                     </li>
                 </ul>
+            </div>
+        </section>
+        <section class="clients section" id="clients">
+            <div class="container">
+                <div class="clients__wrapper">
+                    <div class="clients__box" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">
+                        <h2 class="clients__title title">
+                            Хто наші клієнти?
+                        </h2>
+                        <ul class="accordion">
+                            <li class="accordion__item" data-aos="fade-up" data-aos-delay="300">
+                                <div class="accordion__inner">
+                                    <h3 class="accordion__subtitle">
+                                        Лендінг
+                                    </h3>
+                                    <div class="accordion__box">
+                                        <span class="sr-only">Aнімована іконка крестика</span>
+                                    </div>
+                                </div>
+                                <div class="accordion__text">
+                                    <p>
+                                        Лендінги завжди складали основну частину нашого портфелю. Головне, не
+                                        забувайте
+                                        -
+                                        більше лідів дешевші дзвінки.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="accordion__item" data-aos="fade-up" data-aos-delay="450">
+                                <div class="accordion__inner">
+                                    <h3 class="accordion__subtitle">
+                                        cpa-мережі
+                                    </h3>
+                                    <div class="accordion__box">
+                                        <span class="sr-only">Aнімована іконка крестика</span>
+                                    </div>
+                                </div>
+                                <div class="accordion__text">
+                                    <p>
+                                        Останнім часом для CPA-мереж професійний колл-центр став життєвою
+                                        необхідністю.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="accordion__item" data-aos="fade-up" data-aos-delay="600">
+                                <div class="accordion__inner">
+                                    <h3 class="accordion__subtitle">
+                                        інтернет-магазини
+                                    </h3>
+                                    <div class="accordion__box">
+                                        <span class="sr-only">
+                                            Aнімована іконка крестика
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="accordion__text">
+                                    <p>
+                                        Інтернет-магазинам важливо підтримувати свій статус і репутацію.
+                                        Співпраця з
+                                        професійним колл-центром може стати ідеальним компромісом між якістю
+                                        обслуговування і
+                                        делегуванням обов’язків.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clients__inner sliderclients" data-aos="fromOpacity">
+                        <div class="button-next">
+                            <span></span>
+                        </div>
+                        <div class="button-prev">
+                            <span></span>
+                        </div>
+                        <ul class="swiper-wrapper" data-aos="fromOpacity" data-aos-delay="150">
+                            <li class="swiper-slide">
+                                <a class="clients__link" href="images/dist/schedule.jpg" data-fancybox="gallery">
+                                    <div class="clients__images">
+                                        <picture>
+                                            <source srcset="images/dist/schedule.avif" type="image/avif">
+                                            <source srcset="images/dist/schedule.webp" type="image/webp"><img
+                                                class="clients__img" src="images/dist/schedule.jpg" alt="Графік">
+                                        </picture>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a class="clients__link" href="images/dist/schedule.jpg" data-fancybox="gallery">
+                                    <div class="clients__images">
+                                        <picture>
+                                            <source srcset="images/dist/schedule.avif" type="image/avif">
+                                            <source srcset="images/dist/schedule.webp" type="image/webp"><img
+                                                class="clients__img" src="images/dist/schedule.jpg" alt="Графік">
+                                        </picture>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a class="clients__link" href="images/dist/schedule.jpg" data-fancybox="gallery">
+                                    <div class="clients__images">
+                                        <picture>
+                                            <source srcset="images/dist/schedule.avif" type="image/avif">
+                                            <source srcset="images/dist/schedule.webp" type="image/webp"><img
+                                                class="clients__img" src="images/dist/schedule.jpg" alt="Графік">
+                                        </picture>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -418,104 +535,6 @@
             </div>
         </section>
 
-        <section class="clients section" id="clients">
-            <div class="container">
-                <div class="clients__wrapper">
-                    <div class="clients__box" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">
-                        <h2 class="clients__title title">
-                            Хто наші клієнти?
-                        </h2>
-                        <ul class="accordion">
-                            <li class="accordion__item" data-aos="fade-up" data-aos-delay="300">
-                                <div class="accordion__inner">
-                                    <h3 class="accordion__subtitle">
-                                        Лендінг
-                                    </h3>
-                                    <div class="accordion__box">
-                                        <span class="sr-only">Aнімована іконка крестика</span>
-                                    </div>
-                                </div>
-                                <div class="accordion__text">
-                                    <p>
-                                        Лендінги завжди складали основну частину нашого портфелю. Головне, не
-                                        забувайте
-                                        -
-                                        більше лідів дешевші дзвінки.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="accordion__item" data-aos="fade-up" data-aos-delay="450">
-                                <div class="accordion__inner">
-                                    <h3 class="accordion__subtitle">
-                                        cpa-мережі
-                                    </h3>
-                                    <div class="accordion__box">
-                                        <span class="sr-only">Aнімована іконка крестика</span>
-                                    </div>
-                                </div>
-                                <div class="accordion__text">
-                                    <p>
-                                        Останнім часом для CPA-мереж професійний колл-центр став життєвою необхідністю.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="accordion__item" data-aos="fade-up" data-aos-delay="600">
-                                <div class="accordion__inner">
-                                    <h3 class="accordion__subtitle">
-                                        інтернет-магазини
-                                    </h3>
-                                    <div class="accordion__box">
-                                        <span class="sr-only">
-                                            Aнімована іконка крестика
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="accordion__text">
-                                    <p>
-                                        Інтернет-магазинам важливо підтримувати свій статус і репутацію. Співпраця з
-                                        професійним колл-центром може стати ідеальним компромісом між якістю
-                                        обслуговування і
-                                        делегуванням обов’язків.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="clients__inner sliderclients" data-aos="fromOpacity">
-                        <div class="button-next">
-                            <span></span>
-                        </div>
-                        <div class="button-prev">
-                            <span></span>
-                        </div>
-                        <ul class="swiper-wrapper" data-aos="fromOpacity" data-aos-delay="150">
-                            <li class="swiper-slide">
-                                <a class="clients__link" href="images/schedule.webp" data-fancybox="gallery">
-                                    <div class="clients__images">
-                                        <img class="clients__img" src="images/schedule.webp" alt="Графік">
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a class="clients__link" href="images/schedule.webp" data-fancybox="gallery">
-                                    <div class="clients__images">
-                                        <img class="clients__img" src="images/schedule.webp" alt="Графік">
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a class="clients__link" href="images/schedule.webp" data-fancybox="gallery">
-                                    <div class="clients__images">
-                                        <img class="clients__img" src="images/schedule.webp" alt="Графік">
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="slider-casey section" id="slider-casey">
             <div class="container container--slider">
                 <img class="slider-casey__images" src="images/icons/triangle-top.svg" alt="Декор">
@@ -528,7 +547,11 @@
                     <ul class="swiper-wrapper slider-casey__items">
                         <li class="swiper-slide">
                             <div class="slider-casey__item ">
-                                <img class="slider-casey__img" src="images/pulse.webp" alt="Пульсоксиметр">
+                                <picture>
+                                    <source srcset="images/dist/pulse.avif" type="image/avif">
+                                    <source srcset="images/dist/pulse.webp" type="image/webp"><img
+                                        class="slider-casey__img" src="images/dist/pulse.jpg" alt="Пульсоксиметр">
+                                </picture>
                                 <div class="slider-casey__inner">
                                     <h3 class="slider-casey__subtitle">
                                         Пульсоксиметр
@@ -595,7 +618,11 @@
                         </li>
                         <li class="swiper-slide">
                             <div class="slider-casey__item">
-                                <img class="slider-casey__img" src="images/sani.webp" alt="Палички від засоров">
+                                <picture>
+                                    <source srcset="images/dist/sani.avif" type="image/avif">
+                                    <source srcset="images/dist/sani.webp" type="image/webp"><img
+                                        class="slider-casey__img" src="images/dist/sani.jpg" alt="Палички від засоров">
+                                </picture>
                                 <div class="slider-casey__inner">
                                     <h3 class="slider-casey__subtitle">
                                         Палички від засоров Sani sticks
@@ -662,7 +689,11 @@
                         </li>
                         <li class="swiper-slide">
                             <div class="slider-casey__item">
-                                <img class="slider-casey__img" src="images/bedtime.webp" alt="Постільна білизна">
+                                <picture>
+                                    <source srcset="images/dist/bedtime.avif" type="image/avif">
+                                    <source srcset="images/dist/bedtime.webp" type="image/webp"><img
+                                        class="slider-casey__img" src="images/dist/bedtime.jpg" alt="Постільна білизна">
+                                </picture>
                                 <div class="slider-casey__inner">
                                     <h3 class="slider-casey__subtitle">
                                         Постільна білизна
@@ -729,7 +760,10 @@
                         </li>
                         <li class="swiper-slide">
                             <div class="slider-casey__item">
-                                <img class="slider-casey__img" src="images/clothes.webp" alt="Одяг">
+                                <picture>
+                                    <source srcset="images/dist/clothes.avif" type="image/avif">
+                                    <source srcset="images/dist/clothes.webp" type="image/webp"><img
+                                        class="slider-casey__img" src="images/dist/clothes.jpg" alt="Одяг"></picture>
                                 <div class="slider-casey__inner">
                                     <h3 class="slider-casey__subtitle">
                                         Одяг
@@ -796,7 +830,11 @@
                         </li>
                         <li class="swiper-slide">
                             <div class="slider-casey__item">
-                                <img class="slider-casey__img" src="images/backpack.webp" alt="Рюкзак SwissGear">
+                                <picture>
+                                    <source srcset="images/dist/backpack.avif" type="image/avif">
+                                    <source srcset="images/dist/backpack.webp" type="image/webp"><img
+                                        class="slider-casey__img" src="images/dist/backpack.png" alt="Рюкзак SwissGear">
+                                </picture>
                                 <div class="slider-casey__inner">
                                     <h3 class="slider-casey__subtitle">
                                         Рюкзак SwissGear
@@ -863,7 +901,11 @@
                         </li>
                         <li class="swiper-slide">
                             <div class="slider-casey__item">
-                                <img class="slider-casey__img" src="images/bushnell.webp" alt="Монокуляр Bushnell">
+                                <picture>
+                                    <source srcset="images/dist/bushnell.avif" type="image/avif">
+                                    <source srcset="images/dist/bushnell.webp" type="image/webp"><img
+                                        class="slider-casey__img" src="images/dist/bushnell.jpg"
+                                        alt="Монокуляр Bushnell"></picture>
                                 <div class="slider-casey__inner">
                                     <h3 class="slider-casey__subtitle">
                                         Монокуляр Bushnell
@@ -974,7 +1016,7 @@
                     </label>
                     <input class="intro-form__input" id="work-tel" type="tel" name="tel" placeholder="телефон*" required
                         oninvalid="this.setCustomValidity('Введіть ваш телефон')">
-                    <button class="intro-form__btn btn " type="submit">
+                    <button class="intro-form__link link " type="submit">
                         <span>Надіслати</span>
                         <svg class="intro-form__svg" width="17px" height="16px">
                             <use xlink:href="images/sprite.svg#send">
@@ -1004,8 +1046,12 @@
                         <div class="swiper-slide">
                             <div class="slider-reviews__item">
                                 <div class="slider-reviews__inner">
-                                    <img class="slider-reviews__img" src="images/valentin.webp"
-                                        alt="Валентин Сафаргалин">
+                                    <picture>
+                                        <source srcset="images/dist/valentin.avif" type="image/avif">
+                                        <source srcset="images/dist/valentin.webp" type="image/webp">
+                                        <img class="slider-reviews__img" src="images/dist/valentin.png"
+                                            alt="Валентин Сафаргалин">
+                                    </picture>
                                     <div class="slider-reviews__name">
                                         Валентин Сафаргалин
                                     </div>
@@ -1024,7 +1070,11 @@
                         <div class="swiper-slide">
                             <div class="slider-reviews__item">
                                 <div class="slider-reviews__inner">
-                                    <img class="slider-reviews__img" src="images/dmitry.webp" alt="Дмитрий Спичак">
+                                    <picture>
+                                        <source srcset="images/dist/dmitry.avif" type="image/avif">
+                                        <source srcset="images/dist/dmitry.webp" type="image/webp"><img
+                                            class="slider-reviews__img" src="images/dist/dmitry.jpg"
+                                            alt="Дмитрий Спичак"></picture>
                                     <div class="slider-reviews__name">
                                         Дмитрий Спичак
                                     </div>
@@ -1048,7 +1098,12 @@
                         <div class="swiper-slide">
                             <div class="slider-reviews__item">
                                 <div class="slider-reviews__inner">
-                                    <img class="slider-reviews__img" src="images/alexey.webp" alt="Алексей Варганич">
+                                    <picture>
+                                        <source srcset="images/dist/alexey.avif" type="image/avif">
+                                        <source srcset="images/dist/alexey.webp" type="image/webp">
+                                        <img class="slider-reviews__img" src="images/dist/alexey.png"
+                                            alt="Алексей Варганич">
+                                    </picture>
                                     <div class="slider-reviews__name">
                                         Алексей Варганич
                                     </div>
@@ -1065,7 +1120,11 @@
                         <div class="swiper-slide">
                             <div class="slider-reviews__item">
                                 <div class="slider-reviews__inner">
-                                    <img class="slider-reviews__img" src="images/sergei.webp" alt="Сергей Мельник">
+                                    <picture>
+                                        <source srcset="images/dist/sergei.avif" type="image/avif">
+                                        <source srcset="images/dist/sergei.webp" type="image/webp"><img
+                                            class="slider-reviews__img" src="images/dist/sergei.jpg"
+                                            alt="Сергей Мельник"></picture>
                                     <div class="slider-reviews__name">
                                         Сергей Мельник
                                         <p>
@@ -1081,12 +1140,15 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="swiper-slide">
                             <div class="slider-reviews__item">
                                 <div class="slider-reviews__inner">
-                                    <img class="slider-reviews__img" src="images/valentin.webp"
-                                        alt="Валентин Сафаргалин">
+                                    <picture>
+                                        <source srcset="images/dist/valentin.avif" type="image/avif">
+                                        <source srcset="images/dist/valentin.webp" type="image/webp">
+                                        <img class="slider-reviews__img" src="images/dist/valentin.png"
+                                            alt="Валентин Сафаргалин">
+                                    </picture>
                                     <div class="slider-reviews__name">
                                         Валентин Сафаргалин
                                     </div>
@@ -1105,7 +1167,11 @@
                         <div class="swiper-slide">
                             <div class="slider-reviews__item">
                                 <div class="slider-reviews__inner">
-                                    <img class="slider-reviews__img" src="images/dmitry.webp" alt="Дмитрий Спичак">
+                                    <picture>
+                                        <source srcset="images/dist/dmitry.avif" type="image/avif">
+                                        <source srcset="images/dist/dmitry.webp" type="image/webp"><img
+                                            class="slider-reviews__img" src="images/dist/dmitry.jpg"
+                                            alt="Дмитрий Спичак"></picture>
                                     <div class="slider-reviews__name">
                                         Дмитрий Спичак
                                     </div>
@@ -1129,7 +1195,12 @@
                         <div class="swiper-slide">
                             <div class="slider-reviews__item">
                                 <div class="slider-reviews__inner">
-                                    <img class="slider-reviews__img" src="images/alexey.webp" alt="Алексей Варганич">
+                                    <picture>
+                                        <source srcset="images/dist/dmitry.avif" type="image/avif">
+                                        <source srcset="images/dist/dmitry.webp" type="image/webp">
+                                        <img class="slider-reviews__img" src="images/dist/alexey.png"
+                                            alt="Алексей Варганич">
+                                    </picture>
                                     <div class="slider-reviews__name">
                                         Алексей Варганич
                                     </div>
@@ -1146,7 +1217,11 @@
                         <div class="swiper-slide">
                             <div class="slider-reviews__item">
                                 <div class="slider-reviews__inner">
-                                    <img class="slider-reviews__img" src="images/sergei.webp" alt="Сергей Мельник">
+                                    <picture>
+                                        <source srcset="images/dist/sergei.avif" type="image/avif">
+                                        <source srcset="images/dist/sergei.webp" type="image/webp"><img
+                                            class="slider-reviews__img" src="images/dist/sergei.jpg"
+                                            alt="Сергей Мельник"></picture>
                                     <div class="slider-reviews__name">
                                         Сергей Мельник
                                         <p>
@@ -1299,37 +1374,193 @@
                 </h2>
                 <ul class="partners__wrapper">
                     <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/prom.svg" alt="prom">
+                        <!-- <svg class="partners__img" width="235px" height="80px">
+                            <use xlink:href="images/sprite.svg#prom">
+                            </use>
+                        </svg> -->
+                        <svg class="partners__img" width="150" height="42" viewBox="0 0 150 42" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_16_18)">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M58.82 25.473C59.938 24.355 60.476 23.012 60.476 21.445C60.476 19.878 59.938 18.535 58.82 17.462C57.7 16.342 56.358 15.806 54.746 15.806C53.092 15.806 51.704 16.343 50.541 17.462C49.422 18.536 48.839 19.878 48.839 21.445C48.839 23.012 49.422 24.355 50.541 25.473C51.704 26.548 53.091 27.084 54.746 27.084C56.358 27.084 57.701 26.548 58.82 25.474V25.473ZM42.573 41.361V10.167H49.242V13.121C49.912 11.151 52.553 9.765 55.955 9.765C59.133 9.765 61.818 10.883 63.922 13.165C66.07 15.403 67.144 18.178 67.144 21.445C67.144 24.713 66.07 27.487 63.922 29.77C61.818 32.007 59.133 33.126 55.955 33.126C52.553 33.126 49.913 31.74 49.242 29.77V41.36L42.573 41.361ZM70.59 32.724V10.166H77.258V13.256C78.288 10.972 80.704 9.674 83.792 9.674C84.24 9.674 84.822 9.719 85.538 9.809V16.074C84.8011 15.9266 84.0515 15.8519 83.3 15.851C79.496 15.851 77.258 17.999 77.258 21.713V32.723L70.59 32.724ZM95.16 25.652C96.278 26.771 97.666 27.352 99.322 27.352C100.978 27.352 102.365 26.771 103.484 25.652C104.603 24.489 105.186 23.102 105.186 21.445C105.186 19.789 104.603 18.402 103.484 17.283C102.365 16.119 100.978 15.538 99.322 15.538C97.666 15.538 96.278 16.118 95.159 17.283C94.041 18.402 93.459 19.789 93.459 21.445C93.459 23.101 94.041 24.533 95.159 25.652H95.16ZM108.184 12.986C110.645 15.268 111.853 18.089 111.853 21.446C111.853 24.802 110.645 27.621 108.184 29.948C105.721 32.232 102.768 33.395 99.322 33.395C95.832 33.395 92.878 32.232 90.415 29.948C87.999 27.621 86.79 24.802 86.79 21.445C86.79 18.089 88 15.268 90.415 12.985C92.878 10.659 95.831 9.495 99.322 9.495C102.768 9.495 105.721 10.659 108.184 12.985M115.343 32.724V10.166H122.012V12.986C122.862 11.018 125.144 9.674 127.875 9.674C130.918 9.674 132.976 10.882 134.006 13.256C135.26 10.882 137.765 9.674 141.525 9.674C146.673 9.674 149.537 13.165 149.537 19.028V32.724H142.868V19.834C142.868 17.194 141.66 15.582 139.512 15.582C137.319 15.582 135.752 17.418 135.752 20.058V32.724H129.083V19.834C129.083 17.194 127.875 15.582 125.727 15.582C123.578 15.582 122.012 17.418 122.012 20.058V32.724H115.343Z"
+                                    fill="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0 33.05H33.05V0H0V33.05ZM7.574 25.475H25.475V7.574H7.574V25.475Z"
+                                    fill="url(#paint0_linear_16_18)" />
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_16_18" x1="0" y1="0" x2="33.049" y2="33.049"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop offset="1" stop-color="#4854A2" />
+                                    <stop offset="1" stop-color="#772088" />
+                                </linearGradient>
+                                <clipPath id="clip0_16_18">
+                                    <rect width="150" height="42" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
                     </li>
                     <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/allo.webp" alt="allo">
+                        <picture>
+                            <source srcset="images/dist/partners/allo.avif" type="image/avif">
+                            <source srcset="images/dist/partners/allo.webp" type="image/webp"><img class="partners__img"
+                                src="images/dist/partners/allo.png" alt="allo"></picture>
                     </li>
                     <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/crm.svg" alt="crm">
+                        <svg class="partners__img" width="235px" height="80px">
+                            <use xlink:href="images/sprite.svg#crm">
+                            </use>
+                        </svg>
                     </li>
                     <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/sales-drive.webp" alt="sales-drive">
+                        <picture>
+                            <source srcset="images/dist/partners/sales-drive.avif" type="image/avif">
+                            <source srcset="images/dist/partners/sales-drive.webp" type="image/webp"><img
+                                class="partners__img" src="images/dist/partners/sales-drive.png" alt="sales-drive">
+                        </picture>
                     </li>
                     <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/nova-poshta.webp" alt="nova-poshta">
+                        <picture>
+                            <source srcset="images/dist/partners/nova-poshta.avif" type="image/avif">
+                            <source srcset="images/dist/partners/nova-poshta.webp" type="image/webp"><img
+                                class="partners__img" src="images/dist/partners/nova-poshta.png" alt="nova-poshta">
+                        </picture>
                     </li>
                     <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/citrus.webp" alt="citrus">
+                        <picture>
+                            <source srcset="images/dist/partners/citrus.avif" type="image/avif">
+                            <source srcset="images/dist/partners/citrus.webp" type="image/webp"><img
+                                class="partners__img" src="images/dist/partners/citrus.png" alt="citrus"></picture>
                     </li>
                     <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/rozetka.webp" alt="rozetka">
+                        <picture>
+                            <source srcset="images/dist/partners/rozetka.avif" type="image/avif">
+                            <source srcset="images/dist/partners/rozetka.webp" type="image/webp"><img
+                                class="partners__img" src="images/dist/partners/rozetka.png" alt="rozetka"></picture>
                     </li>
                     <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/trendcrm.svg" alt="trendcrm">
+                        <!-- <svg class="partners__img" width="235px" height="80px">
+                            <use xlink:href="images/sprite.svg#trendcrm">
+                            </use>
+                        </svg> -->
+                        <svg class="partners__img" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="px" height="px" viewBox="0 0 55 32"
+                            version="1.1">
+                            <defs>
+                                <clipPath id="clip1">
+                                    <path d="M 0 0 L 55 0 L 55 31.753906 L 0 31.753906 Z M 0 0 " />
+                                </clipPath>
+                                <linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="6.5" y1="60.759"
+                                    x2="213.5" y2="60.759">
+                                    <stop offset="0"
+                                        style="stop-color:rgb(96.078431%,97.254902%,98.431373%);stop-opacity:1;" />
+                                    <stop offset="1"
+                                        style="stop-color:rgb(91.372549%,93.333333%,96.862745%);stop-opacity:1;" />
+                                </linearGradient>
+                                <linearGradient id="linear1" gradientUnits="userSpaceOnUse" x1="55.727" y1="45.8941"
+                                    x2="55.727" y2="64.2772" gradientTransform="matrix(0.25,0,0,0.25,0,0)">
+                                    <stop offset="0"
+                                        style="stop-color:rgb(19.607843%,19.607843%,19.607843%);stop-opacity:1;" />
+                                    <stop offset="1" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;" />
+                                </linearGradient>
+                                <linearGradient id="linear2" gradientUnits="userSpaceOnUse" x1="73.7423" y1="45.8941"
+                                    x2="73.7423" y2="64.2773" gradientTransform="matrix(0.25,0,0,0.25,0,0)">
+                                    <stop offset="0"
+                                        style="stop-color:rgb(19.607843%,19.607843%,19.607843%);stop-opacity:1;" />
+                                    <stop offset="1" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;" />
+                                </linearGradient>
+                                <linearGradient id="linear3" gradientUnits="userSpaceOnUse" x1="91.7576" y1="45.8941"
+                                    x2="91.7576" y2="64.2772" gradientTransform="matrix(0.25,0,0,0.25,0,0)">
+                                    <stop offset="0"
+                                        style="stop-color:rgb(19.607843%,19.607843%,19.607843%);stop-opacity:1;" />
+                                    <stop offset="1" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;" />
+                                </linearGradient>
+                                <linearGradient id="linear4" gradientUnits="userSpaceOnUse" x1="109.773" y1="45.8942"
+                                    x2="109.773" y2="64.2773" gradientTransform="matrix(0.25,0,0,0.25,0,0)">
+                                    <stop offset="0"
+                                        style="stop-color:rgb(19.607843%,19.607843%,19.607843%);stop-opacity:1;" />
+                                    <stop offset="1" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;" />
+                                </linearGradient>
+                                <linearGradient id="linear5" gradientUnits="userSpaceOnUse" x1="130.04" y1="45.8941"
+                                    x2="130.04" y2="64.2772" gradientTransform="matrix(0.25,0,0,0.25,0,0)">
+                                    <stop offset="0"
+                                        style="stop-color:rgb(19.607843%,19.607843%,19.607843%);stop-opacity:1;" />
+                                    <stop offset="1" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;" />
+                                </linearGradient>
+                                <linearGradient id="linear6" gradientUnits="userSpaceOnUse" x1="148.055" y1="45.8941"
+                                    x2="148.055" y2="64.2772" gradientTransform="matrix(0.25,0,0,0.25,0,0)">
+                                    <stop offset="0"
+                                        style="stop-color:rgb(19.607843%,19.607843%,19.607843%);stop-opacity:1;" />
+                                    <stop offset="1" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;" />
+                                </linearGradient>
+                                <linearGradient id="linear7" gradientUnits="userSpaceOnUse" x1="166.071" y1="45.8941"
+                                    x2="166.071" y2="64.2773" gradientTransform="matrix(0.25,0,0,0.25,0,0)">
+                                    <stop offset="0"
+                                        style="stop-color:rgb(19.607843%,19.607843%,19.607843%);stop-opacity:1;" />
+                                    <stop offset="1" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;" />
+                                </linearGradient>
+                                <linearGradient id="linear8" gradientUnits="userSpaceOnUse" x1="188.027" y1="45.8942"
+                                    x2="188.027" y2="64.2773" gradientTransform="matrix(0.25,0,0,0.25,0,0)">
+                                    <stop offset="0"
+                                        style="stop-color:rgb(19.607843%,19.607843%,19.607843%);stop-opacity:1;" />
+                                    <stop offset="1" style="stop-color:rgb(0%,0%,0%);stop-opacity:1;" />
+                                </linearGradient>
+                                <linearGradient id="linear9" gradientUnits="userSpaceOnUse" x1="30.8142" y1="40.4532"
+                                    x2="30.8142" y2="70.016" gradientTransform="matrix(0.25,0,0,0.25,0,0)">
+                                    <stop offset="0"
+                                        style="stop-color:rgb(100%,79.607843%,19.607843%);stop-opacity:1;" />
+                                    <stop offset="1" style="stop-color:rgb(80.392157%,60%,0%);stop-opacity:1;" />
+                                </linearGradient>
+                            </defs>
+                            <g id="surface1">
+                                <g clip-path="url(#clip1)" clip-rule="nonzero">
+                                    <path
+                                        style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;"
+                                        d="M 52.921875 27.363281 L 28.300781 31.683594 C 27.769531 31.777344 27.230469 31.777344 26.699219 31.683594 L 2.078125 27.363281 C 1.496094 27.261719 0.96875 26.957031 0.589844 26.503906 C 0.207031 26.054688 0 25.480469 0 24.890625 L 0 0 L 55 0 L 55 24.890625 C 55 25.480469 54.792969 26.054688 54.410156 26.503906 C 54.03125 26.957031 53.503906 27.261719 52.921875 27.363281 Z M 52.921875 27.363281 " />
+                                    <path
+                                        style="fill:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke:url(#linear0);stroke-miterlimit:10;"
+                                        d="M 213 1 L 213 92.5625 C 213 97.4375 209.71875 101.609375 205.21875 102.453125 L 113 119.734375 C 111.015625 120.109375 108.984375 120.109375 107 119.734375 L 14.78125 102.453125 C 10.28125 101.609375 7 97.4375 7 92.5625 L 7 1 "
+                                        transform="matrix(0.25,0,0,0.25,0,0)" />
+                                </g>
+                                <path style=" stroke:none;fill-rule:nonzero;fill:url(#linear1);"
+                                    d="M 13.496094 16.023438 L 13.496094 12.203125 L 11.738281 12.203125 L 11.738281 11.527344 L 16.105469 11.527344 L 16.105469 12.203125 L 14.34375 12.203125 L 14.34375 16.023438 Z M 13.496094 16.023438 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:url(#linear2);"
+                                    d="M 16.425781 12.292969 C 16.425781 12.152344 16.453125 11.996094 16.453125 11.996094 C 16.476562 11.84375 16.613281 11.707031 16.613281 11.707031 C 16.6875 11.636719 16.777344 11.585938 16.875 11.558594 C 17.015625 11.527344 17.152344 11.527344 17.152344 11.527344 L 19.285156 11.527344 C 19.402344 11.527344 19.53125 11.535156 19.53125 11.535156 C 19.617188 11.539062 19.703125 11.558594 19.789062 11.585938 C 19.917969 11.628906 20.03125 11.707031 20.03125 11.707031 C 20.148438 11.785156 20.25 11.9375 20.25 11.9375 C 20.351562 12.085938 20.414062 12.25 20.445312 12.425781 C 20.476562 12.683594 20.476562 12.929688 20.476562 12.929688 C 20.476562 13.171875 20.449219 13.429688 20.449219 13.429688 C 20.425781 13.6875 20.28125 13.941406 20.28125 13.941406 C 20.238281 14.027344 20.171875 14.105469 20.171875 14.105469 C 20.109375 14.179688 20.011719 14.25 20.011719 14.25 C 19.917969 14.320312 19.769531 14.359375 19.769531 14.359375 C 19.621094 14.398438 19.433594 14.40625 19.433594 14.40625 L 18.855469 14.40625 L 18.855469 14.4375 L 20.566406 16.023438 L 19.5 16.023438 L 18.019531 14.566406 C 17.949219 14.496094 17.878906 14.394531 17.878906 14.394531 C 17.808594 14.289062 17.808594 14.1875 17.808594 14.1875 L 17.808594 14.085938 C 17.808594 13.949219 17.90625 13.867188 17.90625 13.867188 C 18 13.78125 18.1875 13.777344 18.1875 13.777344 L 19.035156 13.777344 C 19.144531 13.777344 19.273438 13.742188 19.273438 13.742188 C 19.402344 13.710938 19.5 13.578125 19.5 13.578125 C 19.53125 13.523438 19.550781 13.441406 19.550781 13.441406 C 19.570312 13.359375 19.582031 13.273438 19.582031 13.273438 C 19.59375 13.191406 19.59375 13.101562 19.59375 13.101562 C 19.59375 13.011719 19.601562 12.960938 19.601562 12.960938 C 19.601562 12.691406 19.554688 12.546875 19.554688 12.546875 C 19.511719 12.40625 19.441406 12.335938 19.441406 12.335938 C 19.339844 12.234375 19.203125 12.222656 19.203125 12.222656 C 19.066406 12.207031 18.964844 12.203125 18.964844 12.203125 L 17.589844 12.203125 C 17.519531 12.203125 17.46875 12.207031 17.46875 12.207031 C 17.414062 12.214844 17.363281 12.273438 17.363281 12.273438 C 17.292969 12.332031 17.289062 12.386719 17.289062 12.386719 C 17.28125 12.445312 17.273438 12.523438 17.273438 12.523438 L 17.273438 16.027344 L 16.425781 16.027344 Z M 16.425781 12.292969 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:url(#linear3);"
+                                    d="M 21.824219 16.023438 C 21.679688 16.023438 21.550781 16.011719 21.550781 16.011719 C 21.421875 16 21.3125 15.882812 21.3125 15.882812 C 21.195312 15.773438 21.171875 15.632812 21.171875 15.632812 C 21.144531 15.492188 21.144531 15.355469 21.144531 15.355469 L 21.144531 12.167969 C 21.144531 12.035156 21.183594 11.914062 21.183594 11.914062 C 21.222656 11.789062 21.296875 11.699219 21.296875 11.699219 C 21.40625 11.578125 21.554688 11.554688 21.554688 11.554688 C 21.703125 11.527344 21.839844 11.527344 21.839844 11.527344 L 24.726562 11.527344 L 24.726562 12.203125 L 22.296875 12.203125 C 22.238281 12.203125 22.179688 12.207031 22.179688 12.207031 C 22.121094 12.214844 22.0625 12.265625 22.0625 12.265625 C 22.011719 12.316406 22.007812 12.375 22.007812 12.375 L 21.992188 12.484375 L 21.992188 13.390625 L 24.660156 13.390625 L 24.660156 14.066406 L 21.992188 14.066406 L 21.992188 15.121094 C 21.992188 15.242188 22.058594 15.292969 22.058594 15.292969 C 22.097656 15.332031 22.167969 15.335938 22.167969 15.335938 C 22.238281 15.34375 22.347656 15.351562 22.347656 15.351562 L 24.75 15.351562 L 24.75 16.023438 Z M 21.824219 16.023438 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:url(#linear4);"
+                                    d="M 29.636719 15.441406 C 29.636719 15.78125 29.445312 15.929688 29.445312 15.929688 C 29.25 16.078125 28.96875 16.078125 28.96875 16.078125 C 28.761719 16.078125 28.574219 16.007812 28.574219 16.007812 C 28.390625 15.933594 28.242188 15.699219 28.242188 15.699219 L 26.34375 12.703125 C 26.324219 12.671875 26.300781 12.640625 26.273438 12.613281 C 26.253906 12.59375 26.242188 12.59375 26.242188 12.59375 C 26.214844 12.59375 26.183594 12.621094 26.183594 12.621094 C 26.152344 12.644531 26.152344 12.722656 26.152344 12.722656 L 26.152344 16.023438 L 25.328125 16.023438 L 25.328125 12.085938 C 25.328125 11.796875 25.507812 11.636719 25.507812 11.636719 C 25.691406 11.476562 26.015625 11.476562 26.015625 11.476562 C 26.320312 11.476562 26.480469 11.578125 26.480469 11.578125 C 26.640625 11.679688 26.730469 11.828125 26.730469 11.828125 L 28.640625 14.84375 C 28.664062 14.875 28.679688 14.914062 28.679688 14.914062 C 28.691406 14.953125 28.742188 14.953125 28.742188 14.953125 C 28.792969 14.953125 28.800781 14.914062 28.800781 14.914062 C 28.808594 14.875 28.8125 14.84375 28.8125 14.84375 L 28.8125 11.527344 L 29.636719 11.527344 Z M 29.636719 15.441406 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:url(#linear5);"
+                                    d="M 31.257812 15.042969 L 31.257812 15.171875 C 31.257812 15.226562 31.316406 15.285156 31.316406 15.285156 C 31.359375 15.339844 31.417969 15.34375 31.417969 15.34375 C 31.476562 15.351562 31.53125 15.351562 31.53125 15.351562 L 32.511719 15.351562 C 32.863281 15.351562 33.09375 15.261719 33.09375 15.261719 C 33.328125 15.171875 33.480469 14.933594 33.480469 14.933594 C 33.566406 14.804688 33.636719 14.523438 33.636719 14.523438 C 33.707031 14.238281 33.707031 13.660156 33.707031 13.660156 C 33.707031 13.519531 33.699219 13.367188 33.699219 13.367188 C 33.695312 13.261719 33.679688 13.164062 33.65625 13.0625 C 33.617188 12.914062 33.558594 12.78125 33.558594 12.78125 C 33.5 12.644531 33.390625 12.53125 33.390625 12.53125 C 33.328125 12.464844 33.257812 12.410156 33.179688 12.363281 C 33.0625 12.296875 32.929688 12.265625 32.929688 12.265625 C 32.792969 12.234375 32.671875 12.214844 32.671875 12.214844 C 32.546875 12.195312 32.425781 12.203125 32.425781 12.203125 L 31.546875 12.203125 C 31.507812 12.203125 31.449219 12.207031 31.449219 12.207031 C 31.390625 12.214844 31.347656 12.246094 31.347656 12.246094 C 31.308594 12.28125 31.28125 12.335938 31.28125 12.335938 C 31.257812 12.394531 31.257812 12.472656 31.257812 12.472656 Z M 31.097656 16.023438 C 30.84375 16.023438 30.734375 15.972656 30.734375 15.972656 C 30.625 15.921875 30.59375 15.902344 30.59375 15.902344 C 30.53125 15.851562 30.472656 15.75 30.472656 15.75 C 30.414062 15.644531 30.40625 15.453125 30.40625 15.453125 L 30.40625 12.246094 C 30.40625 12.117188 30.425781 11.984375 30.425781 11.984375 C 30.445312 11.847656 30.5625 11.71875 30.5625 11.71875 C 30.613281 11.667969 30.722656 11.597656 30.722656 11.597656 C 30.832031 11.527344 31.042969 11.527344 31.042969 11.527344 L 32.804688 11.527344 C 33.273438 11.527344 33.597656 11.679688 33.597656 11.679688 C 33.792969 11.777344 33.972656 11.90625 34.125 12.0625 C 34.226562 12.175781 34.308594 12.304688 34.375 12.445312 C 34.464844 12.652344 34.515625 12.871094 34.515625 12.871094 C 34.566406 13.089844 34.566406 13.308594 34.566406 13.308594 C 34.566406 13.527344 34.582031 13.726562 34.582031 13.726562 C 34.582031 13.910156 34.574219 14.136719 34.574219 14.136719 C 34.566406 14.359375 34.523438 14.597656 34.523438 14.597656 C 34.492188 14.753906 34.449219 14.910156 34.398438 15.0625 C 34.324219 15.285156 34.183594 15.472656 34.183594 15.472656 C 34.109375 15.5625 34.007812 15.660156 34.007812 15.660156 C 33.90625 15.753906 33.75 15.839844 33.75 15.839844 C 33.597656 15.921875 33.390625 15.972656 33.390625 15.972656 C 33.183594 16.027344 32.921875 16.027344 32.921875 16.027344 L 31.097656 16.027344 Z M 31.097656 16.023438 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:url(#linear6);"
+                                    d="M 36.984375 16.023438 C 36.867188 16.023438 36.753906 16.019531 36.636719 16.011719 C 36.449219 16 36.265625 15.941406 36.265625 15.941406 C 36.078125 15.882812 35.890625 15.78125 35.890625 15.78125 C 35.707031 15.679688 35.550781 15.5 35.550781 15.5 C 35.390625 15.316406 35.300781 15.105469 35.300781 15.105469 C 35.242188 14.96875 35.199219 14.824219 35.164062 14.675781 C 35.136719 14.535156 35.117188 14.390625 35.109375 14.246094 C 35.09375 14.035156 35.09375 13.839844 35.09375 13.839844 C 35.09375 13.601562 35.109375 13.363281 35.109375 13.363281 C 35.121094 13.128906 35.171875 12.894531 35.171875 12.894531 C 35.222656 12.664062 35.300781 12.464844 35.300781 12.464844 C 35.378906 12.265625 35.53125 12.09375 35.53125 12.09375 C 35.699219 11.894531 35.90625 11.785156 35.90625 11.785156 C 36.109375 11.675781 36.316406 11.609375 36.316406 11.609375 C 36.523438 11.546875 36.703125 11.539062 36.703125 11.539062 C 36.882812 11.535156 37.003906 11.527344 37.003906 11.527344 L 38.808594 11.527344 L 38.808594 12.203125 L 37.402344 12.203125 C 37.214844 12.203125 37.042969 12.207031 37.042969 12.207031 C 36.933594 12.214844 36.824219 12.234375 36.722656 12.265625 C 36.625 12.300781 36.53125 12.34375 36.445312 12.394531 C 36.316406 12.472656 36.21875 12.621094 36.21875 12.621094 C 36.117188 12.765625 36.046875 13.042969 36.046875 13.042969 C 35.976562 13.320312 35.96875 13.828125 35.96875 13.828125 C 35.96875 14.078125 35.988281 14.257812 35.988281 14.257812 C 36.007812 14.4375 36.039062 14.574219 36.039062 14.574219 C 36.070312 14.707031 36.109375 14.785156 36.109375 14.785156 C 36.148438 14.863281 36.179688 14.921875 36.179688 14.921875 C 36.355469 15.183594 36.65625 15.265625 36.65625 15.265625 C 36.960938 15.351562 37.359375 15.351562 37.359375 15.351562 L 38.882812 15.351562 L 38.882812 16.027344 Z M 36.984375 16.023438 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:url(#linear7);"
+                                    d="M 39.460938 12.292969 C 39.460938 12.152344 39.484375 11.996094 39.484375 11.996094 C 39.511719 11.84375 39.644531 11.707031 39.644531 11.707031 C 39.71875 11.636719 39.8125 11.585938 39.910156 11.558594 C 40.050781 11.527344 40.1875 11.527344 40.1875 11.527344 L 42.320312 11.527344 C 42.4375 11.527344 42.566406 11.535156 42.566406 11.535156 C 42.652344 11.539062 42.738281 11.558594 42.820312 11.585938 C 42.949219 11.628906 43.066406 11.707031 43.066406 11.707031 C 43.183594 11.785156 43.285156 11.9375 43.285156 11.9375 C 43.382812 12.085938 43.449219 12.25 43.476562 12.425781 C 43.507812 12.683594 43.507812 12.929688 43.507812 12.929688 C 43.507812 13.171875 43.484375 13.429688 43.484375 13.429688 C 43.457031 13.6875 43.316406 13.941406 43.316406 13.941406 C 43.273438 14.027344 43.207031 14.105469 43.207031 14.105469 C 43.144531 14.179688 43.046875 14.25 43.046875 14.25 C 42.949219 14.320312 42.800781 14.359375 42.800781 14.359375 C 42.65625 14.398438 42.46875 14.40625 42.46875 14.40625 L 41.890625 14.40625 L 41.890625 14.4375 L 43.597656 16.023438 L 42.53125 16.023438 L 41.054688 14.566406 C 40.984375 14.496094 40.914062 14.394531 40.914062 14.394531 C 40.839844 14.289062 40.839844 14.1875 40.839844 14.1875 L 40.839844 14.085938 C 40.839844 13.949219 40.9375 13.867188 40.9375 13.867188 C 41.035156 13.78125 41.222656 13.777344 41.222656 13.777344 L 42.070312 13.777344 C 42.179688 13.777344 42.308594 13.742188 42.308594 13.742188 C 42.433594 13.710938 42.53125 13.578125 42.53125 13.578125 C 42.5625 13.523438 42.582031 13.441406 42.582031 13.441406 C 42.601562 13.359375 42.617188 13.273438 42.617188 13.273438 C 42.628906 13.191406 42.628906 13.101562 42.628906 13.101562 C 42.628906 13.011719 42.636719 12.960938 42.636719 12.960938 C 42.636719 12.691406 42.589844 12.546875 42.589844 12.546875 C 42.546875 12.40625 42.472656 12.335938 42.472656 12.335938 C 42.371094 12.234375 42.238281 12.222656 42.238281 12.222656 C 42.101562 12.207031 42 12.203125 42 12.203125 L 40.621094 12.203125 C 40.550781 12.203125 40.5 12.207031 40.5 12.207031 C 40.449219 12.214844 40.398438 12.273438 40.398438 12.273438 C 40.328125 12.332031 40.320312 12.386719 40.320312 12.386719 C 40.3125 12.445312 40.308594 12.523438 40.308594 12.523438 L 40.308594 16.027344 L 39.460938 16.027344 Z M 39.460938 12.292969 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:url(#linear8);"
+                                    d="M 47.625 15.535156 C 47.574219 15.664062 47.527344 15.761719 47.527344 15.761719 C 47.484375 15.859375 47.40625 15.933594 47.40625 15.933594 C 47.355469 15.984375 47.296875 16.019531 47.230469 16.039062 C 47.136719 16.0625 46.980469 16.078125 46.980469 16.078125 C 46.820312 16.078125 46.71875 16.03125 46.71875 16.03125 C 46.652344 16.003906 46.589844 15.964844 46.539062 15.917969 C 46.488281 15.867188 46.449219 15.808594 46.421875 15.742188 C 46.382812 15.640625 46.339844 15.535156 46.339844 15.535156 L 45.1875 12.535156 C 45.175781 12.503906 45.160156 12.472656 45.140625 12.445312 C 45.109375 12.394531 45.078125 12.386719 45.078125 12.386719 C 45.027344 12.386719 45.019531 12.445312 45.019531 12.445312 C 45.015625 12.503906 45.007812 12.523438 45.007812 12.523438 L 45.027344 16.023438 L 44.179688 16.023438 L 44.179688 12.066406 C 44.179688 11.847656 44.273438 11.734375 44.273438 11.734375 C 44.335938 11.660156 44.410156 11.597656 44.492188 11.554688 C 44.617188 11.488281 44.730469 11.488281 44.730469 11.488281 C 44.847656 11.488281 44.90625 11.476562 44.90625 11.476562 C 45.097656 11.476562 45.226562 11.519531 45.226562 11.519531 C 45.355469 11.566406 45.445312 11.644531 45.445312 11.644531 C 45.535156 11.71875 45.59375 11.828125 45.59375 11.828125 C 45.648438 11.9375 45.695312 12.054688 45.695312 12.054688 L 46.859375 15.054688 C 46.890625 15.125 46.917969 15.171875 46.917969 15.171875 C 46.941406 15.214844 46.980469 15.222656 46.980469 15.222656 C 47.011719 15.222656 47.039062 15.175781 47.039062 15.175781 C 47.0625 15.132812 47.101562 15.054688 47.101562 15.054688 L 48.265625 12.054688 C 48.335938 11.863281 48.421875 11.753906 48.421875 11.753906 C 48.503906 11.644531 48.613281 11.578125 48.613281 11.578125 C 48.722656 11.515625 48.824219 11.496094 48.824219 11.496094 C 48.929688 11.476562 49.058594 11.476562 49.058594 11.476562 C 49.371094 11.476562 49.578125 11.617188 49.578125 11.617188 C 49.785156 11.757812 49.785156 12.066406 49.785156 12.066406 L 49.785156 16.027344 L 48.933594 16.027344 L 48.960938 12.523438 C 48.960938 12.433594 48.933594 12.414062 48.933594 12.414062 C 48.917969 12.402344 48.902344 12.394531 48.882812 12.386719 C 48.851562 12.386719 48.820312 12.441406 48.820312 12.441406 C 48.785156 12.492188 48.773438 12.535156 48.773438 12.535156 Z M 47.625 15.535156 " />
+                                <path style=" stroke:none;fill-rule:nonzero;fill:url(#linear9);"
+                                    d="M 9.5625 12.691406 L 7.339844 12.691406 L 7.339844 11.949219 L 9.5625 11.949219 Z M 9.5625 14.171875 L 7.339844 14.171875 L 7.339844 13.429688 L 9.5625 13.429688 Z M 9.5625 15.648438 L 7.339844 15.648438 L 7.339844 14.910156 L 9.5625 14.910156 Z M 6.601562 12.691406 L 5.859375 12.691406 L 5.859375 11.949219 L 6.601562 11.949219 Z M 6.601562 14.171875 L 5.859375 14.171875 L 5.859375 13.429688 L 6.601562 13.429688 Z M 6.601562 15.648438 L 5.859375 15.648438 L 5.859375 14.910156 L 6.601562 14.910156 Z M 9.929688 10.101562 L 5.492188 10.101562 C 5.292969 10.101562 5.105469 10.179688 4.96875 10.320312 C 4.828125 10.457031 4.75 10.644531 4.75 10.839844 L 4.75 16.761719 C 4.75 16.957031 4.828125 17.144531 4.96875 17.28125 C 5.105469 17.421875 5.292969 17.5 5.492188 17.5 L 9.929688 17.5 C 10.128906 17.5 10.316406 17.421875 10.453125 17.28125 C 10.59375 17.144531 10.671875 16.957031 10.671875 16.761719 L 10.671875 10.839844 C 10.671875 10.644531 10.59375 10.457031 10.453125 10.316406 C 10.316406 10.179688 10.128906 10.101562 9.929688 10.101562 Z M 9.929688 10.101562 " />
+                            </g>
+                        </svg>
+
                     </li>
                     <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/nextel.webp" alt="nextel">
+                        <picture>
+                            <source srcset="images/dist/partners/nextel.avif" type="image/avif">
+                            <source srcset="images/dist/partners/nextel.webp" type="image/webp"><img
+                                class="partners__img" src="images/dist/partners/nextel.png" alt="nextel"></picture>
                     </li>
                     <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/binotel.webp" alt="binotel">
+                        <picture>
+                            <source srcset="images/dist/partners/binotel.avif" type="image/avif">
+                            <source srcset="images/dist/partners/binotel.webp" type="image/webp"><img
+                                class="partners__img" src="images/dist/partners/binotel.png" alt="binotel"></picture>
                     </li>
                     <li class="partners__item" data-aos="fade-up" data-aos-delay="300">
-                        <img class="partners__img" src="images/partners/ukrposhta.webp" alt="ukrposhta">
+                        <svg class="partners__img" width="235px" height="80px">
+                            <use xlink:href="images/sprite.svg#ukrposhta">
+                            </use>
+                        </svg>
                     </li>
                 </ul>
             </div>
@@ -1461,7 +1692,7 @@
                         </label>
                         <input class="footer__input" id="footer-tel" type="tel" name="tel" placeholder="телефон*"
                             required oninvalid="this.setCustomValidity('Введіть ваш телефон')">
-                        <button class="footer__btn btn" type="submit">
+                        <button class="footer__link link" type="submit">
                             <span>Надіслати</span>
                         </button>
                     </form>
@@ -1472,7 +1703,7 @@
 
     <div class="modal" id="popup">
         <div class="modal__inner">
-            <a class="modal__btn modal-window close-popup" href="#popup">
+            <a class="modal__link close-popup" href="#popup">
                 <span class="sr-only">Закрити модальне вікно</span>
             </a>
             <h2 class="modal__title">
@@ -1486,14 +1717,14 @@
                 <label class="sr-only" for="modal-text">
                     Введіть ваше ім'я*
                 </label>
-                <input class="form__input" id="modal-text" type="text" name="name" placeholder="ім'я*"
-                    required oninvalid="this.setCustomValidity('введіть ваше ім`я')">
+                <input class="form__input" id="modal-text" type="text" name="name" placeholder="ім'я*" required
+                    oninvalid="this.setCustomValidity('введіть ваше ім`я')">
                 <label class="sr-only" for="modal-tel">
                     Введіть ваш телефон*
                 </label>
-                <input class="form__input" id="modal-tel" type="tel" name="tel" placeholder="телефон*"
-                    required oninvalid="this.setCustomValidity('Введіть ваш телефон')">
-                <button class="form__btn btn  " type="submit">
+                <input class="form__input" id="modal-tel" type="tel" name="tel" placeholder="телефон*" required
+                    oninvalid="this.setCustomValidity('Введіть ваш телефон')">
+                <button class="form__link link" type="submit">
                     <span>Надіслати</span>
                 </button>
             </form>
@@ -1526,7 +1757,8 @@
     </ul>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20230630204110"></script>
-    <script src="js/main.min.js?_v=20230616232959"></script>
+    <script src="js/main.min.js?_v=20231015002257"></script>
 
 </body>
+
 </html>

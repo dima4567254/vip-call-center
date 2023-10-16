@@ -77,8 +77,6 @@ const sliderreviews = new Swiper('.sliderreviews', {
     loop: true,
     loopedslides: 1,
     spaceBetween: 30,
-    // loop: true,
-    // loopedSlides: 3,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -243,3 +241,26 @@ document.addEventListener('keydown', function (e) {
         popupClose(popupActive);
     }
 });
+
+
+async function supportsEncode() {
+    const fallbackclass = 'jpg'
+
+    if (!this.createImageBitmap) return fallbackclass
+
+    const avifData = 'data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUEAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAABYAAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAEAAAABAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgSAAAAAAABNjb2xybmNseAACAAIABoAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAAB5tZGF0EgAKBzgADlAgIGkyCR/wAABAAACvcA==',
+        webpData = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoCAAEAAQAcJaQAA3AA/v3AgAA=',
+        avifblob = await fetch(avifData).then((r) => r.blob())
+    return createImageBitmap(avifblob)
+        .then(() => 'avif')
+        .catch(async (e) => {
+            console.log('avif failed:', e);
+            const webpblob = await fetch(webpData).then((r) => r.blob());
+            return createImageBitmap(webpblob).then(() => 'webp')
+        })
+        .catch(() => fallbackclass)
+}
+
+(async () => {
+    document.body.classList.add(await supportsEncode())
+})()

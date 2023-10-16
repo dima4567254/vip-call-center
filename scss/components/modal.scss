@@ -20,14 +20,6 @@ body.lock {
     z-index: 300;
     visibility: hidden;
 
-    @media (max-width: 992px) {
-        max-width: 600px;
-    }
-
-    @media (max-width: 768px) {
-        max-width: 100%;
-    }
-
     @media (max-width: 576px) {
         background-color: $black;
         padding: 20px;
@@ -75,7 +67,7 @@ body.lock {
         }
     }
 
-    &__btn {
+    &__link {
         position: absolute;
         right: 2%;
         top: 6%;
