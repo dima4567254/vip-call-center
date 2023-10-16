@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .partners {
     position: relative;
 
@@ -64,4 +65,72 @@
         height: 80px;
         object-fit: contain;
     }
+=======
+.partners {
+    position: relative;
+
+    &__images {
+        position: absolute;
+        z-index: -1;
+        width: 375px;
+        height: 329px;
+        right: -10%;
+        bottom: -29%;
+
+        @media (max-width: 1200px) {
+            width: 304px;
+            height: 267px;
+            bottom: 0;
+        }
+
+        @media (max-width: 992px) {
+            width: 234px;
+            height: 205px;
+            right: -20%;
+        }
+
+        @media (max-width: 768px) {
+            width: 163px;
+            height: 143px;
+        }
+
+        @media (max-width: 576px) {
+            width: 93px;
+            height: 82px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        @media (max-width: 1200px) {
+            gap: 25px;
+            justify-content: center;
+        }
+
+        @media (max-width: 992px) {
+            gap: 20px;
+        }
+    }
+
+    &__item {
+        border-radius: 8px;
+        background-color: $black3;
+        padding: 0 10px;
+        display: flex;
+    }
+
+    &__img {
+        width: 235px;
+        height: 80px;
+        object-fit: contain;
+    }
+>>>>>>> 86251bb4e85b1997d959e7a3d724f82f40635fa0
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .header {
     padding: 11px 0;
     position: fixed;
@@ -310,4 +311,318 @@
             display: block;
         }
     }
+=======
+.header {
+    padding: 11px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: transparent;
+
+    &__button {
+        padding: 8px 25px 9px;
+
+        @media (max-width: 1200px) {
+            display: none;
+        }
+    }
+
+    &__btn {
+        display: none;
+
+        @media (max-width: 1200px) {
+            order: 1;
+            width: 30px;
+            height: 22px;
+            position: relative;
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: transparent;
+            padding: 0;
+            z-index: 10;
+
+            &.active {
+                span {
+                    transform: rotate(-40deg);
+                    width: 100%;
+                }
+
+                &:before {
+                    transform: rotate(45deg);
+                    top: 10px;
+                }
+            }
+
+            span {
+                height: 3px;
+                width: 70%;
+                background-color: $hover;
+                transition: all .5s;
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                height: 3px;
+                width: 100%;
+                background-color: $hover;
+                top: 0;
+                transition: all .5s;
+            }
+        }
+    }
+}
+
+.header-fixed {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__logo {
+        z-index: 1;
+        margin-right: 10px;
+
+        @media (max-width: 992px) {
+            margin-right: 0;
+        }
+    }
+
+    &__inner {
+        display: flex;
+
+        @media (max-width: 1200px) {
+            transform: translateY(-200%);
+            position: absolute;
+            top: 0;
+            width: 100%;
+            left: 0;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            background-color: $black1;
+            transition: transform 1s;
+
+            &.active {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 576px) {
+            justify-content: space-between;
+            height: 41px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        width: 100%;
+        gap: 40px;
+
+        @media (max-width: 1350px) {
+            gap: 20px;
+        }
+
+        @media (max-width: 1200px) {
+            z-index: 1;
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__item {
+
+        @media (max-width: 1200px) {
+            padding: 10px 0;
+        }
+
+        &--active {
+            border-bottom: 3px solid $hover;
+
+            @media (max-width: 1200px) {
+                color: $hover;
+            }
+        }
+    }
+
+    &__link {
+        overflow: hidden;
+        padding: 5px 10px;
+        position: relative;
+        font-size: 18px;
+        display: block;
+        outline-offset: 5px;
+
+        @media (max-width: 1200px) {
+            text-align: center;
+            color: $white;
+            text-transform: uppercase;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            background-color: inherit;
+            transform: translateX(-100%);
+            border-radius: 4px;
+        }
+
+        &:focus {
+            color: $focus;
+        }
+
+        &:hover {
+            &::before {
+                transition: transform .5s;
+                background-color: $hover;
+                transform: translateX(0);
+                z-index: -1;
+            }
+        }
+
+        &:active {
+            color: $active;
+        }
+    }
+
+    &__button {
+        display: none;
+        padding: 12px 35px 11px;
+
+        @media (max-width: 1200px) {
+            display: block;
+            max-width: 210px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.language {
+    margin-right: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+
+    @media (max-width: 1350px) {
+        margin-right: 20px;
+    }
+
+    @media (max-width: 1200px) {
+        z-index: 1;
+    }
+
+    @media (max-width: 992px) {
+        margin-right: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 56px;
+        padding: 0;
+    }
+
+    @media (max-width: 768px) {
+        margin-right: 25px;
+    }
+
+    @media (max-width: 576px) {
+        margin-right: 20px;
+    }
+
+    &__link {
+        position: relative;
+        padding-right: 20px;
+        min-width: 12px;
+        transition: color .5s;
+
+        @media (max-width: 992px) {
+            display: none;
+            padding: 0px 20px;
+        }
+
+        &:hover {
+            color: $hover;
+        }
+
+        &::before {
+            content: "/";
+            position: absolute;
+            top: 0;
+            left: 25px;
+
+            @media (max-width: 992px) {
+                display: none;
+            }
+        }
+
+        &:focus {
+            color: $focus;
+        }
+
+        &:active {
+            color: $active;
+        }
+
+        &--active {
+            opacity: .4;
+            pointer-events: none;
+            display: block;
+            transition: color .5s;
+
+            @media (max-width: 992px) {
+                opacity: 1;
+                pointer-events: inherit;
+            }
+
+            &:focus {
+                color: inherit;
+            }
+
+            &:hover {
+                color: inherit;
+            }
+
+            &:active {
+                color: inherit;
+            }
+        }
+    }
+
+    &__box {
+        display: flex;
+        gap: 10px;
+
+        @media (max-width: 992px) {
+            display: block;
+            gap: 0;
+        }
+    }
+
+    &__svg {
+        display: none;
+        position: absolute;
+        top: 47%;
+        left: 80%;
+
+        @media (max-width: 992px) {
+            display: block;
+        }
+    }
+>>>>>>> 86251bb4e85b1997d959e7a3d724f82f40635fa0
 }

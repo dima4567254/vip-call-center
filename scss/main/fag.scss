@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .faq {
     &__title {
         text-align: center;
@@ -83,4 +84,91 @@
 
 .active .faq__box:after {
     transform: rotate(230deg);
+=======
+.faq {
+    &__title {
+        text-align: center;
+    }
+
+    &__accordion {
+        margin: 0 auto;
+        max-width: 730px;
+        user-select: none;
+        position: relative;
+        padding-right: 10px;
+
+        @media (max-width: 768px) {
+            max-width: 100%;
+        }
+
+        @media (max-width: 576px) {
+            padding-right: 0;
+        }
+    }
+
+    &__item {
+        padding: 21px 0;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid hsla(0, 0%, 100%, .35);
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__subtitle {
+        padding-right: 15px;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    &__box {
+        user-select: none;
+        position: relative;
+        padding-right: 10px;
+        width: 14px;
+        height: 14px;
+
+        &::before,
+        &::after {
+            height: 14px;
+            width: 3px;
+            content: '';
+            position: absolute;
+            margin: auto;
+            background-color: $hover;
+            transition: all 2s;
+
+            @media (max-width: 576px) {
+                height: 18px;
+            }
+        }
+
+        &::before {
+            transform: rotate(270deg);
+        }
+
+        &::after {
+            transform: rotate(180deg);
+        }
+    }
+
+    &__text {
+        padding-top: 10px;
+        font-size: 18px;
+    }
+}
+
+.active .faq__box:before {
+    transform: rotate(310deg);
+}
+
+.active .faq__box:after {
+    transform: rotate(230deg);
+>>>>>>> 86251bb4e85b1997d959e7a3d724f82f40635fa0
 }

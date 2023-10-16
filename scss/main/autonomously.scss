@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .autonomously {
     &__wrapper {
         background-color: $black3;
@@ -106,4 +107,107 @@ body.avif .autonomously__text::before {
 
 body.webp .about__img {
     background-image: url('../images/dist/lamp.webp');
+=======
+.autonomously {
+    &__wrapper {
+        background-color: $black3;
+        padding: 48px 0 64px 40px;
+        border-radius: 16px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        @media (max-width: 1200px) {
+            padding: 50px;
+        }
+
+        @media (max-width: 992px) {
+            height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+            display: block;
+        }
+
+        @media (max-width: 576px) {
+            padding: 20px;
+        }
+    }
+
+    &__box {
+        max-width: 62%;
+
+        @media (max-width: 992px) {
+            max-width: 65%;
+        }
+
+        @media (max-width: 768px) {
+            max-width: 100%;
+        }
+    }
+
+    &__text {
+        @include line-height(18, 28, px, );
+        max-width: 78%;
+        position: relative;
+
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+            max-width: 100%;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 3%;
+            right: -37%;
+            height: 145px;
+            width: 30%;
+            background-image: url('../images/icons/lamp.webp');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            @media (max-width: 1200px) {
+                display: none;
+            }
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 37%;
+        width: 400px;
+        height: 310px;
+        margin-top: -40px;
+        object-fit: cover;
+
+        @media (max-width: 1200px) {
+            margin-top: 0;
+        }
+
+        @media (max-width: 992px) {
+            width: 350px;
+            height: 270px;
+        }
+
+        @media (max-width: 768px) {
+            position: inherit;
+            height: 250px;
+            max-width: 340px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        @media (max-width: 576px) {
+            margin: 0 auto;
+            display: flex;
+            height: 200px;
+            max-width: 250px;
+        }
+    }
+>>>>>>> 86251bb4e85b1997d959e7a3d724f82f40635fa0
 }

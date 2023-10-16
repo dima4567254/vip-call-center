@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body.lock {
     overflow: hidden;
 }
@@ -209,4 +210,217 @@ body.lock {
             display: block;
         }
     }
+=======
+body.lock {
+    overflow: hidden;
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    backdrop-filter: blur(4rem);
+    opacity: 0;
+    z-index: 300;
+    visibility: hidden;
+
+    @media (max-width: 576px) {
+        background-color: $black;
+        padding: 20px;
+    }
+
+    &.open {
+        opacity: 1;
+        visibility: visible;
+
+        .modal__inner {
+            transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+        }
+    }
+
+    &__inner {
+        padding: 100px 100px 120px;
+        max-width: 1110px;
+        box-shadow: 0 8px 32px rgba(14, 14, 14, .2);
+        border-radius: 32px;
+        background-color: $black1;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+        transition: all 0.8s ease 0s;
+        transform: perspective(600px) translate(0, -100%) rotateX(45deg);
+
+        @media (max-width: 1200px) {
+            padding: 85;
+        }
+
+        @media (max-width: 992px) {
+            padding: 60px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 45px;
+        }
+
+        @media (max-width: 576px) {
+            padding: 20px;
+            height: 98vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__link {
+        position: absolute;
+        right: 2%;
+        top: 6%;
+        padding: 10px;
+        width: 25px;
+        height: 25px;
+        background-color: transparent;
+        border: none;
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $white;
+            opacity: .7;
+        }
+    }
+
+    &__title {
+        @include line-height(56, 56, px, );
+        margin-bottom: 35px;
+
+        @media (max-width: 1200px) {
+            font-size: 49px;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 992px) {
+            font-size: 43px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 36px;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 30px;
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        margin-bottom: 35px;
+
+        @media (max-width: 992px) {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 576px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text span {
+        color: $hover;
+    }
+
+    &__form {
+        gap: 30px;
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: 1200px) {
+            gap: 25px;
+        }
+
+        @media (max-width: 992px) {
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+}
+
+.form {
+    margin-bottom: 20px;
+
+    &__input {
+        border-radius: 4px;
+        padding: 6px 10px;
+        color: $black2;
+        font-size: 14px;
+        border: none;
+
+        @media (max-width: 992px) {
+            padding: 15px;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+
+        &::placeholder {
+            color: rgb(118, 118, 118);
+        }
+    }
+
+    &__btn {
+        padding: 8px 33px;
+
+        @media (max-width: 992px) {
+            display: inline-grid;
+            justify-content: center;
+            align-items: center;
+            padding: 14px;
+        }
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    &__svg {
+        display: none;
+
+        @media (max-width: 992px) {
+            display: block;
+        }
+    }
+>>>>>>> 86251bb4e85b1997d959e7a3d724f82f40635fa0
 }
