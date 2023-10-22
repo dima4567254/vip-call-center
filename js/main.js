@@ -67,8 +67,10 @@ const sliderclients = new Swiper('.sliderclients', {
     slidesPerView: 1,
     loop: true,
     navigation: {
-        nextEl: '.button-next',
-        prevEl: '.button-prev',
+        // nextEl: '.button-next',
+        // prevEl: '.button-prev',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
 });
 
